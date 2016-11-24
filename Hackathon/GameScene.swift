@@ -65,16 +65,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.contactDelegate = self
     }
     
-    func configCamera() {
-        guard let camera = self.camera else { return }
-        
-        let square = SKSpriteNode(color: .blue, size: .init(width: 200, height: 200))
-        
+    func configCamera() {        
         if UIDevice.current.userInterfaceIdiom == .pad {
-            camera.yScale = camera.xScale * (9 / 16) / (3 / 4)
-            square.xScale = square.yScale * (9 / 16) / (3 / 4)
+//            self.size = CGSize(width: size.height * 3 / 4 , height: size.height)
+            self.size = CGSize(width: size.width, height: size.width * 4 / 3)
         }
-        camera.addChild(square)
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
