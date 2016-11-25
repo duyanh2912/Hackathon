@@ -10,7 +10,7 @@ import Foundation
 
 protocol Controller {
     var view: View! { get set }
-    weak var parent: SKScene! { get set }
+    weak var parent: SKNode! { get set }
     
     init()
 }
@@ -26,7 +26,7 @@ extension Controller {
         return view.size.width
     }
     
-    init(view: View, parent: SKScene) {
+    init(view: View, parent: SKNode) {
         self.init()
         self.view = view
         self.parent = parent

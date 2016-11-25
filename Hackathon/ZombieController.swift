@@ -10,7 +10,7 @@ import Foundation
 
 class ZombieController: Controller {
     var view: View!
-    weak var parent: SKScene!
+    weak var parent: SKNode!
     
     var SPEED: CGFloat = 75
     
@@ -21,9 +21,21 @@ class ZombieController: Controller {
         view.physicsBody?.categoryBitMask = BitMasks.ZOMBIE.rawValue
         view.physicsBody?.collisionBitMask = BitMasks.WALL.rawValue | BitMasks.ZOMBIE.rawValue
         view.physicsBody?.contactTestBitMask = BitMasks.PLAYER.rawValue
+        
+        view.handleContact = { [unowned view = self.view!, weak parent = self.parent as? GameScene, unowned self]
+            other in
+            view.removeFromParent()
+            self.view = nil
+            if var zombieControllers = parent?.zombieControllers {
+                if let index = zombieControllers.index(where: {$0 === self}) {
+                zombieControllers.remove(at: index)
+                }
+            }
+        }
     }
     
     func move() {
+        guard view != nil else { return }
         let dx = PlayerController.instance.position.x - self.position.x
         let dy = PlayerController.instance.position.y - self.position.y
         
@@ -31,10 +43,7 @@ class ZombieController: Controller {
             view.physicsBody?.isResting = true
             return
         }
-        
-        var angle = atan(dy / dx)
-        angle = (dx < 0) ? (angle + CGFloat.pi) : angle
-        view.zRotation = angle - CGFloat.pi / 2
+        view.zRotation = CGFloat.angleHeadTowardDestination(current: self.position, destination: PlayerController.instance.position, spriteAngle: CGFloat.pi / 2)
         
         var vector = CGVector(dx: dx, dy: dy)
         vector.scale(by: SPEED / PlayerController.instance.position.distance(to: position))

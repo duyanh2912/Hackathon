@@ -10,7 +10,7 @@ import Foundation
 
 class WallController: Controller {
     var view: View!
-    weak var parent: SKScene!
+    weak var parent: SKNode!
     
     required init() {}
     

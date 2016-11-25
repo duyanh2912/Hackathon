@@ -11,6 +11,8 @@
 		500052C71DE4A704008B6471 /* GameoverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 500052C51DE4A704008B6471 /* GameoverScene.sks */; };
 		500052C91DE4A86E008B6471 /* SoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500052C81DE4A86E008B6471 /* SoundController.swift */; };
 		501F0E221DE74C5800F0A686 /* WallController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501F0E211DE74C5800F0A686 /* WallController.swift */; };
+		503E62AA1DE83EE0009BCF47 /* HandgunController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503E62A91DE83EE0009BCF47 /* HandgunController.swift */; };
+		503E62AC1DE84862009BCF47 /* BulletController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503E62AB1DE84862009BCF47 /* BulletController.swift */; };
 		50501C721DE3FC54007301E4 /* Border.sks in Resources */ = {isa = PBXBuildFile; fileRef = 50501C711DE3FC54007301E4 /* Border.sks */; };
 		50501C741DE3FF29007301E4 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50501C731DE3FF29007301E4 /* Constant.swift */; };
 		50501C771DE40607007301E4 /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50501C761DE40607007301E4 /* PlayerController.swift */; };
@@ -18,6 +20,7 @@
 		50501C7C1DE42059007301E4 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50501C7B1DE42059007301E4 /* Controller.swift */; };
 		50501C7E1DE422E3007301E4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50501C7D1DE422E3007301E4 /* Utils.swift */; };
 		50501C801DE43475007301E4 /* ZombieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50501C7F1DE43475007301E4 /* ZombieController.swift */; };
+		5089FBFE1DE7CBFC004A41FE /* FeetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5089FBFD1DE7CBFB004A41FE /* FeetController.swift */; };
 		50BD535A1DE35475005A5B55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD53591DE35475005A5B55 /* AppDelegate.swift */; };
 		50BD535C1DE35476005A5B55 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 50BD535B1DE35476005A5B55 /* GameScene.sks */; };
 		50BD53601DE35476005A5B55 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD535F1DE35476005A5B55 /* GameScene.swift */; };
@@ -26,6 +29,8 @@
 		50BD53671DE35477005A5B55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BD53661DE35477005A5B55 /* Assets.xcassets */; };
 		50BD536A1DE35477005A5B55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50BD53681DE35477005A5B55 /* LaunchScreen.storyboard */; };
 		50EDC22E1DE4B7FF00DA3E55 /* game_over.caf in Resources */ = {isa = PBXBuildFile; fileRef = 500052CB1DE4B5B7008B6471 /* game_over.caf */; };
+		50FDED631DE828D300054F59 /* Handgun.sks in Resources */ = {isa = PBXBuildFile; fileRef = 50FDED621DE828D300054F59 /* Handgun.sks */; };
+		50FDED651DE8315C00054F59 /* Glow.sks in Resources */ = {isa = PBXBuildFile; fileRef = 50FDED641DE8315C00054F59 /* Glow.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,13 +39,16 @@
 		500052C81DE4A86E008B6471 /* SoundController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundController.swift; sourceTree = "<group>"; };
 		500052CB1DE4B5B7008B6471 /* game_over.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = game_over.caf; sourceTree = "<group>"; };
 		501F0E211DE74C5800F0A686 /* WallController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallController.swift; sourceTree = "<group>"; };
+		503E62A91DE83EE0009BCF47 /* HandgunController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandgunController.swift; sourceTree = "<group>"; };
+		503E62AB1DE84862009BCF47 /* BulletController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletController.swift; sourceTree = "<group>"; };
 		50501C711DE3FC54007301E4 /* Border.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Border.sks; sourceTree = "<group>"; };
 		50501C731DE3FF29007301E4 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		50501C761DE40607007301E4 /* PlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerController.swift; path = ../../../PlayerController.swift; sourceTree = "<group>"; };
+		50501C761DE40607007301E4 /* PlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
 		50501C791DE4062E007301E4 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		50501C7B1DE42059007301E4 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		50501C7D1DE422E3007301E4 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		50501C7F1DE43475007301E4 /* ZombieController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZombieController.swift; sourceTree = "<group>"; };
+		5089FBFD1DE7CBFB004A41FE /* FeetController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeetController.swift; sourceTree = "<group>"; };
 		50BD53561DE35475005A5B55 /* Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BD53591DE35475005A5B55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50BD535B1DE35476005A5B55 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -50,6 +58,8 @@
 		50BD53661DE35477005A5B55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50BD53691DE35477005A5B55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50BD536B1DE35477005A5B55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50FDED621DE828D300054F59 /* Handgun.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Handgun.sks; sourceTree = "<group>"; };
+		50FDED641DE8315C00054F59 /* Glow.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Glow.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +78,11 @@
 			children = (
 				50501C7B1DE42059007301E4 /* Controller.swift */,
 				50501C761DE40607007301E4 /* PlayerController.swift */,
+				5089FBFD1DE7CBFB004A41FE /* FeetController.swift */,
 				50501C7F1DE43475007301E4 /* ZombieController.swift */,
 				501F0E211DE74C5800F0A686 /* WallController.swift */,
+				503E62A91DE83EE0009BCF47 /* HandgunController.swift */,
+				503E62AB1DE84862009BCF47 /* BulletController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -88,8 +101,10 @@
 				50BD535F1DE35476005A5B55 /* GameScene.swift */,
 				50BD535B1DE35476005A5B55 /* GameScene.sks */,
 				50501C711DE3FC54007301E4 /* Border.sks */,
+				50FDED621DE828D300054F59 /* Handgun.sks */,
 				500052C41DE4A704008B6471 /* GameoverScene.swift */,
 				500052C51DE4A704008B6471 /* GameoverScene.sks */,
+				50FDED641DE8315C00054F59 /* Glow.sks */,
 			);
 			name = Scene;
 			sourceTree = "<group>";
@@ -198,6 +213,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50FDED651DE8315C00054F59 /* Glow.sks in Resources */,
 				50EDC22E1DE4B7FF00DA3E55 /* game_over.caf in Resources */,
 				500052C71DE4A704008B6471 /* GameoverScene.sks in Resources */,
 				50BD53651DE35476005A5B55 /* Main.storyboard in Resources */,
@@ -205,6 +221,7 @@
 				50BD53671DE35477005A5B55 /* Assets.xcassets in Resources */,
 				50501C721DE3FC54007301E4 /* Border.sks in Resources */,
 				50BD536A1DE35477005A5B55 /* LaunchScreen.storyboard in Resources */,
+				50FDED631DE828D300054F59 /* Handgun.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +233,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				50BD53601DE35476005A5B55 /* GameScene.swift in Sources */,
+				503E62AA1DE83EE0009BCF47 /* HandgunController.swift in Sources */,
+				5089FBFE1DE7CBFC004A41FE /* FeetController.swift in Sources */,
 				50BD53621DE35476005A5B55 /* GameViewController.swift in Sources */,
 				50501C7A1DE4062E007301E4 /* View.swift in Sources */,
 				501F0E221DE74C5800F0A686 /* WallController.swift in Sources */,
@@ -224,6 +243,7 @@
 				50501C771DE40607007301E4 /* PlayerController.swift in Sources */,
 				50501C741DE3FF29007301E4 /* Constant.swift in Sources */,
 				500052C61DE4A704008B6471 /* GameoverScene.swift in Sources */,
+				503E62AC1DE84862009BCF47 /* BulletController.swift in Sources */,
 				50501C7C1DE42059007301E4 /* Controller.swift in Sources */,
 				50501C7E1DE422E3007301E4 /* Utils.swift in Sources */,
 				50501C801DE43475007301E4 /* ZombieController.swift in Sources */,

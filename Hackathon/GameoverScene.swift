@@ -41,9 +41,6 @@ class GameoverScene: SKScene {
                     ])))
             }
         }
-        
-        print(self.frame)
-        print(view.frame)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

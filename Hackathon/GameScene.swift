@@ -25,6 +25,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         configBorder()
         configPlayer()
         configZombies()
+        configGuns()
     }
     
     func configZombies() {
@@ -65,10 +66,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.contactDelegate = self
     }
     
-    func configCamera() {        
+    func configCamera() {
         if UIDevice.current.userInterfaceIdiom == .pad {
-//            self.size = CGSize(width: size.height * 3 / 4 , height: size.height)
+            //            self.size = CGSize(width: size.height * 3 / 4 , height: size.height)
             self.size = CGSize(width: size.width, height: size.width * 4 / 3)
+        }
+    }
+    
+    func configGuns() {
+        for node in children {
+            if node.name == "handgun" {
+                let gun = node.children[0].childNode(withName: "gun") as! View
+                let controller = HandgunController(view: gun, parent: self)
+                controller.config()
+            }
         }
     }
     
@@ -89,9 +100,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let location = touches.first?.location(in: self) {
-            PlayerController.instance.touchLocation = location
+        guard let location = touches.first?.location(in: self) else { return }
+        for node in nodes(at: location) {
+            if playerController.currentWeapon != .knife {
+                if node.name == "zombie" {
+                    playerController.shoot(at: location)
+                    return
+                }
+            }
         }
+        PlayerController.instance.touchLocation = location
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {

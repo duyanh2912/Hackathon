@@ -21,6 +21,17 @@ extension CGPoint {
     }
 }
 
+extension CGFloat {
+    static func angleHeadTowardDestination(current position: CGPoint, destination: CGPoint, spriteAngle: CGFloat) -> CGFloat{
+        let dx = destination.x - position.x
+        let dy = destination.y - position.y
+        
+        var angle = atan(dy / dx)
+        angle = (dx < 0) ? (angle + CGFloat.pi) : angle
+        return angle - spriteAngle
+    }
+}
+
 extension CGVector {
     mutating func scale(by factor: CGFloat) {
         self.dx = self.dx * factor
@@ -31,5 +42,15 @@ extension CGVector {
 extension CGRect {
     func middlePoint() -> CGPoint {
         return CGPoint(x: self.midX, y: self.midY)
+    }
+}
+
+extension SKTextureAtlas {
+    func toTextures() -> [SKTexture] {
+        var textures = [SKTexture]()
+        for name in self.textureNames.sorted() {
+            textures.append(self.textureNamed(name))
+        }
+        return textures
     }
 }
