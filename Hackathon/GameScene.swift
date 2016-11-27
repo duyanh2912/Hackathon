@@ -17,6 +17,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     deinit {
         print("bye GameScene")
+        playerController.reset()
     }
     
     override func didMove(to view: SKView) {
@@ -26,6 +27,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         configPlayer()
         configZombies()
         configGuns()
+        configExit()
+    }
+    
+    func configExit() {
+        if let exit = childNode(withName: "exit") as? View {
+            let controller = ExitController(view: exit, parent: self)
+            controller.config()
+        }
     }
     
     func configZombies() {

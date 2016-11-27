@@ -89,7 +89,6 @@ class PlayerController: Controller {
             gameoverScene.scaleMode = .aspectFill
             scene.view?.presentScene(gameoverScene)
         }
-        reset()
     }
     
     func reset() {

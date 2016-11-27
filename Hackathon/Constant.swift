@@ -18,6 +18,7 @@ struct BitMasks: OptionSet {
     static let ZOMBIE = BitMasks(rawValue: 1 << 2)
     static let HANDGUN = BitMasks(rawValue: 1 << 3)
     static let BULLET = BitMasks(rawValue: 1 << 4)
+    static let EXIT = BitMasks(rawValue: 1 << 5)
 }
 
 struct Textures {
