@@ -58,7 +58,7 @@ class PlayerController: Controller {
         view.setScale(1)
         
         let texture = SKTexture(image: #imageLiteral(resourceName: "playerPhysicsBody"))
-        view.physicsBody = SKPhysicsBody(texture: texture, size: texture.size())
+        view.physicsBody = SKPhysicsBody(texture: texture, size: texture.size().scale(by: 0.9))
         view.physicsBody?.restitution = 0
         view.physicsBody?.allowsRotation = true
         

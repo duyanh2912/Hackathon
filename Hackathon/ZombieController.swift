@@ -12,7 +12,7 @@ class ZombieController: Controller {
     var view: View!
     weak var parent: SKNode!
     
-    var SPEED: CGFloat = 75
+    var SPEED: CGFloat = 120
     
     required init() {}
     

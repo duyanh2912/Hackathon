@@ -39,6 +39,14 @@ extension CGVector {
     }
 }
 
+extension CGSize {
+    func scale(by factor: CGFloat) -> CGSize {
+        let width = self.width * factor
+        let height = self.height * factor
+        return CGSize(width: width, height: height)
+    }
+}
+
 extension CGRect {
     func middlePoint() -> CGPoint {
         return CGPoint(x: self.midX, y: self.midY)
