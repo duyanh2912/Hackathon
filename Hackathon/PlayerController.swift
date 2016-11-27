@@ -123,6 +123,9 @@ class PlayerController: Controller {
         
         if currentState == .idle {
             currentState = .move
+            self.animate()
+        }
+        if feetController.view.action(forKey: ACTION_KEY_ANIMATE) == nil {
             feetController.animate()
         }
     }
