@@ -30,6 +30,7 @@
 		50BD536A1DE35477005A5B55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50BD53681DE35477005A5B55 /* LaunchScreen.storyboard */; };
 		50EDC22E1DE4B7FF00DA3E55 /* game_over.caf in Resources */ = {isa = PBXBuildFile; fileRef = 500052CB1DE4B5B7008B6471 /* game_over.caf */; };
 		50F357101DEACFB9006F25D9 /* ExitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F3570F1DEACFB9006F25D9 /* ExitController.swift */; };
+		50F357121DEAD992006F25D9 /* WinScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 50F357111DEAD992006F25D9 /* WinScene.sks */; };
 		50FDED631DE828D300054F59 /* Handgun.sks in Resources */ = {isa = PBXBuildFile; fileRef = 50FDED621DE828D300054F59 /* Handgun.sks */; };
 		50FDED651DE8315C00054F59 /* Glow.sks in Resources */ = {isa = PBXBuildFile; fileRef = 50FDED641DE8315C00054F59 /* Glow.sks */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		50BD53691DE35477005A5B55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50BD536B1DE35477005A5B55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50F3570F1DEACFB9006F25D9 /* ExitController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExitController.swift; sourceTree = "<group>"; };
+		50F357111DEAD992006F25D9 /* WinScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WinScene.sks; sourceTree = "<group>"; };
 		50FDED621DE828D300054F59 /* Handgun.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Handgun.sks; sourceTree = "<group>"; };
 		50FDED641DE8315C00054F59 /* Glow.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Glow.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +110,7 @@
 				500052C41DE4A704008B6471 /* GameoverScene.swift */,
 				500052C51DE4A704008B6471 /* GameoverScene.sks */,
 				50FDED641DE8315C00054F59 /* Glow.sks */,
+				50F357111DEAD992006F25D9 /* WinScene.sks */,
 			);
 			name = Scene;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				50BD535C1DE35476005A5B55 /* GameScene.sks in Resources */,
 				50BD53671DE35477005A5B55 /* Assets.xcassets in Resources */,
 				50501C721DE3FC54007301E4 /* Border.sks in Resources */,
+				50F357121DEAD992006F25D9 /* WinScene.sks in Resources */,
 				50BD536A1DE35477005A5B55 /* LaunchScreen.storyboard in Resources */,
 				50FDED631DE828D300054F59 /* Handgun.sks in Resources */,
 			);
