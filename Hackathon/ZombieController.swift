@@ -12,7 +12,8 @@ class ZombieController: Controller {
     var view: View!
     weak var parent: SKNode!
     
-    var SPEED: CGFloat = 120
+    var SPEED: CGFloat = 100
+    var audio = SKAudioNode(fileNamed: "zombie_moan")
     
     required init() {}
     
@@ -32,6 +33,17 @@ class ZombieController: Controller {
                 }
             }
         }
+        
+        audio.autoplayLooped = false
+        view.addChild(audio)
+        let moan = SKAction.run { [unowned self] in
+            if arc4random_uniform(2) == 0 {
+                self.audio.run(.play())
+                print("play")
+            }
+        }
+        let delay = SKAction.wait(forDuration: Double(arc4random_uniform(40) / 5 + 2))
+        view.run(.repeatForever(.sequence([moan, delay])))
     }
     
     func move() {

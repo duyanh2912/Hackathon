@@ -5,7 +5,7 @@
 //  Created by Developer on 11/21/16.
 //  Copyright © 2016 Developer. All rights reserved.
 //
-
+import AVFoundation
 import SpriteKit
 import GameplayKit
 
@@ -15,12 +15,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var zombieControllers = [ZombieController]()
     var wallControllers = [WallController]()
     
+    static var audioPlayer: AVAudioPlayer?
+    
     deinit {
         print("bye GameScene")
         playerController.reset()
     }
     
     override func didMove(to view: SKView) {
+        configMusic()
         configCamera()
         configPhysics()
         configBorder()
@@ -28,6 +31,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         configZombies()
         configGuns()
         configExit()
+    }
+    
+    func configMusic() {
+        guard GameScene.audioPlayer == nil else { return }
+        
+        if let path = Bundle.main.url(forResource: "background", withExtension: "mp3") {
+            print("music")
+            GameScene.audioPlayer = try! AVAudioPlayer(contentsOf: path)
+            GameScene.audioPlayer?.volume = 0.75
+            GameScene.audioPlayer?.numberOfLoops = -1
+            GameScene.audioPlayer?.play()
+        }
     }
     
     func configExit() {
@@ -51,6 +66,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let player = self.childNode(withName: "player") as! View
         playerController.set(view: player, parent: self)
         playerController.config()
+        self.listener = player
     }
     
     func configBorder() {

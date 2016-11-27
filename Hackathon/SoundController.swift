@@ -11,6 +11,7 @@ import SpriteKit
 
 class SoundController {
     let GAME_OVER = SKAction.playSoundFileNamed("game_over", waitForCompletion: false)
+    let HANDGUN_FIRE = SKAction.playSoundFileNamed("handgun_fire", waitForCompletion: false)
     
     static let sharedInstance = SoundController()
     

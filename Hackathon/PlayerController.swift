@@ -175,5 +175,6 @@ class PlayerController: Controller {
                 self.animate()
             }
         }
+        parent.run(SoundController.sharedInstance.HANDGUN_FIRE)
     }
 }
