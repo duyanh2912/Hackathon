@@ -20,5 +20,7 @@ class WallController: Controller {
         view.physicsBody?.categoryBitMask = BitMasks.WALL.rawValue
         view.physicsBody?.contactTestBitMask = 0
         view.physicsBody?.collisionBitMask = (view.physicsBody?.collisionBitMask)! ^ BitMasks.WALL.rawValue
+        
+        view.configLightningMask(mask: LightMask.DEFAULT.rawValue)
     }
 }

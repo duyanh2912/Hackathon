@@ -26,6 +26,7 @@ class PlayerController: Controller {
     var view: View!
     weak var parent: SKNode!
     
+    var lightNode = SKLightNode()
     var timePerFrame: Double = 1/20
     var textures = [SKTexture]()
     var SPEED: CGFloat = 150
@@ -37,8 +38,24 @@ class PlayerController: Controller {
         }
     }
     var currentState: PlayerState = .idle
-    required init() {
+    var shoulder: CGPoint {
+        switch currentWeapon {
+        case .handgun:
+            return .init(x: 0, y: -53)
+        default:
+            return .zero
+        }
     }
+    var nose: CGPoint {
+        switch currentWeapon {
+        case .handgun:
+            return .init(x: 117.5, y: -53)
+        default:
+            return .zero
+        }
+    }
+    
+    required init() {}
     
     func set(view: View, parent: SKScene) {
         self.view = view
@@ -70,6 +87,10 @@ class PlayerController: Controller {
         view.yScale = yScale
         configHandleContact()
         animate()
+        
+        view.addChild(lightNode)
+        lightNode.categoryBitMask = 1
+        lightNode.falloff = 3
     }
     
     func configHandleContact() {
@@ -160,8 +181,7 @@ class PlayerController: Controller {
         var angle = atan(dy / dx)
         angle = (dx < 0) ? (angle + CGFloat.pi) : angle
         
-        let shoulder = view.childNode(withName: "shoulder")!
-        angle += asin(shoulder.position.distance(to: CGPoint.zero) * view.xScale / location.distance(to: position))
+        angle += asin(shoulder.distance(to: CGPoint.zero) * view.xScale / location.distance(to: position))
         view.zRotation = angle
        
         let bullet = View(texture: Textures.BULLET, size: Textures.BULLET.size().applying(CGAffineTransform.init(scaleX: 0.75, y: 0.75)))

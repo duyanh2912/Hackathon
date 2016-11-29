@@ -70,20 +70,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func configBorder() {
-        for node in children {
-            if node.name == "wall" {
-                let controller = WallController(view: (node as! View), parent: self)
-                controller.config()
-                wallControllers.append(controller)
-            }
-            
-            if node.name == "border" {
-                for child in node.children[0].children {
-                    let controller = WallController(view: (child as! View), parent: self)
-                    controller.config()
-                    wallControllers.append(controller)
-                }
-            }
+        self.enumerateChildNodes(withName: "//wall") { [unowned self]
+            (node, stop) in
+            let controller = WallController(view: node as! View, parent: self)
+            controller.config()
+            self.wallControllers.append(controller)
         }
     }
     
@@ -95,7 +86,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if UIDevice.current.userInterfaceIdiom == .pad {
             //            self.size = CGSize(width: size.height * 3 / 4 , height: size.height)
             self.size = CGSize(width: size.width, height: size.width * 4 / 3)
+        } else {
+            self.size = CGSize(width: size.width, height: size.width * 16 / 9)
         }
+        
+        let camera = SKCameraNode()
+        camera.setScale(540 / size.width)
+        self.addChild(camera)
+        self.camera = camera
     }
     
     func configGuns() {

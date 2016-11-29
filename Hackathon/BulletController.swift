@@ -17,7 +17,7 @@ class BulletController: Controller {
     required init() {}
     
     func config(destination: CGPoint) {
-        view.position = (PlayerController.instance.view.childNode(withName: "nose")?.position)!
+        view.position = PlayerController.instance.nose
       
         view.physicsBody = SKPhysicsBody(rectangleOf: view.size)
         view.physicsBody?.categoryBitMask = BitMasks.BULLET.rawValue
@@ -42,5 +42,7 @@ class BulletController: Controller {
         var angle = atan(dy / dx)
         angle = (dx < 0) ? (angle + CGFloat.pi) : angle
         view.zRotation = angle
+        
+        
     }
 }

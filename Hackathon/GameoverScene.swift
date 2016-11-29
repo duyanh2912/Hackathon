@@ -48,7 +48,7 @@ class GameoverScene: SKScene {
         if nodes(at: location).contains(replayLabel) {
             if let view = self.view {
                 // Load the SKScene from 'GameScene.sks'
-                if let scene = SKScene(fileNamed: "GameScene") {
+                if let scene = SKScene(fileNamed: currentLevelScene) {
                     // Set the scale mode to scale to fit the window
                     scene.scaleMode = .fill
                     

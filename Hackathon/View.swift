@@ -12,4 +12,10 @@ typealias HandleContact = (_: View) -> ()
 
 class View: SKSpriteNode {
     var handleContact: HandleContact?
+    
+    func configLightningMask(mask: UInt32) {
+        self.lightingBitMask = mask
+        self.shadowedBitMask = mask
+        self.shadowCastBitMask = mask
+    }
 }

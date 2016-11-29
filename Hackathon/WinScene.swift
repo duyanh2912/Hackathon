@@ -14,9 +14,11 @@ class WinScene: SKScene {
         
         for node in nodes(at: location) {
             if node.name == "replay" {
+                currentLevel = (currentLevel == 2) ? 1 : (currentLevel + 1)
+                
                 if let view = self.view {
                     // Load the SKScene from 'GameScene.sks'
-                    if let scene = SKScene(fileNamed: "GameScene") {
+                    if let scene = SKScene(fileNamed: currentLevelScene) {
                         // Set the scale mode to scale to fit the window
                         scene.scaleMode = .fill
                         

@@ -31,5 +31,8 @@ class ExitController: Controller {
                 scene.view?.presentScene(winScene)
             }
         }
+        
+        view.configLightningMask(mask: LightMask.DEFAULT.rawValue)
+        view.shadowCastBitMask = 0
     }
 }

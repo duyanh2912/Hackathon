@@ -24,5 +24,7 @@ class HandgunController: Controller {
             view.removeFromParent()
             PlayerController.instance.currentWeapon = .handgun
         }
+        
+        view.configLightningMask(mask: LightMask.DEFAULT.rawValue)
     }
 }

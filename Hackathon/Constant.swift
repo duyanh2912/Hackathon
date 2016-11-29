@@ -8,6 +8,9 @@
 import SpriteKit
 import Foundation
 
+var currentLevel = 1
+var currentLevelScene: String { return "Level\(currentLevel)" }
+
 let ACTION_KEY_ANIMATE = "animate"
 
 struct BitMasks: OptionSet {
@@ -19,6 +22,12 @@ struct BitMasks: OptionSet {
     static let HANDGUN = BitMasks(rawValue: 1 << 3)
     static let BULLET = BitMasks(rawValue: 1 << 4)
     static let EXIT = BitMasks(rawValue: 1 << 5)
+}
+
+struct LightMask: OptionSet {
+    let rawValue: UInt32
+    
+    static let DEFAULT = BitMasks(rawValue: 1 << 0)
 }
 
 struct Textures {

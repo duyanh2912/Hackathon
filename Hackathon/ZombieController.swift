@@ -43,7 +43,9 @@ class ZombieController: Controller {
             }
         }
         let delay = SKAction.wait(forDuration: Double(arc4random_uniform(40) / 5 + 2))
-        view.run(.repeatForever(.sequence([moan, delay])))
+        view.run(.repeatForever(.sequence([delay, moan])))
+        
+        view.configLightningMask(mask: LightMask.DEFAULT.rawValue)
     }
     
     func move() {
