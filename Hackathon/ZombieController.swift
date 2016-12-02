@@ -18,21 +18,8 @@ class ZombieController: Controller {
     required init() {}
     
     func config() {
-        view.physicsBody = SKPhysicsBody(texture: view.texture!, size: view.size)
-        view.physicsBody?.categoryBitMask = BitMasks.ZOMBIE.rawValue
-        view.physicsBody?.collisionBitMask = BitMasks.WALL.rawValue | BitMasks.ZOMBIE.rawValue
-        view.physicsBody?.contactTestBitMask = BitMasks.PLAYER.rawValue
-        
-        view.handleContact = { [unowned view = self.view!, weak parent = self.parent as? GameScene, unowned self]
-            other in
-            view.removeFromParent()
-            self.view = nil
-            if var zombieControllers = parent?.zombieControllers {
-                if let index = zombieControllers.index(where: {$0 === self}) {
-                zombieControllers.remove(at: index)
-                }
-            }
-        }
+        configPhysics()
+        configHandleContact()
         
         audio.autoplayLooped = false
         view.addChild(audio)
@@ -48,6 +35,29 @@ class ZombieController: Controller {
         view.configLightningMask(mask: LightMask.DEFAULT.rawValue)
     }
     
+    func configPhysics() {
+        view.physicsBody = SKPhysicsBody(circleOfRadius: view.height / 1.8)
+        view.configPhysicsMask(
+            category: BitMasks.ZOMBIE.rawValue,
+            collision: BitMasks.ZOMBIE.rawValue | BitMasks.WALL.rawValue,
+            contact: BitMasks.PLAYER.rawValue | BitMasks.BULLET.rawValue
+        )
+        view.physicsBody?.friction = 0
+    }
+    
+    func configHandleContact() {
+        view.handleContact = { [unowned view = self.view!, weak parent = self.parent as? GameScene, unowned self]
+            other in
+            view.removeFromParent()
+            if var zombieControllers = parent?.zombieControllers {
+                if let index = zombieControllers.index(where: {$0 === self}) {
+                    zombieControllers.remove(at: index)
+                    parent?.zombieControllers = zombieControllers
+                }
+            }
+        }
+    }
+    
     func move() {
         guard view != nil else { return }
         let dx = PlayerController.instance.position.x - self.position.x
@@ -57,10 +67,6 @@ class ZombieController: Controller {
             view.physicsBody?.isResting = true
             return
         }
-        view.zRotation = CGFloat.angleHeadTowardDestination(current: self.position, destination: PlayerController.instance.position, spriteAngle: CGFloat.pi / 2)
-        
-        var vector = CGVector(dx: dx, dy: dy)
-        vector.scale(by: SPEED / PlayerController.instance.position.distance(to: position))
-        view.physicsBody?.velocity = vector
+        view.headToward(PlayerController.instance.position, spriteAngle: CGFloat.pi / 2, speed: SPEED)
     }
 }

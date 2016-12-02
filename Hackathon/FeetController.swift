@@ -14,12 +14,16 @@ enum MoveType: String {
 }
 
 class FeetController: Controller {
+    // VIEW
+    var textures = [SKTexture]()
     var view: View!
     weak var parent: SKNode!
     
-    var textures = [SKTexture]()
+    // PROPERTIES
     var timePerFrame: Double = 1 / 30
+    var isAnimating = false
     
+    // FUNCTIONS
     required init() {}
     
     func config(moveType: MoveType) {
@@ -30,11 +34,13 @@ class FeetController: Controller {
     
     func animate() {
         view.run(.repeatForever(.animate(with: textures, timePerFrame: timePerFrame)), withKey: ACTION_KEY_ANIMATE)
+        isAnimating = true
     }
     
     func stop() {
         view.removeAction(forKey: ACTION_KEY_ANIMATE)
         view.texture = Textures.FEET_IDLE
+        isAnimating = false
     }
     
 }

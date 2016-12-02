@@ -14,19 +14,29 @@ class WinScene: SKScene {
         
         for node in nodes(at: location) {
             if node.name == "replay" {
-                currentLevel = (currentLevel == 2) ? 1 : (currentLevel + 1)
+                currentLevel = (currentLevel == maxLevel) ? 1 : (currentLevel + 1)
                 
                 if let view = self.view {
                     // Load the SKScene from 'GameScene.sks'
                     if let scene = SKScene(fileNamed: currentLevelScene) {
                         // Set the scale mode to scale to fit the window
-                        scene.scaleMode = .fill
+                        scene.scaleMode = .aspectFit
                         
                         // Present the scene
                         view.presentScene(scene, transition: .doorsOpenHorizontal(withDuration: 1))
                     }
                 }
             }
+        }
+    }
+    
+    static func present(view: SKView) {
+        if let winScene = SKScene(fileNamed: "WinScene") {
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                winScene.size = CGSize(width: winScene.size.width, height: winScene.size.width * 1024 / 768)
+            }
+            winScene.scaleMode = .aspectFill
+            view.presentScene(winScene)
         }
     }
 }

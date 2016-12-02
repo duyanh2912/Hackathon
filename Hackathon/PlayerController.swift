@@ -21,23 +21,27 @@ enum PlayerState: String {
 }
 
 class PlayerController: Controller {
-    static let instance = PlayerController()
+    static var instance: PlayerController!
     
+    // VIEW
+    var textures = [SKTexture]()
     var view: View!
     weak var parent: SKNode!
     
-    var lightNode = SKLightNode()
-    var timePerFrame: Double = 1/20
-    var textures = [SKTexture]()
-    var SPEED: CGFloat = 150
-    var touchLocation: CGPoint?
-    var feetController: FeetController!
+    // PROPERTIES
     var currentWeapon: WeaponType = .knife {
         didSet {
             animate()
         }
     }
     var currentState: PlayerState = .idle
+    var SPEED: CGFloat = 150
+    var touchLocation: CGPoint?
+    var timePerFrame: Double = 1/20  //Animation
+    
+    // CHILDREN
+    var lightNode = SKLightNode()
+    var feetController: FeetController!
     var shoulder: CGPoint {
         switch currentWeapon {
         case .handgun:
@@ -55,8 +59,10 @@ class PlayerController: Controller {
         }
     }
     
+    // FUNCTIONS
     required init() {}
     
+    // Dùng hàm set() thay cho init()
     func set(view: View, parent: SKScene) {
         self.view = view
         self.parent = parent
@@ -69,22 +75,16 @@ class PlayerController: Controller {
         feetController.config(moveType: .walk)
     }
     
+    // Chỉnh physics + lightning
     func config() {
-        let xScale = view.xScale
-        let yScale = view.yScale
-        view.setScale(1)
-        
-        let texture = SKTexture(image: #imageLiteral(resourceName: "playerPhysicsBody"))
-        view.physicsBody = SKPhysicsBody(texture: texture, size: texture.size().scale(by: 0.9))
+        view.physicsBody = SKPhysicsBody(circleOfRadius: view.size.height / 2 * 0.7)
         view.physicsBody?.restitution = 0
         view.physicsBody?.allowsRotation = true
         
         view.physicsBody?.categoryBitMask = BitMasks.PLAYER.rawValue
         view.physicsBody?.collisionBitMask = BitMasks.WALL.rawValue
         view.physicsBody?.contactTestBitMask = BitMasks.ZOMBIE.rawValue
-        
-        view.xScale = xScale
-        view.yScale = yScale
+    
         configHandleContact()
         animate()
         
@@ -95,12 +95,13 @@ class PlayerController: Controller {
     
     func configHandleContact() {
         view.handleContact = { [unowned self] other in
-            if other.name == "zombie" {
+            if other.physicsBody?.categoryBitMask == BitMasks.ZOMBIE.rawValue {
                 self.gameOver()
             }
         }
     }
     
+    // Chuyển sang scene Game Over
     func gameOver() {
         if let gameoverScene = SKScene(fileNamed: "GameoverScene") {
             guard let scene = self.parent as? SKScene else { return }
@@ -112,17 +113,22 @@ class PlayerController: Controller {
         }
     }
     
+    // Vì PlayerController là singleton nên mỗi lần chơi lại phải reset
     func reset() {
         self.touchLocation = nil
         self.currentState = .idle
         self.currentWeapon = .knife
     }
     
+    // Hàm move() đc gọi trong update của GameScene
     func move() {
+        
+        // Nếu người chơi chưa chạm tay vào màn hình (touchLocation == nil) thì return luôn
         guard let destination = touchLocation else { return }
         let dx = destination.x - position.x
         let dy = destination.y - position.y
         
+        // Khi player đến đủ gần touchLocation thì dừng việc chuyển động lại
         guard abs(dx) > width / 8 || abs(dy) > height / 8  else {
             view.physicsBody?.isResting = true
             if currentState == .move {
@@ -133,11 +139,13 @@ class PlayerController: Controller {
             return
         }
         
+        // Xoay player về phía touchLocation
         let angle = CGFloat.angleHeadTowardDestination(current: self.position, destination: destination, spriteAngle: 0)
         view.zRotation = angle
         
+        // Gắn vector vận tốc cho player
         var vector = CGVector(dx: dx, dy: dy)
-        vector.scale(by: SPEED / destination.distance(to: position))
+        vector = vector.scale(by: SPEED / destination.distance(to: position))
         view.physicsBody?.velocity = vector
         view.physicsBody?.angularVelocity = 0
         
@@ -145,16 +153,21 @@ class PlayerController: Controller {
             currentState = .move
             self.animate()
         }
-        if feetController.view.action(forKey: ACTION_KEY_ANIMATE) == nil {
+        
+        // Nếu feet chưa animate thì cho nó animate
+        if !feetController.isAnimating {
             feetController.animate()
         }
     }
     
+    // Hàm animate được gọi sau mỗi lần chuyển currentState hoặc weapon
     func animate(repeatForever: Bool = true, completion: @escaping () -> () = {}) {
         stop()
         if let textures = Textures.animation[currentWeapon.rawValue]?[currentState.rawValue] {
             self.textures = textures
             let animate = SKAction.animate(with: textures, timePerFrame: timePerFrame)
+            
+            // completion được gọi sau khi animate xong 1 lượt
             let completion = SKAction.run(completion)
             let action = SKAction.sequence([animate, completion])
             if repeatForever {
@@ -165,9 +178,11 @@ class PlayerController: Controller {
         }
     }
     
+    // Dừng animation
     func stop() {
         view.removeAction(forKey: ACTION_KEY_ANIMATE)
     }
+    
     
     func shoot(at location: CGPoint) {
         guard currentState != .reload, currentState != .shoot else { return }

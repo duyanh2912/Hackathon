@@ -11,10 +11,9 @@ import GameplayKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     let soundController = SoundController.sharedInstance
-    var playerController = PlayerController.instance
+    var playerController: PlayerController!
     var zombieControllers = [ZombieController]()
     var wallControllers = [WallController]()
-    
     static var audioPlayer: AVAudioPlayer?
     
     deinit {
@@ -26,8 +25,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         configMusic()
         configCamera()
         configPhysics()
-        configBorder()
         configPlayer()
+        configBorder()
         configZombies()
         configGuns()
         configExit()
@@ -64,9 +63,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func configPlayer() {
         let player = self.childNode(withName: "player") as! View
+        playerController = PlayerController()
         playerController.set(view: player, parent: self)
         playerController.config()
         self.listener = player
+        PlayerController.instance = playerController
     }
     
     func configBorder() {
@@ -126,7 +127,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         guard let location = touches.first?.location(in: self) else { return }
         for node in nodes(at: location) {
             if playerController.currentWeapon != .knife {
-                if node.name == "zombie" {
+                if node.physicsBody?.categoryBitMask == BitMasks.ZOMBIE.rawValue {
                     playerController.shoot(at: location)
                     return
                 }

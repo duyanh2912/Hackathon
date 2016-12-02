@@ -8,14 +8,17 @@
 import SpriteKit
 import Foundation
 
+let maxLevel = 3
 var currentLevel = 1
 var currentLevelScene: String { return "Level\(currentLevel)" }
 
 let ACTION_KEY_ANIMATE = "animate"
+let ACTION_KEY_MOVE = "move"
 
 struct BitMasks: OptionSet {
     let rawValue: UInt32
     
+    static let zero = BitMasks(rawValue: 0)
     static let WALL = BitMasks(rawValue: 1 << 0)
     static let PLAYER = BitMasks(rawValue: 1 << 1)
     static let ZOMBIE = BitMasks(rawValue: 1 << 2)

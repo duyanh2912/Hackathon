@@ -24,7 +24,7 @@ class GameoverScene: SKScene {
         }
        
         let gameoverLabel = childNode(withName: "gameoverLabel") as! SKLabelNode
-        gameoverLabel.position = frame.middlePoint()
+        gameoverLabel.position = frame.center()
         gameoverLabel.alpha = 0
         
         replayLabel = SKLabelNode(text: "Replay")

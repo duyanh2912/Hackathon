@@ -36,7 +36,7 @@ class BulletController: Controller {
         let dy = destination.y - position.y
         
         var vector = CGVector(dx: dx, dy: dy)
-        vector.scale(by: SPEED / destination.distance(to: position))
+        vector = vector.scale(by: SPEED / destination.distance(to: position))
         view.physicsBody?.velocity = vector
         
         var angle = atan(dy / dx)

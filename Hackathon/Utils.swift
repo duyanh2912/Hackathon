@@ -7,6 +7,41 @@
 //
 import SpriteKit
 import Foundation
+import GameplayKit
+
+extension SKNode {
+    func configPhysicsMask(category: UInt32, collision: UInt32, contact: UInt32) {
+        physicsBody?.categoryBitMask = category
+        physicsBody?.collisionBitMask = collision
+        physicsBody?.contactTestBitMask = contact
+    }
+}
+
+extension GKGraphNode2D {
+    func toCGPoint() -> CGPoint {
+        return CGPoint(x: CGFloat(self.position.x), y: CGFloat(self.position.y))
+    }
+}
+
+extension SKSpriteNode {
+    func configLightningMask(mask: UInt32) {
+        self.lightingBitMask = mask
+        self.shadowedBitMask = mask
+        self.shadowCastBitMask = mask
+    }
+    
+    var height: CGFloat { return self.size.height }
+    var width: CGFloat { return self.size.width }
+    
+    func headToward(_ destination: CGPoint, spriteAngle: CGFloat, speed: CGFloat) {
+        let angle = CGFloat.angleHeadTowardDestination(current: self.position, destination: destination, spriteAngle: spriteAngle)
+        self.zRotation = angle
+        
+        let vector = CGVector(dx: destination.x - self.position.x, dy: destination.y - self.position.y).scale(by: speed / destination.distance(to: self.position))
+        self.physicsBody?.velocity = vector
+        self.physicsBody?.angularVelocity = 0
+    }
+}
 
 extension CGPoint {
     func distance(to other: CGPoint) -> CGFloat {
@@ -33,9 +68,14 @@ extension CGFloat {
 }
 
 extension CGVector {
-    mutating func scale(by factor: CGFloat) {
-        self.dx = self.dx * factor
-        self.dy = self.dy * factor
+    func scale(by factor: CGFloat) -> CGVector {
+        let dx = self.dx * factor
+        let dy = self.dy * factor
+        return CGVector(dx: dx, dy: dy)
+    }
+    
+    func subtract(by vector: CGVector) -> CGVector {
+        return CGVector(dx: self.dx - vector.dx, dy: self.dy - vector.dy)
     }
 }
 
@@ -48,7 +88,7 @@ extension CGSize {
 }
 
 extension CGRect {
-    func middlePoint() -> CGPoint {
+    func center() -> CGPoint {
         return CGPoint(x: self.midX, y: self.midY)
     }
 }
