@@ -16,15 +16,12 @@ enum MoveType: String {
 class FeetController: Controller {
     // VIEW
     var textures = [SKTexture]()
-    var view: View!
-    weak var parent: SKNode!
     
     // PROPERTIES
     var timePerFrame: Double = 1 / 30
     var isAnimating = false
     
     // FUNCTIONS
-    required init() {}
     
     func config(moveType: MoveType) {
         if let textures = Textures.animation["feet"]?[moveType.rawValue] {

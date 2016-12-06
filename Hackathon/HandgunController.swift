@@ -9,22 +9,17 @@ import SpriteKit
 import Foundation
 
 class HandgunController: Controller {
-    var view: View!
-    weak var parent: SKNode!
-    
-    required init() {}
-    
     func config() {
         view.physicsBody = SKPhysicsBody(rectangleOf: view.size.applying(.init(scaleX: 0.5, y: 0.5)))
-        view.physicsBody?.categoryBitMask = BitMasks.HANDGUN.rawValue
+        view.physicsBody?.categoryBitMask = BitMasks.HANDGUN
         view.physicsBody?.collisionBitMask = 0
-        view.physicsBody?.contactTestBitMask = BitMasks.PLAYER.rawValue
+        view.physicsBody?.contactTestBitMask = BitMasks.PLAYER
         
         view.handleContact = { [unowned view = self.view!] other in
             view.removeFromParent()
             PlayerController.instance.currentWeapon = .handgun
         }
         
-        view.configLightningMask(mask: LightMask.DEFAULT.rawValue)
+        view.configLightningMask(mask: LightMask.DEFAULT)
     }
 }

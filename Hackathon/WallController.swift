@@ -9,18 +9,13 @@ import SpriteKit
 import Foundation
 
 class WallController: Controller {
-    var view: View!
-    weak var parent: SKNode!
-    
-    required init() {}
-    
     func config() {
         view.physicsBody = SKPhysicsBody(rectangleOf: view.size)
         view.physicsBody?.isDynamic = false
-        view.physicsBody?.categoryBitMask = BitMasks.WALL.rawValue
+        view.physicsBody?.categoryBitMask = BitMasks.WALL
         view.physicsBody?.contactTestBitMask = 0
-        view.physicsBody?.collisionBitMask = (view.physicsBody?.collisionBitMask)! ^ BitMasks.WALL.rawValue
+        view.physicsBody?.collisionBitMask = (view.physicsBody?.collisionBitMask)! ^ BitMasks.WALL
         
-        view.configLightningMask(mask: LightMask.DEFAULT.rawValue)
+        view.configLightningMask(mask: LightMask.DEFAULT)
     }
 }

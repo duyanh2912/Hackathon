@@ -15,22 +15,18 @@ var currentLevelScene: String { return "Level\(currentLevel)" }
 let ACTION_KEY_ANIMATE = "animate"
 let ACTION_KEY_MOVE = "move"
 
-struct BitMasks: OptionSet {
-    let rawValue: UInt32
-    
-    static let zero = BitMasks(rawValue: 0)
-    static let WALL = BitMasks(rawValue: 1 << 0)
-    static let PLAYER = BitMasks(rawValue: 1 << 1)
-    static let ZOMBIE = BitMasks(rawValue: 1 << 2)
-    static let HANDGUN = BitMasks(rawValue: 1 << 3)
-    static let BULLET = BitMasks(rawValue: 1 << 4)
-    static let EXIT = BitMasks(rawValue: 1 << 5)
+struct BitMasks {
+    static let zero: UInt32 = 0
+    static let WALL: UInt32 = 1 << 0
+    static let PLAYER: UInt32 = 1 << 1
+    static let ZOMBIE: UInt32 = 1 << 2
+    static let HANDGUN: UInt32 = 1 << 3
+    static let BULLET: UInt32 = 1 << 4
+    static let EXIT: UInt32 = 1 << 5
 }
 
-struct LightMask: OptionSet {
-    let rawValue: UInt32
-    
-    static let DEFAULT = BitMasks(rawValue: 1 << 0)
+struct LightMask {
+    static let DEFAULT: UInt32 = 1 << 0
 }
 
 struct Textures {

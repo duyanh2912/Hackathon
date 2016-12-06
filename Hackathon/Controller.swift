@@ -8,11 +8,14 @@
 import SpriteKit
 import Foundation
 
-protocol Controller {
-    var view: View! { get set }
-    weak var parent: SKNode! { get set }
+class Controller {
+    var view: View!
+    weak var parent: SKNode!
     
-    init()
+    init(view: View, parent: SKNode) {
+        self.view = view
+        self.parent = parent
+    }
 }
 
 extension Controller {
@@ -25,10 +28,5 @@ extension Controller {
     var width: CGFloat {
         return view.size.width
     }
-    
-    init(view: View, parent: SKNode) {
-        self.init()
-        self.view = view
-        self.parent = parent
-    }
+  
 }

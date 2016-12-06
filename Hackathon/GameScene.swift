@@ -70,8 +70,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies {
     
     func configPlayer() {
         let player = self.childNode(withName: "player") as! View
-        playerController = PlayerController()
-        playerController.set(view: player, parent: self)
+        playerController = PlayerController(view: player, parent: self)
         playerController.config()
         self.listener = player
         PlayerController.instance = playerController
@@ -145,7 +144,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies {
         guard let location = touches.first?.location(in: self) else { return }
         for node in nodes(at: location) {
             if playerController.currentWeapon != .knife {
-                if node.physicsBody?.categoryBitMask == BitMasks.ZOMBIE.rawValue {
+                if node.physicsBody?.categoryBitMask == BitMasks.ZOMBIE {
                     playerController.shoot(at: location)
                     return
                 }

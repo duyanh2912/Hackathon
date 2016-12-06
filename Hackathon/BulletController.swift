@@ -9,20 +9,15 @@ import SpriteKit
 import Foundation
 
 class BulletController: Controller {
-    var view: View!
-    weak var parent: SKNode!
-    
     var SPEED: CGFloat = 160
-    
-    required init() {}
     
     func config(destination: CGPoint) {
         view.position = PlayerController.instance.nose
       
         view.physicsBody = SKPhysicsBody(rectangleOf: view.size)
-        view.physicsBody?.categoryBitMask = BitMasks.BULLET.rawValue
+        view.physicsBody?.categoryBitMask = BitMasks.BULLET
         view.physicsBody?.collisionBitMask = 0
-        view.physicsBody?.contactTestBitMask = BitMasks.ZOMBIE.rawValue | BitMasks.WALL.rawValue
+        view.physicsBody?.contactTestBitMask = BitMasks.ZOMBIE | BitMasks.WALL
         
         view.lightingBitMask = 1
         

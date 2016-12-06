@@ -25,8 +25,6 @@ class PlayerController: Controller {
     
     // VIEW
     var textures = [SKTexture]()
-    var view: View!
-    weak var parent: SKNode!
     
     // PROPERTIES
     var currentWeapon: WeaponType = .knife {
@@ -60,12 +58,10 @@ class PlayerController: Controller {
     }
     
     // FUNCTIONS
-    required init() {}
     
     // Dùng hàm set() thay cho init()
-    func set(view: View, parent: SKScene) {
-        self.view = view
-        self.parent = parent
+    override init(view: View, parent: SKNode) {
+        super.init(view: view, parent: parent)
         
         self.feetController = FeetController(
             view: view.childNode(withName: "feet") as! View,
@@ -81,9 +77,9 @@ class PlayerController: Controller {
         view.physicsBody?.restitution = 0
         view.physicsBody?.allowsRotation = true
         
-        view.physicsBody?.categoryBitMask = BitMasks.PLAYER.rawValue
-        view.physicsBody?.collisionBitMask = BitMasks.WALL.rawValue
-        view.physicsBody?.contactTestBitMask = BitMasks.ZOMBIE.rawValue
+        view.physicsBody?.categoryBitMask = BitMasks.PLAYER
+        view.physicsBody?.collisionBitMask = BitMasks.WALL
+        view.physicsBody?.contactTestBitMask = BitMasks.ZOMBIE
     
         configHandleContact()
         animate()
@@ -95,7 +91,7 @@ class PlayerController: Controller {
     
     func configHandleContact() {
         view.handleContact = { [unowned self] other in
-            if other.physicsBody?.categoryBitMask == BitMasks.ZOMBIE.rawValue {
+            if other.physicsBody?.categoryBitMask == BitMasks.ZOMBIE {
                 self.gameOver()
             }
         }

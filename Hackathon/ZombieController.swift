@@ -9,13 +9,8 @@ import SpriteKit
 import Foundation
 
 class ZombieController: Controller {
-    var view: View!
-    weak var parent: SKNode!
-    
     var SPEED: CGFloat = 100
     var audio = SKAudioNode(fileNamed: "zombie_moan")
-    
-    required init() {}
     
     func config() {
         configPhysics()
@@ -32,15 +27,15 @@ class ZombieController: Controller {
         let delay = SKAction.wait(forDuration: Double(arc4random_uniform(40) / 5 + 2))
         view.run(.repeatForever(.sequence([delay, moan])))
         
-        view.configLightningMask(mask: LightMask.DEFAULT.rawValue)
+        view.configLightningMask(mask: LightMask.DEFAULT)
     }
     
     func configPhysics() {
         view.physicsBody = SKPhysicsBody(circleOfRadius: view.height / 1.8)
         view.configPhysicsMask(
-            category: BitMasks.ZOMBIE.rawValue,
-            collision: BitMasks.ZOMBIE.rawValue | BitMasks.WALL.rawValue,
-            contact: BitMasks.PLAYER.rawValue | BitMasks.BULLET.rawValue
+            category: BitMasks.ZOMBIE,
+            collision: BitMasks.ZOMBIE | BitMasks.WALL,
+            contact: BitMasks.PLAYER | BitMasks.BULLET
         )
         view.physicsBody?.friction = 0
     }
