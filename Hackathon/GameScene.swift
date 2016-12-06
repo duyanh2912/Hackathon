@@ -28,8 +28,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies {
     
     override func didMove(to view: SKView) {
         configMusic()
-        configCamera()
         configPhysics()
+        configBackground()
         configPlayer()
         configBorder()
         configZombies()
@@ -37,6 +37,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies {
         configExit()
         configPathFinder()
         configSmartZombies()
+        configCamera()
+    }
+    
+    func configBackground() {
+        if let node = self.childNode(withName: "background") as? SKSpriteNode {
+            node.configLightningMask(mask: LightMask.DEFAULT)
+        }
     }
     
     func configMusic() {
