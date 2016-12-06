@@ -10,6 +10,11 @@ import SpriteKit
 import Foundation
 
 class Level2: GameScene {
-    
+//    override func didMove(to view: SKView) {
+//        enumerateChildNodes(withName: "//zombie", using: { node,_ in
+//            node.name = "smartZombie"
+//        })
+//        super.didMove(to: view)
+//    }
 }
 

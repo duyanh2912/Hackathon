@@ -77,12 +77,19 @@ protocol PathFindable: class {
 
 protocol SmartZombies: class, PathFindable {
     var smartZombieControllers: [SmartZombieController]! { get set }
-    var lastPlayerPosition: CGPoint? { get set }
     var lastUpdate: TimeInterval? { get set }
 
 }
 extension SmartZombies where Self: GameScene {
+    func configPathFinder() {
+        let obstacles = self["//wall"] as! [SKSpriteNode]
+        //        obstacles += self["//zombie"] as! [SKSpriteNode]
+        self.pathFinder = PathFinder(obstacles: obstacles, bufferRadius: Float(#imageLiteral(resourceName: "zombie").size.height / 2.6))
+        PathFinder.instance = self.pathFinder
+    }
+    
     func configSmartZombies() {
+        smartZombieControllers = [SmartZombieController]()
         for node in children {
             if node.name == "smartZombie" {
                 let zombie = SmartZombieController(view: node as! View, parent: self)
@@ -94,11 +101,8 @@ extension SmartZombies where Self: GameScene {
     
     func zombiesPathUpdate() {
         for controller in self.smartZombieControllers {
-            if playerController.position != lastPlayerPosition {
                 controller.updatePathNodes()
-            }
         }
-        lastPlayerPosition = playerController.position
     }
     
     func update(_ currentTime: TimeInterval) {

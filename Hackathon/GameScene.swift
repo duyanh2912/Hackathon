@@ -9,12 +9,17 @@ import AVFoundation
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene, SKPhysicsContactDelegate {
+class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies {
     let soundController = SoundController.sharedInstance
     var playerController: PlayerController!
     var zombieControllers = [ZombieController]()
     var wallControllers = [WallController]()
     static var audioPlayer: AVAudioPlayer?
+    
+    // Smart Zombies Properties
+    var smartZombieControllers: [SmartZombieController]!
+    var lastUpdate: TimeInterval? = nil
+    var pathFinder: PathFinder!
     
     deinit {
         print("bye GameScene")
@@ -30,6 +35,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         configZombies()
         configGuns()
         configExit()
+        configPathFinder()
+        configSmartZombies()
     }
     
     func configMusic() {
@@ -118,8 +125,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func didSimulatePhysics() {
         PlayerController.instance.move()
         camera?.position = PlayerController.instance.position
-        for zombie in zombieControllers {
-            zombie.move()
+        for zombie in zombieControllers { zombie.move() }
+        for smart in smartZombieControllers { smart.move() }
+    }
+    
+    override func update(_ currentTime: TimeInterval) {
+        guard lastUpdate != nil else {
+            lastUpdate = currentTime
+            zombiesPathUpdate()
+            return
+        }
+        if currentTime - lastUpdate! > 0.05 {
+            lastUpdate = currentTime
+            zombiesPathUpdate()
         }
     }
     
