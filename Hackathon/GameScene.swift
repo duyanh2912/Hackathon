@@ -81,6 +81,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies {
         playerController.config()
         self.listener = player
         PlayerController.instance = playerController
+//        playerController.lightNode.isEnabled = false
     }
     
     func configBorder() {

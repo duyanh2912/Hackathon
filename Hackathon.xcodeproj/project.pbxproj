@@ -30,6 +30,7 @@
 		505FCA781DF68FE70092ABCB /* SKTextureAtlas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FCA6F1DF68FE70092ABCB /* SKTextureAtlas.swift */; };
 		506F48611DEDD9AE00F2F95B /* Level1.sks in Resources */ = {isa = PBXBuildFile; fileRef = 506F48601DEDD9AE00F2F95B /* Level1.sks */; };
 		5089FBFE1DE7CBFC004A41FE /* FeetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5089FBFD1DE7CBFB004A41FE /* FeetController.swift */; };
+		508FA49A1DF9A5B7004098BD /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FA4991DF9A5B7004098BD /* UIButton.swift */; };
 		50A3AC0E1DEDDFFB00490730 /* Level1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3AC0D1DEDDFFB00490730 /* Level1.swift */; };
 		50A3AC121DF1212900490730 /* Level3.sks in Resources */ = {isa = PBXBuildFile; fileRef = 50A3AC111DF1212900490730 /* Level3.sks */; };
 		50A3AC141DF121C100490730 /* Level3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3AC131DF121C100490730 /* Level3.swift */; };
@@ -81,6 +82,7 @@
 		505FCA6F1DF68FE70092ABCB /* SKTextureAtlas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTextureAtlas.swift; sourceTree = "<group>"; };
 		506F48601DEDD9AE00F2F95B /* Level1.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level1.sks; sourceTree = "<group>"; };
 		5089FBFD1DE7CBFB004A41FE /* FeetController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeetController.swift; sourceTree = "<group>"; };
+		508FA4991DF9A5B7004098BD /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		50A3AC0D1DEDDFFB00490730 /* Level1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level1.swift; sourceTree = "<group>"; };
 		50A3AC111DF1212900490730 /* Level3.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level3.sks; sourceTree = "<group>"; };
 		50A3AC131DF121C100490730 /* Level3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level3.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 		505FCA631DF68FE70092ABCB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				508FA4981DF9A54D004098BD /* UIKit */,
 				505FCA641DF68FE70092ABCB /* CoreGraphics */,
 				505FCA6A1DF68FE70092ABCB /* GameplayKit */,
 				505FCA6C1DF68FE70092ABCB /* SpriteKit */,
@@ -196,6 +199,14 @@
 				50A3AC171DF123A000490730 /* PathFinding.swift */,
 			);
 			name = Levels;
+			sourceTree = "<group>";
+		};
+		508FA4981DF9A54D004098BD /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				508FA4991DF9A5B7004098BD /* UIButton.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		50B515EA1DE3E9B70088200C /* Scene */ = {
@@ -349,6 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				508FA49A1DF9A5B7004098BD /* UIButton.swift in Sources */,
 				503E62AA1DE83EE0009BCF47 /* HandgunController.swift in Sources */,
 				5089FBFE1DE7CBFC004A41FE /* FeetController.swift in Sources */,
 				505FCA731DF68FE70092ABCB /* CGSize.swift in Sources */,
