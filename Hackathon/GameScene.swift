@@ -43,9 +43,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
     }
     
     func configBackground() {
-        if let node = self.childNode(withName: "background") as? SKSpriteNode {
-            node.configLightningMask(mask: LightMask.DEFAULT)
-        }
+        let node = self.childNode(withName: "background") as! SKSpriteNode
+        node.configLightningMask(mask: LightMask.DEFAULT)
     }
     
     func configMusic() {
