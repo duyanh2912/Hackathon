@@ -44,6 +44,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
         configCamera()
         configTimer()
         configGifts()
+        configTraps()
     }
     
     func configBackground() {
@@ -84,6 +85,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
             if node.name == "stuntPowerUp" {
                 let gift = StuntPowerUpController(view: node as! View, parent: self)
                 gift.config()
+            }
+        }
+    }
+    func configTraps() {
+        for node in children {
+            if node.name == "trap" {
+                let trap = TrapController(view: node as! View, parent: self)
+                trap.config()
             }
         }
     }

@@ -56,6 +56,9 @@ class ZombieController: Controller {
                     parent?.zombieControllers = zombieControllers
                 }
             }
+            if other.physicsBody?.categoryBitMask == BitMasks.TRAP  {
+                self.stopMoving(duration: 2)
+            }
         }
     }
     

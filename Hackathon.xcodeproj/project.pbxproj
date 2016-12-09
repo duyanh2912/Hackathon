@@ -53,6 +53,7 @@
 		50FDED631DE828D300054F59 /* Handgun.sks in Resources */ = {isa = PBXBuildFile; fileRef = 50FDED621DE828D300054F59 /* Handgun.sks */; };
 		50FDED651DE8315C00054F59 /* Glow.sks in Resources */ = {isa = PBXBuildFile; fileRef = 50FDED641DE8315C00054F59 /* Glow.sks */; };
 		50FE5E741DF20AC700772C4C /* Level2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE5E731DF20AC700772C4C /* Level2.swift */; };
+		6388EE311DFB707600575FC7 /* TrapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6388EE301DFB707600575FC7 /* TrapController.swift */; };
 		639521881DFB179D0086E203 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639521871DFB179C0086E203 /* Timer.swift */; };
 		63C327331DFB563A0025AB23 /* StuntPowerUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C327321DFB563A0025AB23 /* StuntPowerUpController.swift */; };
 		63FE5EA31DEAED420014347C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FE5EA21DEAED420014347C /* Constant.swift */; };
@@ -111,6 +112,7 @@
 		50FDED621DE828D300054F59 /* Handgun.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Handgun.sks; sourceTree = "<group>"; };
 		50FDED641DE8315C00054F59 /* Glow.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Glow.sks; sourceTree = "<group>"; };
 		50FE5E731DF20AC700772C4C /* Level2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level2.swift; sourceTree = "<group>"; };
+		6388EE301DFB707600575FC7 /* TrapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrapController.swift; sourceTree = "<group>"; };
 		639521871DFB179C0086E203 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		63C327321DFB563A0025AB23 /* StuntPowerUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StuntPowerUpController.swift; sourceTree = "<group>"; };
 		63FE5EA21DEAED420014347C /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			children = (
 				50501C7B1DE42059007301E4 /* Controller.swift */,
 				63FE5EA41DEAED640014347C /* ExitController.swift */,
+				6388EE301DFB707600575FC7 /* TrapController.swift */,
 				63FE5EA81DEAED830014347C /* PlayerController.swift */,
 				5089FBFD1DE7CBFB004A41FE /* FeetController.swift */,
 				63C327321DFB563A0025AB23 /* StuntPowerUpController.swift */,
@@ -398,6 +401,7 @@
 				63FE5EA31DEAED420014347C /* Constant.swift in Sources */,
 				50BD53621DE35476005A5B55 /* GameViewController.swift in Sources */,
 				505FCA721DF68FE70092ABCB /* CGRect.swift in Sources */,
+				6388EE311DFB707600575FC7 /* TrapController.swift in Sources */,
 				50501C7A1DE4062E007301E4 /* View.swift in Sources */,
 				505FCA741DF68FE70092ABCB /* CGVector.swift in Sources */,
 				505FCA761DF68FE70092ABCB /* SKNode.swift in Sources */,
