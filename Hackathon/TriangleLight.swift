@@ -20,7 +20,7 @@ extension TriangleLight where Self: GameScene {
         let triangle = SKSpriteNode(texture: Textures.TRIANGLE)
         triangle.setScale(2)
         triangle.position = CGPoint(x: -220, y: 0)
-        triangle.zPosition = -3
+        triangle.zPosition = ZPosition.LIGHT_CONE
         
         playerController.view.addChild(triangle)
         playerController.lightNode.position = playerController.lightNode.position.add(x: 20, y: 0)

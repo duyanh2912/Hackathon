@@ -58,7 +58,7 @@ class FeetController: Controller {
                     node.removeFromParent()
                 }
             }
-            footprint.zPosition = ZPosition.FOOTPRINT1
+            footprint.zPosition = ZPosition.FOOTPRINT
             footprint.zRotation = player.view.zRotation
             footprint.setScale(player.view.xScale)
 

@@ -68,7 +68,8 @@ struct Textures {
 
 struct ZPosition {
     static let PLAYER: CGFloat = 10
-    static let FEET: CGFloat = -0.1
-    static let FOOTPRINT1: CGFloat = 9.5
-    static let FOOTPRINT2: CGFloat = 9.4
+    static let FEET: CGFloat = -0.1  // child của player
+    static let FOOTPRINT: CGFloat = 9.5
+    static let LIGHT_CONE: CGFloat = -0.1 // child của player
+    static let TIME: CGFloat = 11
 }
