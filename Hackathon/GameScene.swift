@@ -9,7 +9,8 @@ import AVFoundation
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies {
+class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
+    var currentTime: Int! = 0
     let soundController = SoundController.sharedInstance
     var playerController: PlayerController!
     var zombieControllers = [ZombieController]()
@@ -38,6 +39,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies {
         configPathFinder()
         configSmartZombies()
         configCamera()
+        configTimer()
     }
     
     func configBackground() {

@@ -27,6 +27,7 @@ class GameoverScene: SKScene {
         gameoverLabel.position = frame.center()
         gameoverLabel.alpha = 0
         
+        
         replayLabel = SKLabelNode(text: "Replay")
         replayLabel.position = gameoverLabel.position.add(x: 0, y: -30)
         replayLabel.fontSize = 20

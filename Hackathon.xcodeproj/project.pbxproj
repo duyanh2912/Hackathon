@@ -50,6 +50,7 @@
 		50FDED631DE828D300054F59 /* Handgun.sks in Resources */ = {isa = PBXBuildFile; fileRef = 50FDED621DE828D300054F59 /* Handgun.sks */; };
 		50FDED651DE8315C00054F59 /* Glow.sks in Resources */ = {isa = PBXBuildFile; fileRef = 50FDED641DE8315C00054F59 /* Glow.sks */; };
 		50FE5E741DF20AC700772C4C /* Level2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE5E731DF20AC700772C4C /* Level2.swift */; };
+		639521881DFB179D0086E203 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639521871DFB179C0086E203 /* Timer.swift */; };
 		63FE5EA31DEAED420014347C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FE5EA21DEAED420014347C /* Constant.swift */; };
 		63FE5EA51DEAED640014347C /* ExitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FE5EA41DEAED640014347C /* ExitController.swift */; };
 		63FE5EA71DEAED710014347C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FE5EA61DEAED710014347C /* GameScene.swift */; };
@@ -103,6 +104,7 @@
 		50FDED621DE828D300054F59 /* Handgun.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Handgun.sks; sourceTree = "<group>"; };
 		50FDED641DE8315C00054F59 /* Glow.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Glow.sks; sourceTree = "<group>"; };
 		50FE5E731DF20AC700772C4C /* Level2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level2.swift; sourceTree = "<group>"; };
+		639521871DFB179C0086E203 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		63FE5EA21DEAED420014347C /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		63FE5EA41DEAED640014347C /* ExitController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExitController.swift; sourceTree = "<group>"; };
 		63FE5EA61DEAED710014347C /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				63FE5EA61DEAED710014347C /* GameScene.swift */,
+				639521871DFB179C0086E203 /* Timer.swift */,
 				50FDED621DE828D300054F59 /* Handgun.sks */,
 				500052C41DE4A704008B6471 /* GameoverScene.swift */,
 				500052C51DE4A704008B6471 /* GameoverScene.sks */,
@@ -365,6 +368,7 @@
 				5089FBFE1DE7CBFC004A41FE /* FeetController.swift in Sources */,
 				505FCA731DF68FE70092ABCB /* CGSize.swift in Sources */,
 				505FCA781DF68FE70092ABCB /* SKTextureAtlas.swift in Sources */,
+				639521881DFB179D0086E203 /* Timer.swift in Sources */,
 				505FCA701DF68FE70092ABCB /* CGFloat.swift in Sources */,
 				63FE5EA91DEAED830014347C /* PlayerController.swift in Sources */,
 				63FE5EA71DEAED710014347C /* GameScene.swift in Sources */,

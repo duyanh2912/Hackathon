@@ -9,6 +9,7 @@ import SpriteKit
 import Foundation
 
 class WinScene: SKScene {
+    var finalTime: Int!
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let location = touches.first?.location(in: self) else { return }
         
@@ -28,14 +29,21 @@ class WinScene: SKScene {
                 }
             }
         }
+        for node in nodes(at: location) {
+            if node.name == "score" {
+                let label = node as! SKLabelNode
+                label.text = "Score: /(finalTime)"
+                
+            }
+        }
     }
-    
     static func present(view: SKView) {
         if let winScene = SKScene(fileNamed: "WinScene") {
             if UIDevice.current.userInterfaceIdiom == .pad {
                 winScene.size = CGSize(width: winScene.size.width, height: winScene.size.width * 1024 / 768)
             }
             winScene.scaleMode = .aspectFill
+            (winScene as! WinScene).finalTime = (view.scene as! Timer).currentTime
             view.presentScene(winScene)
         }
     }
