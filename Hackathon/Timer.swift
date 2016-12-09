@@ -16,7 +16,7 @@ protocol Timer {
 }
 extension Timer where Self: GameScene{
     func configTimer(){
-        currentTime = 0
+        currentTime = 100
         let labelTime = SKLabelNode()
         labelTime.fontSize = 65;
         labelTime.color = UIColor.darkGray
@@ -26,10 +26,10 @@ extension Timer where Self: GameScene{
         self.camera?.addChild(labelTime)
         
         let count = SKAction.run { [unowned self] in
-            self.currentTime = self.currentTime + 1;
+            self.currentTime = self.currentTime - 1;
             labelTime.text = "Time: \(self.currentTime!)"
         }
-        let runTime = SKAction.sequence([SKAction.wait(forDuration: 1), count])
+        let runTime = SKAction.sequence([SKAction.wait(forDuration: 3), count])
         self.run(SKAction.repeatForever(runTime))
         
     }
