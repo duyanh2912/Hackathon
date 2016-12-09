@@ -43,7 +43,7 @@ class WinScene: SKScene {
                 winScene.size = CGSize(width: winScene.size.width, height: winScene.size.width * 1024 / 768)
             }
             winScene.scaleMode = .aspectFill
-            (winScene as! WinScene).score = 100 - (view.scene as! Timer).currentTime * 1 / 3
+            (winScene as! WinScene).score = (view.scene as! Timer).currentTime 
             view.presentScene(winScene)
         }
     }
