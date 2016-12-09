@@ -9,7 +9,7 @@ import SpriteKit
 import Foundation
 
 let maxLevel = 3
-var currentLevel = 2
+var currentLevel = 1
 var currentLevelScene: String { return "Level\(currentLevel)" }
 
 let ACTION_KEY_ANIMATE = "animate"

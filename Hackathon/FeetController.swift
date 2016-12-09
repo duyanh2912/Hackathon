@@ -45,31 +45,29 @@ class FeetController: Controller {
     func footPrints() {
         let delay = SKAction.wait(forDuration: 1)
         let footPrint = SKAction.run { [unowned self, unowned player = PlayerController.instance!] in
-            let foot1 = SKSpriteNode(texture: self.view.texture, size: self.view.size)
-//            let foot2 = SKSpriteNode(texture: self.view.texture, size: self.view.size)
+            let footprint = SKSpriteNode(texture: self.view.texture, size: self.view.size)
             
-            foot1.color = .yellow
-            foot1.colorBlendFactor = 1
-            foot1.blendMode = .add
-            foot1.position = player.position
-            foot1.zPosition = ZPosition.FOOTPRINT1
-            foot1.zRotation = player.view.zRotation
-            foot1.setScale(player.view.xScale)
-//            foot1.alpha = 0.6
-//            foot1.configLightningMask(mask: LightMask.DEFAULT)
+            footprint.name = "footprint"
+            footprint.color = .yellow
+            footprint.colorBlendFactor = 1
+            footprint.blendMode = .add
+            footprint.position = player.position
             
-//            foot2.alpha = 0.4
-//            foot2.zPosition = ZPosition.FOOTPRINT2
-//            foot2.configLightningMask(mask: LightMask.DEFAULT)
-            
-            self.parent.addChild(foot1)
-//            foot1.addChild(foot2)
+            for node in (self.parent as! GameScene).nodes(at: footprint.position){
+                if node.name == "footprint" {
+                    node.removeFromParent()
+                }
+            }
+            footprint.zPosition = ZPosition.FOOTPRINT1
+            footprint.zRotation = player.view.zRotation
+            footprint.setScale(player.view.xScale)
+
+            self.parent.addChild(footprint)
             
             let fade = SKAction.sequence([.wait(forDuration: 5), .fadeAlpha(to: 0, duration: 0.5), .removeFromParent()])
-            foot1.run(fade)
-//            foot2.run(fade)
+            footprint.run(fade)
         }
         
-        parent.run(.repeatForever(.sequence([delay, footPrint])))
+        parent.run(.repeatForever(.sequence([footPrint, delay])))
     }
 }
