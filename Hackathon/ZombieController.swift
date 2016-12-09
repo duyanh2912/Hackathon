@@ -72,7 +72,9 @@ class ZombieController: Controller {
             self.view.headToward(PlayerController.instance.position, spriteAngle: CGFloat.pi / 2, speed: self.SPEED)
         }
     }
+    
     func stopMoving(){
+        view.physicsBody?.isResting = true
         move = {}
         self.view.run(SKAction.wait(forDuration: 5)){[unowned self] in
             self.configMove()

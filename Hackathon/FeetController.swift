@@ -68,6 +68,6 @@ class FeetController: Controller {
             footprint.run(fade)
         }
         
-        parent.run(.repeatForever(.sequence([footPrint, delay])))
+        parent.run(.repeatForever(.sequence([delay, footPrint])))
     }
 }

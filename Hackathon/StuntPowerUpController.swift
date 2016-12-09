@@ -8,7 +8,7 @@
 
 import Foundation
 import SpriteKit
-class GiftController: Controller{
+class StuntPowerUpController: Controller{
     func config() {
         view.physicsBody = SKPhysicsBody(rectangleOf: view.size)
         view.physicsBody?.categoryBitMask = BitMasks.GIFT
@@ -19,12 +19,13 @@ class GiftController: Controller{
         configHandleContact()
     }
     func configHandleContact() {
-        view.handleContact = { [unowned self] other in
-            if other.physicsBody?.categoryBitMask == BitMasks.PLAYER {
-                self.view.removeFromParent()
-                for node in (self.parent as! GameScene).zombieControllers{
-                    node.stopMoving()
-                }
+        view.handleContact = { [unowned view = self.view!, unowned parent = self.parent as! GameScene] other in
+            view.removeFromParent()
+            for node in parent.zombieControllers{
+                node.stopMoving()
+            }
+            for node in parent.smartZombieControllers {
+                node.stopMoving()
             }
         }
     }
