@@ -54,6 +54,7 @@
 		50FDED651DE8315C00054F59 /* Glow.sks in Resources */ = {isa = PBXBuildFile; fileRef = 50FDED641DE8315C00054F59 /* Glow.sks */; };
 		50FE5E741DF20AC700772C4C /* Level2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE5E731DF20AC700772C4C /* Level2.swift */; };
 		639521881DFB179D0086E203 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639521871DFB179C0086E203 /* Timer.swift */; };
+		63C327331DFB563A0025AB23 /* GiftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C327321DFB563A0025AB23 /* GiftController.swift */; };
 		63FE5EA31DEAED420014347C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FE5EA21DEAED420014347C /* Constant.swift */; };
 		63FE5EA51DEAED640014347C /* ExitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FE5EA41DEAED640014347C /* ExitController.swift */; };
 		63FE5EA71DEAED710014347C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FE5EA61DEAED710014347C /* GameScene.swift */; };
@@ -111,6 +112,7 @@
 		50FDED641DE8315C00054F59 /* Glow.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Glow.sks; sourceTree = "<group>"; };
 		50FE5E731DF20AC700772C4C /* Level2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level2.swift; sourceTree = "<group>"; };
 		639521871DFB179C0086E203 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		63C327321DFB563A0025AB23 /* GiftController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftController.swift; sourceTree = "<group>"; };
 		63FE5EA21DEAED420014347C /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		63FE5EA41DEAED640014347C /* ExitController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExitController.swift; sourceTree = "<group>"; };
 		63FE5EA61DEAED710014347C /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				63FE5EA41DEAED640014347C /* ExitController.swift */,
 				63FE5EA81DEAED830014347C /* PlayerController.swift */,
 				5089FBFD1DE7CBFB004A41FE /* FeetController.swift */,
+				63C327321DFB563A0025AB23 /* GiftController.swift */,
 				50501C7F1DE43475007301E4 /* ZombieController.swift */,
 				501F0E211DE74C5800F0A686 /* WallController.swift */,
 				503E62A91DE83EE0009BCF47 /* HandgunController.swift */,
@@ -382,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				508FA49A1DF9A5B7004098BD /* UIButton.swift in Sources */,
+				63C327331DFB563A0025AB23 /* GiftController.swift in Sources */,
 				503E62AA1DE83EE0009BCF47 /* HandgunController.swift in Sources */,
 				5089FBFE1DE7CBFC004A41FE /* FeetController.swift in Sources */,
 				505FCA731DF68FE70092ABCB /* CGSize.swift in Sources */,
