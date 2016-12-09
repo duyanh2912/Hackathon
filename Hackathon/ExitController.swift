@@ -23,6 +23,7 @@ class ExitController: Controller {
         view.handleContact = { [unowned parent = (self.parent as! SKScene)]
             other in
             WinScene.present(view: parent.view!)
+            
         }
         
         view.configLightningMask(mask: LightMask.DEFAULT)
