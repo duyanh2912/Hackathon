@@ -23,6 +23,7 @@ struct BitMasks {
     static let HANDGUN: UInt32 = 1 << 3
     static let BULLET: UInt32 = 1 << 4
     static let EXIT: UInt32 = 1 << 5
+    static let STATUE: UInt32 = 1 << 6
 }
 
 struct LightMask {

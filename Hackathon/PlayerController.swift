@@ -74,7 +74,7 @@ class PlayerController: Controller {
         view.physicsBody?.allowsRotation = true
         
         view.physicsBody?.categoryBitMask = BitMasks.PLAYER
-        view.physicsBody?.collisionBitMask = BitMasks.WALL
+        view.physicsBody?.collisionBitMask = BitMasks.WALL | BitMasks.STATUE
         view.physicsBody?.contactTestBitMask = BitMasks.ZOMBIE
     
         configHandleContact()

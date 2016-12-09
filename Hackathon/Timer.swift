@@ -35,7 +35,7 @@ extension Timer where Self: GameScene{
             self.currentTime = self.currentTime - 1;
             labelTime.text = "Time: \(self.currentTime!)"
         }
-        let runTime = SKAction.sequence([SKAction.wait(forDuration: 3), count])
+        let runTime = SKAction.sequence([SKAction.wait(forDuration: 1), count])
         self.run(SKAction.repeatForever(runTime))
         
     }

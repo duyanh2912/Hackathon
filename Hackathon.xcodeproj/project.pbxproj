@@ -42,6 +42,7 @@
 		50BD53651DE35476005A5B55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50BD53631DE35476005A5B55 /* Main.storyboard */; };
 		50BD53671DE35477005A5B55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BD53661DE35477005A5B55 /* Assets.xcassets */; };
 		50BD536A1DE35477005A5B55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50BD53681DE35477005A5B55 /* LaunchScreen.storyboard */; };
+		50C159D31DFB399D009656F2 /* StatueZombieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C159D21DFB399D009656F2 /* StatueZombieController.swift */; };
 		50CB9E5B1DEAFF3B00271641 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 50CB9E5A1DEAFF3B00271641 /* background.mp3 */; };
 		50CB9E611DEB025500271641 /* handgun_fire.wav in Resources */ = {isa = PBXBuildFile; fileRef = 50CB9E601DEB025500271641 /* handgun_fire.wav */; };
 		50CB9E631DEB06CE00271641 /* zombie_moan.wav in Resources */ = {isa = PBXBuildFile; fileRef = 50CB9E621DEB06CE00271641 /* zombie_moan.wav */; };
@@ -98,6 +99,7 @@
 		50BD53661DE35477005A5B55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50BD53691DE35477005A5B55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50BD536B1DE35477005A5B55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50C159D21DFB399D009656F2 /* StatueZombieController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatueZombieController.swift; sourceTree = "<group>"; };
 		50CB9E5A1DEAFF3B00271641 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
 		50CB9E601DEB025500271641 /* handgun_fire.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = handgun_fire.wav; sourceTree = "<group>"; };
 		50CB9E621DEB06CE00271641 /* zombie_moan.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = zombie_moan.wav; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				503E62A91DE83EE0009BCF47 /* HandgunController.swift */,
 				503E62AB1DE84862009BCF47 /* BulletController.swift */,
 				50A3AC151DF1222F00490730 /* SmartZombieController.swift */,
+				50C159D21DFB399D009656F2 /* StatueZombieController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				503E62AA1DE83EE0009BCF47 /* HandgunController.swift in Sources */,
 				5089FBFE1DE7CBFC004A41FE /* FeetController.swift in Sources */,
 				505FCA731DF68FE70092ABCB /* CGSize.swift in Sources */,
+				50C159D31DFB399D009656F2 /* StatueZombieController.swift in Sources */,
 				505FCA781DF68FE70092ABCB /* SKTextureAtlas.swift in Sources */,
 				639521881DFB179D0086E203 /* Timer.swift in Sources */,
 				505FCA701DF68FE70092ABCB /* CGFloat.swift in Sources */,

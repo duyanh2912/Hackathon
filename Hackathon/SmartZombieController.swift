@@ -20,20 +20,22 @@ class SmartZombieController: ZombieController {
         move()
     }
     
-    override func move() {
-        guard view != nil else { return }
-        guard currentTargetNodeIndex < pathNodes.count else {
-            view.physicsBody?.isResting = true
+    override func configMove() {
+        move = {
+        guard self.view != nil else { return }
+        guard self.currentTargetNodeIndex < self.pathNodes.count else {
+            self.view.physicsBody?.isResting = true
             return
         }
         
-        let dx = pathNodes[currentTargetNodeIndex].x - self.position.x
-        let dy = pathNodes[currentTargetNodeIndex].y - self.position.y
-        if !(abs(dx) > width / 8 || abs(dy) > height / 8) {
-            currentTargetNodeIndex += 1
+        let dx = self.pathNodes[self.currentTargetNodeIndex].x - self.position.x
+        let dy = self.pathNodes[self.currentTargetNodeIndex].y - self.position.y
+            if !(abs(dx) > self.width / 8 || abs(dy) > self.height / 8) {
+            self.currentTargetNodeIndex += 1
         }
        
-        view.headToward(pathNodes[currentTargetNodeIndex], spriteAngle: CGFloat.pi / 2, speed: SPEED)
+        self.view.headToward(self.pathNodes[self.currentTargetNodeIndex], spriteAngle: CGFloat.pi / 2, speed: self.SPEED)
+        }
     }
     
     override func configHandleContact() {
