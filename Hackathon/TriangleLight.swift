@@ -19,7 +19,7 @@ extension TriangleLight where Self: GameScene {
     
         let triangle = SKSpriteNode(texture: Textures.TRIANGLE)
         triangle.setScale(2)
-        triangle.position = CGPoint(x: -142, y: 0)
+        triangle.position = CGPoint(x: -220, y: 0)
         triangle.zPosition = -3
         
         playerController.view.addChild(triangle)
