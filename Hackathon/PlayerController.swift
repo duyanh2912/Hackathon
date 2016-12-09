@@ -62,17 +62,13 @@ class PlayerController: Controller {
     // Dùng hàm set() thay cho init()
     override init(view: View, parent: SKNode) {
         super.init(view: view, parent: parent)
-        
-        self.feetController = FeetController(
-            view: view.childNode(withName: "feet") as! View,
-            parent: parent
-        )
-        feetController.timePerFrame = self.timePerFrame
-        feetController.config(moveType: .walk)
     }
     
     // Chỉnh physics + lightning
     func config() {
+        configFeet()
+        view.zPosition = ZPosition.PLAYER
+        
         view.physicsBody = SKPhysicsBody(circleOfRadius: view.size.height / 2 * 0.7)
         view.physicsBody?.restitution = 0
         view.physicsBody?.allowsRotation = true
@@ -87,6 +83,15 @@ class PlayerController: Controller {
         view.addChild(lightNode)
         lightNode.categoryBitMask = 1
         lightNode.falloff = 3
+    }
+    
+    func configFeet() {
+        self.feetController = FeetController(
+            view: view.childNode(withName: "feet") as! View,
+            parent: parent
+        )
+        feetController.timePerFrame = self.timePerFrame
+        feetController.config(moveType: .walk)
     }
     
     func configHandleContact() {

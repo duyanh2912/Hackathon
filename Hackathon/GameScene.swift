@@ -78,9 +78,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies {
     func configPlayer() {
         let player = self.childNode(withName: "player") as! View
         playerController = PlayerController(view: player, parent: self)
+        PlayerController.instance = playerController
         playerController.config()
         self.listener = player
-        PlayerController.instance = playerController
 //        playerController.lightNode.isEnabled = false
     }
     
@@ -107,6 +107,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies {
         
         let camera = SKCameraNode()
         camera.setScale(540 / size.width)
+        
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            camera.setScale(camera.xScale / 0.75)
+        }
+        
         self.addChild(camera)
         self.camera = camera
     }

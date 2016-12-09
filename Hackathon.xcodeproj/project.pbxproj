@@ -45,6 +45,7 @@
 		50CB9E5B1DEAFF3B00271641 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 50CB9E5A1DEAFF3B00271641 /* background.mp3 */; };
 		50CB9E611DEB025500271641 /* handgun_fire.wav in Resources */ = {isa = PBXBuildFile; fileRef = 50CB9E601DEB025500271641 /* handgun_fire.wav */; };
 		50CB9E631DEB06CE00271641 /* zombie_moan.wav in Resources */ = {isa = PBXBuildFile; fileRef = 50CB9E621DEB06CE00271641 /* zombie_moan.wav */; };
+		50D88FC41DFB1A47007C61A5 /* Footstep.sks in Resources */ = {isa = PBXBuildFile; fileRef = 50D88FC31DFB1A47007C61A5 /* Footstep.sks */; };
 		50EDC22E1DE4B7FF00DA3E55 /* game_over.caf in Resources */ = {isa = PBXBuildFile; fileRef = 500052CB1DE4B5B7008B6471 /* game_over.caf */; };
 		50F357121DEAD992006F25D9 /* WinScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 50F357111DEAD992006F25D9 /* WinScene.sks */; };
 		50FDED631DE828D300054F59 /* Handgun.sks in Resources */ = {isa = PBXBuildFile; fileRef = 50FDED621DE828D300054F59 /* Handgun.sks */; };
@@ -99,6 +100,7 @@
 		50CB9E5A1DEAFF3B00271641 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
 		50CB9E601DEB025500271641 /* handgun_fire.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = handgun_fire.wav; sourceTree = "<group>"; };
 		50CB9E621DEB06CE00271641 /* zombie_moan.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = zombie_moan.wav; sourceTree = "<group>"; };
+		50D88FC31DFB1A47007C61A5 /* Footstep.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Footstep.sks; sourceTree = "<group>"; };
 		50F357111DEAD992006F25D9 /* WinScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WinScene.sks; sourceTree = "<group>"; };
 		50FDED621DE828D300054F59 /* Handgun.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Handgun.sks; sourceTree = "<group>"; };
 		50FDED641DE8315C00054F59 /* Glow.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Glow.sks; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				50A3AC111DF1212900490730 /* Level3.sks */,
 				500848191DEDCB6500C4A940 /* Boss.sks */,
 				50A3AC171DF123A000490730 /* PathFinding.swift */,
+				50D88FC31DFB1A47007C61A5 /* Footstep.sks */,
 			);
 			name = Levels;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				500052C71DE4A704008B6471 /* GameoverScene.sks in Resources */,
 				50BD53651DE35476005A5B55 /* Main.storyboard in Resources */,
 				50BD535C1DE35476005A5B55 /* Level2.sks in Resources */,
+				50D88FC41DFB1A47007C61A5 /* Footstep.sks in Resources */,
 				50BD53671DE35477005A5B55 /* Assets.xcassets in Resources */,
 				500848181DEDC45F00C4A940 /* tha_thu.wav in Resources */,
 				501FF6B41DED5E34002505C4 /* Em Cua Ngay Hom Qua - Son Tung M TP.mp3 in Resources */,

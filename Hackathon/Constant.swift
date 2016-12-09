@@ -9,7 +9,7 @@ import SpriteKit
 import Foundation
 
 let maxLevel = 3
-var currentLevel = 1
+var currentLevel = 2
 var currentLevelScene: String { return "Level\(currentLevel)" }
 
 let ACTION_KEY_ANIMATE = "animate"
@@ -61,4 +61,11 @@ struct Textures {
             "reload": HANDGUN_RELOAD
         ]
     ]
+}
+
+struct ZPosition {
+    static let PLAYER: CGFloat = 1
+    static let FEET: CGFloat = -0.1
+    static let FOOTPRINT1: CGFloat = 0.4
+    static let FOOTPRINT2: CGFloat = 0.3
 }
