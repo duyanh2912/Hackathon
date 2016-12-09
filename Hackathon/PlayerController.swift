@@ -39,7 +39,7 @@ class PlayerController: Controller {
     
     // CHILDREN
     var lightNode = SKLightNode()
-    var feetController: FeetController!
+    var feetController: FeetController?
     var shoulder: CGPoint {
         switch currentWeapon {
         case .handgun:
@@ -91,12 +91,13 @@ class PlayerController: Controller {
     }
     
     func configFeet() {
+        guard let feet = view.childNode(withName: "feet") as? View else { return }
         self.feetController = FeetController(
-            view: view.childNode(withName: "feet") as! View,
+            view: feet,
             parent: parent
         )
-        feetController.timePerFrame = self.timePerFrame
-        feetController.config(moveType: .walk)
+        feetController?.timePerFrame = self.timePerFrame
+        feetController?.config(moveType: .walk)
     }
     
     func configHandleContact() {
@@ -141,7 +142,7 @@ class PlayerController: Controller {
                     self.currentState = .idle
                     self.animate()
                 }
-                self.feetController.stop()
+                self.feetController?.stop()
                 return
             }
             
@@ -161,8 +162,8 @@ class PlayerController: Controller {
             }
             
             // Nếu feet chưa animate thì cho nó animate
-            if !self.feetController.isAnimating {
-                self.feetController.animate()
+            if self.feetController?.isAnimating == false {
+                self.feetController?.animate()
             }
         }
     }

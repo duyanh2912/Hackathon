@@ -102,7 +102,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
         PlayerController.instance = playerController
         playerController.config()
         self.listener = player
-//        playerController.lightNode.isEnabled = false
     }
     
     func configBorder() {
@@ -116,6 +115,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
     
     func configPhysics() {
         self.physicsWorld.contactDelegate = self
+        self.physicsWorld.gravity = .zero
     }
     
     func configCamera() {

@@ -8,8 +8,8 @@
 import SpriteKit
 import Foundation
 
-let maxLevel = 3
-var currentLevel = 1
+let maxLevel = 4
+var currentLevel = 4
 var currentLevelScene: String { return "Level\(currentLevel)" }
 
 let ACTION_KEY_ANIMATE = "animate"
@@ -35,6 +35,7 @@ struct Textures {
 //    static let FEET_IDLE = SKTexture(image: #imageLiteral(resourceName: "feet_idle"))
     static let BULLET = SKTexture(image: #imageLiteral(resourceName: "bullet"))
     static let TRIANGLE = SKTexture(image: #imageLiteral(resourceName: "triangle"))
+    static let SON_TUNG = SKTexture(image: #imageLiteral(resourceName: "son_tung"))
     
     static let FEET_IDLE = FEET_RUN[6]
     static let FEET_RUN = SKTextureAtlas(named: "feet_run").toTextures()

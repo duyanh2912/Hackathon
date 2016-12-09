@@ -11,7 +11,7 @@
 		500052C71DE4A704008B6471 /* GameoverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 500052C51DE4A704008B6471 /* GameoverScene.sks */; };
 		500052C91DE4A86E008B6471 /* SoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500052C81DE4A86E008B6471 /* SoundController.swift */; };
 		500848181DEDC45F00C4A940 /* tha_thu.wav in Resources */ = {isa = PBXBuildFile; fileRef = 500848171DEDC45F00C4A940 /* tha_thu.wav */; };
-		5008481A1DEDCB6500C4A940 /* Boss.sks in Resources */ = {isa = PBXBuildFile; fileRef = 500848191DEDCB6500C4A940 /* Boss.sks */; };
+		5008481A1DEDCB6500C4A940 /* Level4.sks in Resources */ = {isa = PBXBuildFile; fileRef = 500848191DEDCB6500C4A940 /* Level4.sks */; };
 		501F0E221DE74C5800F0A686 /* WallController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501F0E211DE74C5800F0A686 /* WallController.swift */; };
 		501FF6B41DED5E34002505C4 /* Em Cua Ngay Hom Qua - Son Tung M TP.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 501FF6B31DED5E34002505C4 /* Em Cua Ngay Hom Qua - Son Tung M TP.mp3 */; };
 		503E62AA1DE83EE0009BCF47 /* HandgunController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503E62A91DE83EE0009BCF47 /* HandgunController.swift */; };
@@ -30,6 +30,8 @@
 		505FCA781DF68FE70092ABCB /* SKTextureAtlas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FCA6F1DF68FE70092ABCB /* SKTextureAtlas.swift */; };
 		506F48611DEDD9AE00F2F95B /* Level1.sks in Resources */ = {isa = PBXBuildFile; fileRef = 506F48601DEDD9AE00F2F95B /* Level1.sks */; };
 		5089FBFE1DE7CBFC004A41FE /* FeetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5089FBFD1DE7CBFB004A41FE /* FeetController.swift */; };
+		508BEDD71DFB6FF200EA471B /* Level4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508BEDD61DFB6FF200EA471B /* Level4.swift */; };
+		508BEDD91DFB74C400EA471B /* SpecialPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508BEDD81DFB74C400EA471B /* SpecialPlayerController.swift */; };
 		508FA49A1DF9A5B7004098BD /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FA4991DF9A5B7004098BD /* UIButton.swift */; };
 		50A3AC0E1DEDDFFB00490730 /* Level1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3AC0D1DEDDFFB00490730 /* Level1.swift */; };
 		50A3AC121DF1212900490730 /* Level3.sks in Resources */ = {isa = PBXBuildFile; fileRef = 50A3AC111DF1212900490730 /* Level3.sks */; };
@@ -68,7 +70,7 @@
 		500052C81DE4A86E008B6471 /* SoundController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundController.swift; sourceTree = "<group>"; };
 		500052CB1DE4B5B7008B6471 /* game_over.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = game_over.caf; sourceTree = "<group>"; };
 		500848171DEDC45F00C4A940 /* tha_thu.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tha_thu.wav; sourceTree = "<group>"; };
-		500848191DEDCB6500C4A940 /* Boss.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Boss.sks; sourceTree = "<group>"; };
+		500848191DEDCB6500C4A940 /* Level4.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level4.sks; sourceTree = "<group>"; };
 		501F0E211DE74C5800F0A686 /* WallController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallController.swift; sourceTree = "<group>"; };
 		501FF6B31DED5E34002505C4 /* Em Cua Ngay Hom Qua - Son Tung M TP.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Em Cua Ngay Hom Qua - Son Tung M TP.mp3"; sourceTree = "<group>"; };
 		503E62A91DE83EE0009BCF47 /* HandgunController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandgunController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,8 @@
 		505FCA6F1DF68FE70092ABCB /* SKTextureAtlas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTextureAtlas.swift; sourceTree = "<group>"; };
 		506F48601DEDD9AE00F2F95B /* Level1.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level1.sks; sourceTree = "<group>"; };
 		5089FBFD1DE7CBFB004A41FE /* FeetController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeetController.swift; sourceTree = "<group>"; };
+		508BEDD61DFB6FF200EA471B /* Level4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level4.swift; sourceTree = "<group>"; };
+		508BEDD81DFB74C400EA471B /* SpecialPlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialPlayerController.swift; sourceTree = "<group>"; };
 		508FA4991DF9A5B7004098BD /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		50A3AC0D1DEDDFFB00490730 /* Level1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level1.swift; sourceTree = "<group>"; };
 		50A3AC111DF1212900490730 /* Level3.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level3.sks; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 				503E62AB1DE84862009BCF47 /* BulletController.swift */,
 				50A3AC151DF1222F00490730 /* SmartZombieController.swift */,
 				50C159D21DFB399D009656F2 /* StatueZombieController.swift */,
+				508BEDD81DFB74C400EA471B /* SpecialPlayerController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -207,7 +212,8 @@
 				50BD535B1DE35476005A5B55 /* Level2.sks */,
 				50A3AC131DF121C100490730 /* Level3.swift */,
 				50A3AC111DF1212900490730 /* Level3.sks */,
-				500848191DEDCB6500C4A940 /* Boss.sks */,
+				508BEDD61DFB6FF200EA471B /* Level4.swift */,
+				500848191DEDCB6500C4A940 /* Level4.sks */,
 				50D88FC31DFB1A47007C61A5 /* Footstep.sks */,
 			);
 			name = Levels;
@@ -371,7 +377,7 @@
 				50F357121DEAD992006F25D9 /* WinScene.sks in Resources */,
 				50BD536A1DE35477005A5B55 /* LaunchScreen.storyboard in Resources */,
 				50CB9E631DEB06CE00271641 /* zombie_moan.wav in Resources */,
-				5008481A1DEDCB6500C4A940 /* Boss.sks in Resources */,
+				5008481A1DEDCB6500C4A940 /* Level4.sks in Resources */,
 				50FDED631DE828D300054F59 /* Handgun.sks in Resources */,
 				50A3AC121DF1212900490730 /* Level3.sks in Resources */,
 			);
@@ -388,6 +394,7 @@
 				63C327331DFB563A0025AB23 /* StuntPowerUpController.swift in Sources */,
 				503E62AA1DE83EE0009BCF47 /* HandgunController.swift in Sources */,
 				5089FBFE1DE7CBFC004A41FE /* FeetController.swift in Sources */,
+				508BEDD91DFB74C400EA471B /* SpecialPlayerController.swift in Sources */,
 				505FCA731DF68FE70092ABCB /* CGSize.swift in Sources */,
 				50C159D31DFB399D009656F2 /* StatueZombieController.swift in Sources */,
 				505FCA781DF68FE70092ABCB /* SKTextureAtlas.swift in Sources */,
@@ -411,6 +418,7 @@
 				500052C61DE4A704008B6471 /* GameoverScene.swift in Sources */,
 				50A3AC161DF1222F00490730 /* SmartZombieController.swift in Sources */,
 				503E62AC1DE84862009BCF47 /* BulletController.swift in Sources */,
+				508BEDD71DFB6FF200EA471B /* Level4.swift in Sources */,
 				505FCA711DF68FE70092ABCB /* CGPoint.swift in Sources */,
 				505FCA771DF68FE70092ABCB /* SKSpriteNode.swift in Sources */,
 				50501C7C1DE42059007301E4 /* Controller.swift in Sources */,
