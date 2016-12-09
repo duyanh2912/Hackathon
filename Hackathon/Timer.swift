@@ -16,17 +16,21 @@ protocol Timer {
 }
 extension Timer where Self: GameScene{
     func configTimer(){
-        currentTime = 0;
-        let count = SKAction.run {
+        currentTime = 0
+        let labelTime = SKLabelNode()
+        labelTime.fontSize = 65;
+        labelTime.color = UIColor.darkGray
+        labelTime.verticalAlignmentMode = .top
+        labelTime.position = CGPoint(x: 0, y: self.size.height / 2 - 50)
+        labelTime.text = "Time: \(self.currentTime!)"
+        self.camera?.addChild(labelTime)
+        
+        let count = SKAction.run { [unowned self] in
             self.currentTime = self.currentTime + 1;
+            labelTime.text = "Time: \(self.currentTime!)"
         }
-        let runTime = SKAction.sequence([count, SKAction.wait(forDuration: 1)])
+        let runTime = SKAction.sequence([SKAction.wait(forDuration: 1), count])
         self.run(SKAction.repeatForever(runTime))
-        let labelTime = SKLabelNode(fileNamed: "labelTime")
-        labelTime?.fontSize = 65;
-        labelTime?.color = UIColor.darkGray
-        labelTime?.position = CGPoint(x: 0, y: self.size.height)
-        labelTime?.text = "Time:  /(self.currentTime)"
-        self.camera?.addChild(labelTime!)
+        
     }
 }

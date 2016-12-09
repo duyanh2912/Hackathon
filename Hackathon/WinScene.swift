@@ -9,7 +9,7 @@ import SpriteKit
 import Foundation
 
 class WinScene: SKScene {
-    var finalTime: Int!
+    var score: Int!
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let location = touches.first?.location(in: self) else { return }
         
@@ -32,7 +32,7 @@ class WinScene: SKScene {
         for node in nodes(at: location) {
             if node.name == "score" {
                 let label = node as! SKLabelNode
-                label.text = "Score: /(finalTime)"
+                label.text = "Score: \(score)"
                 
             }
         }
@@ -43,7 +43,7 @@ class WinScene: SKScene {
                 winScene.size = CGSize(width: winScene.size.width, height: winScene.size.width * 1024 / 768)
             }
             winScene.scaleMode = .aspectFill
-            (winScene as! WinScene).finalTime = (view.scene as! Timer).currentTime
+            (winScene as! WinScene).score = 100 - (view.scene as! Timer).currentTime * 1 / 3
             view.presentScene(winScene)
         }
     }
