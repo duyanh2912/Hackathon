@@ -18,8 +18,8 @@ extension Timer where Self: GameScene{
     func configTimer(){
         currentTime = 100
         let labelTime = SKLabelNode()
-        labelTime.fontSize = 65;
-        labelTime.fontName = "Arial"
+        labelTime.fontSize = 65
+        labelTime.fontName = "Papyrus"
         labelTime.color = UIColor.darkGray
         labelTime.verticalAlignmentMode = .top
         labelTime.position = CGPoint(x: 0, y: self.size.height / 2 - 50)
