@@ -33,6 +33,7 @@ struct LightMask {
 struct Textures {
 //    static let FEET_IDLE = SKTexture(image: #imageLiteral(resourceName: "feet_idle"))
     static let BULLET = SKTexture(image: #imageLiteral(resourceName: "bullet"))
+    static let TRIANGLE = SKTexture(image: #imageLiteral(resourceName: "triangle"))
     
     static let FEET_IDLE = FEET_RUN[6]
     static let FEET_RUN = SKTextureAtlas(named: "feet_run").toTextures()
@@ -65,8 +66,8 @@ struct Textures {
 }
 
 struct ZPosition {
-    static let PLAYER: CGFloat = 1
+    static let PLAYER: CGFloat = 10
     static let FEET: CGFloat = -0.1
-    static let FOOTPRINT1: CGFloat = 0.4
-    static let FOOTPRINT2: CGFloat = 0.3
+    static let FOOTPRINT1: CGFloat = 9.5
+    static let FOOTPRINT2: CGFloat = 9.4
 }

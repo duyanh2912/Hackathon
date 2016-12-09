@@ -24,7 +24,7 @@ extension Timer where Self: GameScene{
         labelTime.verticalAlignmentMode = .top
         labelTime.position = CGPoint(x: 0, y: self.size.height / 2 - 50)
         labelTime.text = "Time: \(self.currentTime!)"
-        labelTime.zPosition = 10
+        labelTime.zPosition = 11
         self.camera?.addChild(labelTime)
         
         let count = SKAction.run { [unowned self] in

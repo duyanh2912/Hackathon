@@ -43,6 +43,7 @@
 		50BD53671DE35477005A5B55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BD53661DE35477005A5B55 /* Assets.xcassets */; };
 		50BD536A1DE35477005A5B55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50BD53681DE35477005A5B55 /* LaunchScreen.storyboard */; };
 		50C159D31DFB399D009656F2 /* StatueZombieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C159D21DFB399D009656F2 /* StatueZombieController.swift */; };
+		50C159D61DFB44BA009656F2 /* TriangleLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C159D51DFB44BA009656F2 /* TriangleLight.swift */; };
 		50CB9E5B1DEAFF3B00271641 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 50CB9E5A1DEAFF3B00271641 /* background.mp3 */; };
 		50CB9E611DEB025500271641 /* handgun_fire.wav in Resources */ = {isa = PBXBuildFile; fileRef = 50CB9E601DEB025500271641 /* handgun_fire.wav */; };
 		50CB9E631DEB06CE00271641 /* zombie_moan.wav in Resources */ = {isa = PBXBuildFile; fileRef = 50CB9E621DEB06CE00271641 /* zombie_moan.wav */; };
@@ -100,6 +101,7 @@
 		50BD53691DE35477005A5B55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50BD536B1DE35477005A5B55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50C159D21DFB399D009656F2 /* StatueZombieController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatueZombieController.swift; sourceTree = "<group>"; };
+		50C159D51DFB44BA009656F2 /* TriangleLight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleLight.swift; sourceTree = "<group>"; };
 		50CB9E5A1DEAFF3B00271641 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
 		50CB9E601DEB025500271641 /* handgun_fire.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = handgun_fire.wav; sourceTree = "<group>"; };
 		50CB9E621DEB06CE00271641 /* zombie_moan.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = zombie_moan.wav; sourceTree = "<group>"; };
@@ -203,7 +205,6 @@
 				50A3AC131DF121C100490730 /* Level3.swift */,
 				50A3AC111DF1212900490730 /* Level3.sks */,
 				500848191DEDCB6500C4A940 /* Boss.sks */,
-				50A3AC171DF123A000490730 /* PathFinding.swift */,
 				50D88FC31DFB1A47007C61A5 /* Footstep.sks */,
 			);
 			name = Levels;
@@ -221,7 +222,6 @@
 			isa = PBXGroup;
 			children = (
 				63FE5EA61DEAED710014347C /* GameScene.swift */,
-				639521871DFB179C0086E203 /* Timer.swift */,
 				50FDED621DE828D300054F59 /* Handgun.sks */,
 				500052C41DE4A704008B6471 /* GameoverScene.swift */,
 				500052C51DE4A704008B6471 /* GameoverScene.sks */,
@@ -229,6 +229,7 @@
 				63FE5EAA1DEAED930014347C /* WinScene.swift */,
 				50F357111DEAD992006F25D9 /* WinScene.sks */,
 				506F485F1DEDD97200F2F95B /* Levels */,
+				50C159D41DFB4468009656F2 /* Protocols */,
 			);
 			name = Scene;
 			sourceTree = "<group>";
@@ -266,6 +267,16 @@
 				50BD536B1DE35477005A5B55 /* Info.plist */,
 			);
 			path = Hackathon;
+			sourceTree = "<group>";
+		};
+		50C159D41DFB4468009656F2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				639521871DFB179C0086E203 /* Timer.swift */,
+				50A3AC171DF123A000490730 /* PathFinding.swift */,
+				50C159D51DFB44BA009656F2 /* TriangleLight.swift */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 		50EDC22F1DE4B8BD00DA3E55 /* Sounds */ = {
@@ -390,6 +401,7 @@
 				63FE5EAB1DEAED930014347C /* WinScene.swift in Sources */,
 				505FCA751DF68FE70092ABCB /* GKGraphNode2D.swift in Sources */,
 				501F0E221DE74C5800F0A686 /* WallController.swift in Sources */,
+				50C159D61DFB44BA009656F2 /* TriangleLight.swift in Sources */,
 				500052C91DE4A86E008B6471 /* SoundController.swift in Sources */,
 				50BD535A1DE35475005A5B55 /* AppDelegate.swift in Sources */,
 				500052C61DE4A704008B6471 /* GameoverScene.swift in Sources */,

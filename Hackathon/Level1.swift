@@ -8,7 +8,14 @@
 import SpriteKit
 import Foundation
 
-class Level1: GameScene {
+class Level1: GameScene, TriangleLight {
+    var isUsingTriangeLight: Bool = true
+    
+    override func didMove(to view: SKView) {
+        super.didMove(to: view)
+        configTriangeLight()
+    }
+    
     override func configZombies() {
         enumerateChildNodes(withName: "zombie") { [unowned self]
             (node, stop) in
