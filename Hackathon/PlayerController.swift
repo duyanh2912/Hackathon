@@ -57,6 +57,9 @@ class PlayerController: Controller {
         }
     }
     
+    // ACTION
+    var move: (() -> ())!
+    
     // FUNCTIONS
     
     // Dùng hàm set() thay cho init()
@@ -83,6 +86,8 @@ class PlayerController: Controller {
         view.addChild(lightNode)
         lightNode.categoryBitMask = 1
         lightNode.falloff = 3
+        
+        configMove()
     }
     
     func configFeet() {
@@ -122,42 +127,52 @@ class PlayerController: Controller {
     }
     
     // Hàm move() đc gọi trong update của GameScene
-    func move() {
-        
-        // Nếu người chơi chưa chạm tay vào màn hình (touchLocation == nil) thì return luôn
-        guard let destination = touchLocation else { return }
-        let dx = destination.x - position.x
-        let dy = destination.y - position.y
-        
-        // Khi player đến đủ gần touchLocation thì dừng việc chuyển động lại
-        guard abs(dx) > width / 8 || abs(dy) > height / 8  else {
-            view.physicsBody?.isResting = true
-            if currentState == .move {
-                currentState = .idle
-                animate()
+    func configMove() {
+        move = {
+            // Nếu người chơi chưa chạm tay vào màn hình (touchLocation == nil) thì return luôn
+            guard let destination = self.touchLocation else { return }
+            let dx = destination.x - self.position.x
+            let dy = destination.y - self.position.y
+            
+            // Khi player đến đủ gần touchLocation thì dừng việc chuyển động lại
+            guard abs(dx) > self.width / 8 || abs(dy) > self.height / 8  else {
+                self.view.physicsBody?.isResting = true
+                if self.currentState == .move {
+                    self.currentState = .idle
+                    self.animate()
+                }
+                self.feetController.stop()
+                return
             }
-            feetController.stop()
-            return
+            
+            // Xoay player về phía touchLocation
+            let angle = CGFloat.angleHeadTowardDestination(current: self.position, destination: destination, spriteAngle: 0)
+            self.view.zRotation = angle
+            
+            // Gắn vector vận tốc cho player
+            var vector = CGVector(dx: dx, dy: dy)
+            vector = vector.scale(by: self.SPEED / destination.distance(to: self.position))
+            self.view.physicsBody?.velocity = vector
+            self.view.physicsBody?.angularVelocity = 0
+            
+            if self.currentState == .idle {
+                self.currentState = .move
+                self.animate()
+            }
+            
+            // Nếu feet chưa animate thì cho nó animate
+            if !self.feetController.isAnimating {
+                self.feetController.animate()
+            }
         }
-        
-        // Xoay player về phía touchLocation
-        let angle = CGFloat.angleHeadTowardDestination(current: self.position, destination: destination, spriteAngle: 0)
-        view.zRotation = angle
-        
-        // Gắn vector vận tốc cho player
-        var vector = CGVector(dx: dx, dy: dy)
-        vector = vector.scale(by: SPEED / destination.distance(to: position))
-        view.physicsBody?.velocity = vector
-        view.physicsBody?.angularVelocity = 0
-        
-        if currentState == .idle {
-            currentState = .move
-            self.animate()
-        }
-        
-        // Nếu feet chưa animate thì cho nó animate
-        if !feetController.isAnimating {
-            feetController.animate()
+    }
+    
+    // Gọi hàm nếu muốn player dừng lại trong 1 khoảng thời gian nào đó
+    func stopMoving(duration: Double) {
+        view.physicsBody?.isResting = true
+        move = {}
+        self.view.run(SKAction.wait(forDuration: duration)){[unowned self] in
+            self.configMove()
         }
     }
     

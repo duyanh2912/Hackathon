@@ -59,8 +59,9 @@ class ZombieController: Controller {
         }
     }
     
+    
     func configMove() {
-            move = { [unowned self, unowned player = PlayerController.instance!] in
+        move = { [unowned self, unowned player = PlayerController.instance!] in
             guard self.view != nil else { return }
             let dx = player.position.x - self.position.x
             let dy = player.position.y - self.position.y
@@ -73,10 +74,11 @@ class ZombieController: Controller {
         }
     }
     
-    func stopMoving(){
+    // Gọi hàm nếu muốn zombie dừng lại trong 1 khoảng thời gian nào đó
+    func stopMoving(duration: Double){
         view.physicsBody?.isResting = true
         move = {}
-        self.view.run(SKAction.wait(forDuration: 5)){[unowned self] in
+        self.view.run(SKAction.wait(forDuration: duration)){[unowned self] in
             self.configMove()
         }
     }
