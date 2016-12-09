@@ -25,6 +25,7 @@ struct BitMasks {
     static let EXIT: UInt32 = 1 << 5
     static let STATUE: UInt32 = 1 << 6
     static let GIFT: UInt32 = 1 << 7
+    static let TRAP: UInt32 = 1 << 8
 }
 
 struct LightMask {

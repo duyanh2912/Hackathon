@@ -105,6 +105,9 @@ class PlayerController: Controller {
             if other.physicsBody?.categoryBitMask == BitMasks.ZOMBIE {
                 self.gameOver()
             }
+            if other.physicsBody?.categoryBitMask == BitMasks.TRAP {
+                self.stopMoving(duration: 2)
+            }
         }
     }
     
