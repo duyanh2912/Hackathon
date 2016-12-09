@@ -13,7 +13,7 @@ class WinScene: SKScene {
     override func didMove(to view: SKView) {
             if let node = childNode(withName: "score") {
                 let label = node as! SKLabelNode
-                label.text = "Score: \(score)"
+                label.text = "Score: \(score!)"
                 
             }
     }
@@ -45,7 +45,7 @@ class WinScene: SKScene {
                 winScene.size = CGSize(width: winScene.size.width, height: winScene.size.width * 1024 / 768)
             }
             winScene.scaleMode = .aspectFill
-            (winScene as! WinScene).score = (view.scene as! Timer).currentTime 
+            (winScene as! WinScene).score = (view.scene as! Timer).currentTime!
             view.presentScene(winScene)
         }
     }
