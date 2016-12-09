@@ -16,6 +16,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
     var zombieControllers = [ZombieController]()
     var statueZombieControllers = [StatueZombieController]()
     var wallControllers = [WallController]()
+    var giftControllers = [GiftController]()
     static var audioPlayer: AVAudioPlayer?
     
     // Smart Zombies Properties
@@ -42,6 +43,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
         configStatueZombies()
         configCamera()
         configTimer()
+        configGifts()
     }
     
     func configBackground() {
@@ -77,7 +79,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
             }
         }
     }
-    
+    func configGifts(){
+        for node in children {
+            if node.name == "gift" {
+                let gift = GiftController(view: node as! View, parent: self)
+                gift.config()
+                giftControllers.append(gift)
+            }
+        }
+    }
     func configStatueZombies() {
         for node in self["//statueZombie"] {
             let zombie = StatueZombieController(view: node as! View, parent: self)
