@@ -10,6 +10,14 @@ import Foundation
 
 class WinScene: SKScene {
     var score: Int!
+    override func didMove(to view: SKView) {
+            if let node = childNode(withName: "score") {
+                let label = node as! SKLabelNode
+                label.text = "Score: \(score)"
+                
+            }
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let location = touches.first?.location(in: self) else { return }
         
@@ -29,13 +37,7 @@ class WinScene: SKScene {
                 }
             }
         }
-        for node in nodes(at: location) {
-            if node.name == "score" {
-                let label = node as! SKLabelNode
-                label.text = "Score: \(score)"
-                
-            }
-        }
+    
     }
     static func present(view: SKView) {
         if let winScene = SKScene(fileNamed: "WinScene") {

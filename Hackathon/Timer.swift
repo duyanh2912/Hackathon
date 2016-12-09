@@ -28,6 +28,10 @@ extension Timer where Self: GameScene{
         self.camera?.addChild(labelTime)
         
         let count = SKAction.run { [unowned self] in
+            if self.currentTime == 0 {
+                GameoverScene.present(view: self.view!)
+            }
+            
             self.currentTime = self.currentTime - 1;
             labelTime.text = "Time: \(self.currentTime!)"
         }
