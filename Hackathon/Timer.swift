@@ -21,7 +21,7 @@ extension Timer where Self: GameScene{
             self.currentTime = self.currentTime + 1;
         }
         let runTime = SKAction.sequence([count, SKAction.wait(forDuration: 1)])
-        self.run(runTime)
+        self.run(SKAction.repeatForever(runTime))
         let labelTime = SKLabelNode(fileNamed: "labelTime")
         labelTime?.fontSize = 65;
         labelTime?.color = UIColor.darkGray
