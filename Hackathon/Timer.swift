@@ -19,10 +19,12 @@ extension Timer where Self: GameScene{
         currentTime = 100
         let labelTime = SKLabelNode()
         labelTime.fontSize = 65;
+        labelTime.fontName = "Arial"
         labelTime.color = UIColor.darkGray
         labelTime.verticalAlignmentMode = .top
         labelTime.position = CGPoint(x: 0, y: self.size.height / 2 - 50)
         labelTime.text = "Time: \(self.currentTime!)"
+        labelTime.zPosition = 10
         self.camera?.addChild(labelTime)
         
         let count = SKAction.run { [unowned self] in

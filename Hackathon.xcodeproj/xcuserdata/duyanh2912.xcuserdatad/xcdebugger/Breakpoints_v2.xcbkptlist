@@ -234,11 +234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hackathon/Timer.swift"
-            timestampString = "503000150.102067"
+            timestampString = "503001553.916318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "configTimer()"
             landmarkType = "7">
          </BreakpointContent>
