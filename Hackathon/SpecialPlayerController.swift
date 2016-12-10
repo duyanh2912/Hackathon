@@ -11,6 +11,4 @@ import Foundation
 class SpecialPlayerController: PlayerController {
     override func animate(repeatForever: Bool, completion: @escaping () -> ()) {
     }
-    
-    
 }

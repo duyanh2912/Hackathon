@@ -45,6 +45,9 @@ class SmartZombieController: ZombieController {
                 zombieControllers.remove(at: index)
                 (parent as! GameScene).smartZombieControllers = zombieControllers
             }
+            if other.physicsBody?.categoryBitMask == BitMasks.TRAP {
+                self.view.removeFromParent()
+            }
         }
     }
 }
