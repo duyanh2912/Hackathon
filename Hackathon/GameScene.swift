@@ -56,6 +56,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
         configTimer()
         configGifts()
         configTraps()
+        configBoomFirst()
     }
     
     func configBackground() {
@@ -105,6 +106,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
             if node.name == "stuntPowerUp" {
                 let gift = StuntPowerUpController(view: node as! View, parent: self)
                 gift.config()
+            }
+        }
+    }
+    func configBoomFirst() {
+        for node in children {
+            if node.name = "boomfirst" {
+                let boom = BoomFirstController(view: node as! View, parent: self)
+                boom.config()
             }
         }
     }

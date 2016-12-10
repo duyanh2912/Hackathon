@@ -9,7 +9,7 @@ import SpriteKit
 import Foundation
 
 class SuperZombieController: ZombieController {
-    func config() {
+    override func config() {
         super.config()
         configEyeRay()
     }
