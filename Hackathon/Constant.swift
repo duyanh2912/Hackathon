@@ -26,12 +26,9 @@ struct BitMasks {
     static let STATUE: UInt32 = 1 << 6
     static let GIFT: UInt32 = 1 << 7
     static let TRAP: UInt32 = 1 << 8
-<<<<<<< HEAD
-    static let EYE_RAY: UInt32 = 1 << 11
-=======
     static let BOOM: UInt32 = 1 << 9
     static let BOOMFIRST: UInt32 = 1 << 10
->>>>>>> 4f325e4bb83d047cd028248dfc83524a25e906e0
+    static let EYE_RAY: UInt32 = 1 << 11
 }
 
 struct LightMask {
