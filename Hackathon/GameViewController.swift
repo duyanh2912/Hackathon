@@ -15,6 +15,8 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        currentLevel = Int(arc4random_uniform(UInt32(maxLevel))) + 1
+        
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
             if let scene = SKScene(fileNamed: currentLevelScene) {
@@ -29,7 +31,7 @@ class GameViewController: UIViewController {
             
             view.showsFPS = true
             view.showsNodeCount = true
-           // view.showsPhysics = true
+            //view.showsPhysics = true
         }
     }
 

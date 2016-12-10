@@ -16,6 +16,7 @@ class ZombieController: Controller {
     
     var move: (() -> ())!
     func config() {
+        view.zPosition = ZPosition.ZOMBIE
         configMove()
         configPhysics()
         configHandleContact()
@@ -49,11 +50,13 @@ class ZombieController: Controller {
     func configHandleContact() {
         view.handleContact = { [unowned view = self.view!, weak parent = self.parent as? GameScene, unowned self]
             other in
-            view.removeFromParent()
-            if var zombieControllers = parent?.zombieControllers {
-                if let index = zombieControllers.index(where: {$0 === self}) {
-                    zombieControllers.remove(at: index)
-                    parent?.zombieControllers = zombieControllers
+            if other.physicsBody?.categoryBitMask == BitMasks.BULLET {
+                view.removeFromParent()
+                if var zombieControllers = parent?.zombieControllers {
+                    if let index = zombieControllers.index(where: {$0 === self}) {
+                        zombieControllers.remove(at: index)
+                        parent?.zombieControllers = zombieControllers
+                    }
                 }
             }
             if other.physicsBody?.categoryBitMask == BitMasks.TRAP  {

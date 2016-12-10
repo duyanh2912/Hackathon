@@ -10,7 +10,7 @@ import Foundation
 import SpriteKit
 class TrapController: Controller{
     func config() {
-        view.physicsBody = SKPhysicsBody(rectangleOf: view.size)
+        view.physicsBody = SKPhysicsBody(rectangleOf: view.size.scale(by: 0.25))
         view.physicsBody?.categoryBitMask = BitMasks.TRAP
         view.physicsBody?.contactTestBitMask = BitMasks.PLAYER | BitMasks.ZOMBIE
         view.physicsBody?.collisionBitMask = 0

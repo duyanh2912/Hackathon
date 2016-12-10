@@ -10,7 +10,7 @@ import Foundation
 import SpriteKit
 class StuntPowerUpController: Controller{
     func config() {
-        view.physicsBody = SKPhysicsBody(rectangleOf: view.size)
+        view.physicsBody = SKPhysicsBody(rectangleOf: view.size.scale(by: 0.25))
         view.physicsBody?.categoryBitMask = BitMasks.GIFT
         view.physicsBody?.contactTestBitMask = BitMasks.PLAYER
         view.physicsBody?.collisionBitMask = 0

@@ -5,6 +5,7 @@
 //  Created by Developer on 12/10/16.
 //  Copyright © 2016 Developer. All rights reserved.
 //
+import AVFoundation
 import SpriteKit
 import Foundation
 
@@ -14,6 +15,7 @@ class Level4: GameScene {
             if node.name == "zombie" {
                 let zombie = ZombieController(view: node as! View, parent: self)
                 zombie.audio = SKAudioNode(fileNamed: "tha_thu")
+                zombie.SPEED = 125
                 zombie.config()
                 zombieControllers.append(zombie)
             }
@@ -25,8 +27,18 @@ class Level4: GameScene {
         playerController = SpecialPlayerController(view: player, parent: self)
         PlayerController.instance = playerController
         playerController.config()
-        
         self.listener = player
-        playerController.lightNode.falloff = 2
+        playerController.lightNode.falloff = 2.5
+    }
+    
+    override func configMusic() {
+        if let path = Bundle.main.url(forResource: "Em Cua Ngay Hom Qua - Son Tung M TP", withExtension: "mp3") {
+            print("music")
+            GameScene.audioPlayer = try! AVAudioPlayer(contentsOf: path)
+            GameScene.audioPlayer?.volume = 0.75
+            GameScene.audioPlayer?.numberOfLoops = -1
+            GameScene.audioPlayer?.currentTime = 2
+            GameScene.audioPlayer?.play()
+        }
     }
 }

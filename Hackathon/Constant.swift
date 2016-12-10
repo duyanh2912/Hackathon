@@ -9,7 +9,7 @@ import SpriteKit
 import Foundation
 
 let maxLevel = 4
-var currentLevel = 4
+var currentLevel: Int = 0
 var currentLevelScene: String { return "Level\(currentLevel)" }
 
 let ACTION_KEY_ANIMATE = "animate"
@@ -74,4 +74,6 @@ struct ZPosition {
     static let FOOTPRINT: CGFloat = 9.5
     static let LIGHT_CONE: CGFloat = -0.1 // child của player
     static let TIME: CGFloat = 11
+    static let BACKGROUND: CGFloat = -10
+    static let ZOMBIE: CGFloat = 1
 }

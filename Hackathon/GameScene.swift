@@ -12,9 +12,15 @@ import GameplayKit
 class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
     var currentTime: Int! = 0
     let soundController = SoundController.sharedInstance
+    
+    // Player
     var playerController: PlayerController!
+    
+    // Các loại zombie
     var zombieControllers = [ZombieController]()
     var statueZombieControllers = [StatueZombieController]()
+    
+    // Tường
     var wallControllers = [WallController]()
     
     static var audioPlayer: AVAudioPlayer?
@@ -50,11 +56,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
     func configBackground() {
         let node = self.childNode(withName: "background") as! SKSpriteNode
         node.configLightningMask(mask: LightMask.DEFAULT)
+        node.zPosition = ZPosition.BACKGROUND
     }
     
     func configMusic() {
-        guard GameScene.audioPlayer == nil else { return }
-        
         if let path = Bundle.main.url(forResource: "background", withExtension: "mp3") {
             print("music")
             GameScene.audioPlayer = try! AVAudioPlayer(contentsOf: path)
