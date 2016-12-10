@@ -72,7 +72,7 @@ struct ZPosition {
     static let PLAYER: CGFloat = 10
     static let FEET: CGFloat = -0.1  // child của player
     static let FOOTPRINT: CGFloat = 9.5
-    static let LIGHT_CONE: CGFloat = -0.1 // child của player
+    static let LIGHT_CONE: CGFloat = -1 // child của player
     static let TIME: CGFloat = 11
     static let BACKGROUND: CGFloat = -10
     static let ZOMBIE: CGFloat = 1

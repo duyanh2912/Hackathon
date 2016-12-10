@@ -16,7 +16,8 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         
         // Random màn chơi
-        currentLevel = Int(arc4random_uniform(UInt32(maxLevel))) + 1
+//        currentLevel = Int(arc4random_uniform(UInt32(maxLevel))) + 1
+        currentLevel = 4
         
         if let view = self.view as! SKView? {
             if let scene = SKScene(fileNamed: currentLevelScene) {

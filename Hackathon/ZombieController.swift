@@ -10,7 +10,7 @@ import Foundation
 
 class ZombieController: Controller {
     var SPEED: CGFloat = 100
-    var audio = SKAudioNode(fileNamed: "zombie_moan")
+    var audio: SKAudioNode? = SKAudioNode(fileNamed: "zombie_moan")
     
     // ACTIONS
     
@@ -25,11 +25,12 @@ class ZombieController: Controller {
     }
     
     func configSound() {
-        audio.autoplayLooped = false
-        view.addChild(audio)
+        guard audio != nil else { return }
+        audio?.autoplayLooped = false
+        view.addChild(audio!)
         let moan = SKAction.run { [unowned self] in
             if arc4random_uniform(2) == 0 {
-                self.audio.run(.play())
+                self.audio?.run(.play())
                 print("play")
             }
         }

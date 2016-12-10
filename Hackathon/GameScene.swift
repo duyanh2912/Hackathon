@@ -65,12 +65,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
     }
     
     func configMusic() {
-        if let path = Bundle.main.url(forResource: "background", withExtension: "mp3") {
-            print("music")
+        func loadMusic(path: URL) {
             GameScene.audioPlayer = try! AVAudioPlayer(contentsOf: path)
             GameScene.audioPlayer?.volume = 0.75
             GameScene.audioPlayer?.numberOfLoops = -1
             GameScene.audioPlayer?.play()
+        }
+        
+        if let path = Bundle.main.url(forResource: "background", withExtension: "mp3") {
+            print("music")
+            if let audio = GameScene.audioPlayer {
+                if audio.url != path {
+                    loadMusic(path: path)
+                }
+            } else {
+                loadMusic(path: path)
+            }
         }
     }
     

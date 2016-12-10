@@ -22,6 +22,15 @@ class Level4: GameScene {
         }
     }
     
+    override func configStatueZombies() {
+        for node in self["//statueZombie"] {
+            let zombie = StatueZombieController(view: node as! View, parent: self)
+            zombie.view.colorBlendFactor = 0
+            zombie.config()
+            statueZombieControllers.append(zombie)
+        }
+    }
+    
     override func configPlayer() {
         let player = self.childNode(withName: "player") as! View
         playerController = SpecialPlayerController(view: player, parent: self)
@@ -32,13 +41,22 @@ class Level4: GameScene {
     }
     
     override func configMusic() {
-        if let path = Bundle.main.url(forResource: "Em Cua Ngay Hom Qua - Son Tung M TP", withExtension: "mp3") {
-            print("music")
+        func loadMusic(path: URL) {
             GameScene.audioPlayer = try! AVAudioPlayer(contentsOf: path)
-            GameScene.audioPlayer?.volume = 0.75
             GameScene.audioPlayer?.numberOfLoops = -1
             GameScene.audioPlayer?.currentTime = 2
             GameScene.audioPlayer?.play()
+        }
+        
+        if let path = Bundle.main.url(forResource: "Em Cua Ngay Hom Qua - Son Tung M TP", withExtension: "mp3") {
+            print("music")
+            if let audio = GameScene.audioPlayer {
+                if audio.url != path {
+                    loadMusic(path: path)
+                }
+            } else {
+                loadMusic(path: path)
+            }
         }
     }
 }
