@@ -57,7 +57,7 @@ class ZombieController: Controller {
             if other.physicsBody?.categoryBitMask == BitMasks.TRAP  {
                 self.stopMoving(duration: 2)
             }
-            if other.physicsBody?.categoryBitMask == BitMasks.TRAP {
+            if other.physicsBody?.categoryBitMask == BitMasks.BOOM {
                 self.view.removeFromParent()
             }
         }
