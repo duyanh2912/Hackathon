@@ -15,15 +15,12 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Random màn chơi
         currentLevel = Int(arc4random_uniform(UInt32(maxLevel))) + 1
         
         if let view = self.view as! SKView? {
-            // Load the SKScene from 'GameScene.sks'
             if let scene = SKScene(fileNamed: currentLevelScene) {
-                // Set the scale mode to scale to fit the window
                 scene.scaleMode = .aspectFit
-                
-                // Present the scene
                 view.presentScene(scene)
             }
             

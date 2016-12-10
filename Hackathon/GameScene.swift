@@ -10,7 +10,11 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
+    
+    // Timer phục vụ tính điểm
     var currentTime: Int! = 0
+    
+    // Sound Controller cho tiếng bắn súng v.v...
     let soundController = SoundController.sharedInstance
     
     // Player
@@ -23,6 +27,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
     // Tường
     var wallControllers = [WallController]()
     
+    // Nhạc nền, để static thì ở màn hình Game Over vẫn có nhạc
     static var audioPlayer: AVAudioPlayer?
     
     // Smart Zombies Properties
@@ -133,20 +138,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
     }
     
     func configCamera() {
+        // Chỉnh kích thước của GameScene để camera luôn vừa với màn hình (không bị chòi ra ngoài)
         if UIDevice.current.userInterfaceIdiom == .pad {
-            //            self.size = CGSize(width: size.height * 3 / 4 , height: size.height)
             self.size = CGSize(width: size.width, height: size.width * 4 / 3)
         } else {
             self.size = CGSize(width: size.width, height: size.width * 16 / 9)
         }
         
+        // Chỉnh scale để kích thước camera ở các bàn chơi là cố định
         let camera = SKCameraNode()
         camera.setScale(540 / size.width)
         
+        // Nếu là iPhone thì cho camera to ra để dễ chơi hơn
         if UIDevice.current.userInterfaceIdiom == .phone {
             camera.setScale(camera.xScale / 0.75)
         }
         
+        // Đặt camera của GameScene là SKCameraNode vừa tạo
         self.addChild(camera)
         self.camera = camera
     }
@@ -170,13 +178,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
     }
     
     override func didSimulatePhysics() {
+        // Hàm move được gọi liên tục để player và zombie di chuyển nuột =))
         PlayerController.instance.move()
-        camera?.position = PlayerController.instance.position
         for zombie in zombieControllers { zombie.move() }
         for smart in smartZombieControllers { smart.move() }
+        
+        // Cho camera đi theo player
+        camera?.position = PlayerController.instance.position
     }
     
     override func update(_ currentTime: TimeInterval) {
+        // Smart Zombie update đường đi 0.05s 1 lần
         guard lastUpdate != nil else {
             lastUpdate = currentTime
             zombiesPathUpdate()
@@ -191,6 +203,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let location = touches.first?.location(in: self) else { return }
         for node in nodes(at: location) {
+            // Nếu có súng thì chạm vào zombie là bắn
             if playerController.currentWeapon != .knife {
                 if node.physicsBody?.categoryBitMask == BitMasks.ZOMBIE {
                     playerController.shoot(at: location)
@@ -198,11 +211,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
                 }
             }
         }
+        // update touchLocation của PlayerController để hàm move di chuyển tới điểm chạm mới
         PlayerController.instance.touchLocation = location
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let location = touches.first?.location(in: self) {
+            // update touchLocation của PlayerController để hàm move di chuyển tới điểm chạm mới
             PlayerController.instance.touchLocation = location
         }
     }

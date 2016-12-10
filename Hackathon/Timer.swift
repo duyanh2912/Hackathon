@@ -16,7 +16,10 @@ protocol Timer {
 }
 extension Timer where Self: GameScene{
     func configTimer(){
+        // Có 100 giây để chơi hết bài
         currentTime = 100
+        
+        // labelTime
         let labelTime = SKLabelNode()
         labelTime.fontSize = 65
         labelTime.fontName = "Papyrus"
@@ -25,8 +28,11 @@ extension Timer where Self: GameScene{
         labelTime.position = CGPoint(x: 0, y: self.size.height / 2 - 50)
         labelTime.text = "Time: \(self.currentTime!)"
         labelTime.zPosition = ZPosition.TIME
+        
+        // Add vào camera để labelTime luôn ở trên màn hình
         self.camera?.addChild(labelTime)
         
+        // Cứ mỗi giây time giảm 1
         let count = SKAction.run { [unowned self] in
             if self.currentTime == 0 {
                 GameoverScene.present(view: self.view!)

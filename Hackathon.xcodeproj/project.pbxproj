@@ -141,18 +141,10 @@
 			isa = PBXGroup;
 			children = (
 				50501C7B1DE42059007301E4 /* Controller.swift */,
-				63FE5EA41DEAED640014347C /* ExitController.swift */,
-				6388EE301DFB707600575FC7 /* TrapController.swift */,
-				63FE5EA81DEAED830014347C /* PlayerController.swift */,
-				5089FBFD1DE7CBFB004A41FE /* FeetController.swift */,
-				63C327321DFB563A0025AB23 /* StuntPowerUpController.swift */,
-				50501C7F1DE43475007301E4 /* ZombieController.swift */,
-				501F0E211DE74C5800F0A686 /* WallController.swift */,
-				503E62A91DE83EE0009BCF47 /* HandgunController.swift */,
-				503E62AB1DE84862009BCF47 /* BulletController.swift */,
-				50A3AC151DF1222F00490730 /* SmartZombieController.swift */,
-				50C159D21DFB399D009656F2 /* StatueZombieController.swift */,
-				508BEDD81DFB74C400EA471B /* SpecialPlayerController.swift */,
+				50ABEF061DFB862500CCE469 /* Player */,
+				50ABEF0A1DFB866F00CCE469 /* Item */,
+				50ABEF081DFB865900CCE469 /* Weapon */,
+				50ABEF071DFB863500CCE469 /* Zombie */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -228,6 +220,46 @@
 				508FA4991DF9A5B7004098BD /* UIButton.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		50ABEF061DFB862500CCE469 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				5089FBFD1DE7CBFB004A41FE /* FeetController.swift */,
+				63FE5EA81DEAED830014347C /* PlayerController.swift */,
+				508BEDD81DFB74C400EA471B /* SpecialPlayerController.swift */,
+			);
+			name = Player;
+			sourceTree = "<group>";
+		};
+		50ABEF071DFB863500CCE469 /* Zombie */ = {
+			isa = PBXGroup;
+			children = (
+				50501C7F1DE43475007301E4 /* ZombieController.swift */,
+				50A3AC151DF1222F00490730 /* SmartZombieController.swift */,
+				50C159D21DFB399D009656F2 /* StatueZombieController.swift */,
+			);
+			name = Zombie;
+			sourceTree = "<group>";
+		};
+		50ABEF081DFB865900CCE469 /* Weapon */ = {
+			isa = PBXGroup;
+			children = (
+				503E62A91DE83EE0009BCF47 /* HandgunController.swift */,
+				503E62AB1DE84862009BCF47 /* BulletController.swift */,
+			);
+			name = Weapon;
+			sourceTree = "<group>";
+		};
+		50ABEF0A1DFB866F00CCE469 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				63FE5EA41DEAED640014347C /* ExitController.swift */,
+				6388EE301DFB707600575FC7 /* TrapController.swift */,
+				63C327321DFB563A0025AB23 /* StuntPowerUpController.swift */,
+				501F0E211DE74C5800F0A686 /* WallController.swift */,
+			);
+			name = Item;
 			sourceTree = "<group>";
 		};
 		50B515EA1DE3E9B70088200C /* Scene */ = {

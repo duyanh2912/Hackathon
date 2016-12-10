@@ -17,16 +17,12 @@ class GameoverScene: SKScene {
     
     override func didMove(to view: SKView) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { [unowned self] in
-//            let audio = SKAudioNode(fileNamed: "game_over")
-//            self.addChild(audio)
-//            audio.run(.play())
             self.run(SoundController.sharedInstance.GAME_OVER)
         }
        
         let gameoverLabel = childNode(withName: "gameoverLabel") as! SKLabelNode
         gameoverLabel.position = frame.center()
         gameoverLabel.alpha = 0
-        
         
         replayLabel = SKLabelNode(text: "Replay")
         replayLabel.position = gameoverLabel.position.add(x: 0, y: -50)
