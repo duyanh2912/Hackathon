@@ -31,6 +31,7 @@ struct BitMasks {
     static let BOOM: UInt32 = 1 << 9
     static let BOOMFIRST: UInt32 = 1 << 10
     static let EYE_RAY: UInt32 = 1 << 11
+    static let BLAST: UInt32 = 1 << 12
 }
 
 struct LightMask {
@@ -43,6 +44,7 @@ struct Textures {
     static let TRIANGLE = SKTexture(image: #imageLiteral(resourceName: "triangle"))
     static let SON_TUNG = SKTexture(image: #imageLiteral(resourceName: "son_tung"))
     static let RAY = SKTexture(image: #imageLiteral(resourceName: "ray"))
+    static let MINE = SKTexture(image: #imageLiteral(resourceName: "mine"))
     
     static let FEET_IDLE = FEET_RUN[6]
     static let FEET_RUN = SKTextureAtlas(named: "feet_run").toTextures()

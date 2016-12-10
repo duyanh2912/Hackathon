@@ -43,7 +43,7 @@ class ZombieController: Controller {
         view.configPhysicsMask(
             category: BitMasks.ZOMBIE,
             collision: BitMasks.ZOMBIE | BitMasks.WALL | BitMasks.PLAYER,
-            contact: BitMasks.PLAYER | BitMasks.BULLET
+            contact: BitMasks.PLAYER | BitMasks.BULLET | BitMasks.BLAST
         )
         view.physicsBody?.friction = 0
     }
@@ -51,13 +51,13 @@ class ZombieController: Controller {
     func configHandleContact() {
         view.handleContact = { [unowned self]
             other in
-            if other.physicsBody?.categoryBitMask == BitMasks.BULLET {
+            if other.physicsBody?.categoryBitMask == BitMasks.BULLET | BitMasks.BLAST{
                 self.removeFromParent()
             }
             if other.physicsBody?.categoryBitMask == BitMasks.TRAP  {
                 self.stopMoving(duration: 2)
             }
-            if other.physicsBody?.categoryBitMask == BitMasks.BOOM {
+            if other.physicsBody?.categoryBitMask == BitMasks.BLAST {
                 self.view.removeFromParent()
             }
         }

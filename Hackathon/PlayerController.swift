@@ -108,8 +108,13 @@ class PlayerController: Controller {
             if other.physicsBody?.categoryBitMask == BitMasks.TRAP {
                 self.stopMoving(duration: 2)
             }
-            if other.physicsBody?.categoryBitMask == BitMasks.TRAP {
-                self.gameOver()
+            if other.physicsBody?.categoryBitMask == BitMasks.BLAST {
+                self.lightNode.move(toParent: self.parent)
+//                self.view.childNode(withName: "light_cone")?.move(toParent: self.parent)
+                self.view.removeFromParent()
+                self.parent.run(.wait(forDuration: 1)) {
+                    self.gameOver()
+                }
             }
         }
     }

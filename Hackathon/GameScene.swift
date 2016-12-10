@@ -11,7 +11,13 @@ import GameplayKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
     // Số boom drop 
-    var dropbooms: Int! = 0
+    var dropbooms: Int = 0 {
+        didSet {
+            labelBoom.text = "BOOM: \(dropbooms)"
+        }
+    }
+    var labelBoom: SKLabelNode!
+    
     // Timer phục vụ tính điểm
     var currentTime: Int! = 0
     
@@ -124,7 +130,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
     }
     func configBoomFirst() {
         for node in children {
-            if node.name == "boomfirst" {
+            if node.name == "mine" {
                 let boom = BoomFirstController(view: node as! View, parent: self)
                 boom.config()
             }
@@ -178,17 +184,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
         self.physicsWorld.gravity = .zero
     }
     
-    func configCamera() {
-        let labelBoom = SKLabelNode()
+    func configDropLabel() {
+        labelBoom = SKLabelNode()
         labelBoom.name = "DropBoom"
         labelBoom.text = "BOOM: \(dropbooms)"
-        labelBoom.fontSize = 50
+        labelBoom.fontSize = 90
         labelBoom.fontName = "Papyrus"
         labelBoom.color = UIColor.darkGray
         labelBoom.verticalAlignmentMode = .bottom
-        labelBoom.position = CGPoint(x: -200, y: 50)
+        labelBoom.horizontalAlignmentMode = .left
+        labelBoom.position = CGPoint(x: -self.size.width / 2, y: -self.size.height / 2).add(x: 8, y: 8)
         labelBoom.zPosition = ZPosition.TIME
-        // Chỉnh kích thước của GameScene để camera luôn vừa với màn hình (không bị chòi ra ngoài)
+        self.camera?.addChild(labelBoom)
+    }
+    
+    func configCamera() {
+               // Chỉnh kích thước của GameScene để camera luôn vừa với màn hình (không bị chòi ra ngoài)
         if UIDevice.current.userInterfaceIdiom == .pad {
             self.size = CGSize(width: size.width, height: size.width * 4 / 3)
         } else {
@@ -207,7 +218,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
         // Đặt camera của GameScene là SKCameraNode vừa tạo
         self.addChild(camera)
         self.camera = camera
-        self.camera?.addChild(labelBoom)
+        
     }
     
     func configGuns() {
@@ -256,7 +267,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
                     return
                 }
             }
-            
             playerController.SPEED = PLAYER_SPEED
         }
     }
@@ -271,14 +281,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
                     return
                 }
             }
+            
             if dropbooms > 0 {
                 if node.name == "DropBoom" {
-                    let boom = BoomController(view: node as! View, parent: self)
+                    playerController.view.physicsBody?.isResting = true
+                    playerController.touchLocation = playerController.position
+                    self.dropbooms -= 1
+                    let boom = BoomController(parent: self)
                     boom.config()
-                    boom.position = playerController.view.position.add(
-                        x: 50 * cos(playerController.view.zPosition),
-                        y: 50 * sin(playerController.view.zPosition))
-                    self.addChild(boom)
+                    boom.view.position = playerController.view.position.add(
+                        x: 75 * cos(playerController.view.zRotation),
+                        y: 75 * sin(playerController.view.zRotation))
+                    self.addChild(boom.view)
+                    print("zRotation: \(playerController.view.zRotation)")
+                    return
                 }
             }
         }

@@ -22,6 +22,7 @@ extension TriangleLight where Self: GameScene {
         triangle.setScale(2)
         triangle.position = CGPoint(x: -220, y: 0)
         triangle.zPosition = ZPosition.LIGHT_CONE
+        triangle.name = "light_cone"
         
         playerController.view.addChild(triangle)
         

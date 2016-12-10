@@ -10,9 +10,9 @@ import Foundation
 import SpriteKit
 class BoomFirstController: Controller {
     func config() {
-        view.physicsBody = SKPhysicsBody(circleOfRadius: view.size.height / 2 * 0.5)
+        view.physicsBody = SKPhysicsBody(circleOfRadius: view.size.height / 2 * 0.8)
         view.physicsBody?.categoryBitMask = BitMasks.BOOMFIRST
-        view.physicsBody?.contactTestBitMask = BitMasks.PLAYER | BitMasks.ZOMBIE
+        view.physicsBody?.contactTestBitMask = BitMasks.PLAYER
         view.physicsBody?.collisionBitMask = 0
         
         view.configLightningMask(mask: LightMask.DEFAULT)
@@ -20,8 +20,9 @@ class BoomFirstController: Controller {
         configHandleContact()
     }
     func configHandleContact() {
-        view.handleContact = { [unowned view = self.view!] other in
+        view.handleContact = { [unowned view = self.view!, unowned parent = self.parent as! GameScene] other in
             view.removeFromParent()
+            parent.dropbooms += 1
         }
     }
 }

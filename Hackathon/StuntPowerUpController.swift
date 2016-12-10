@@ -22,10 +22,7 @@ class StuntPowerUpController: Controller{
     func configHandleContact() {
         view.handleContact = { [unowned view = self.view!, unowned parent = self.parent as! GameScene] other in
             view.removeFromParent()
-            for node in parent.zombieControllers{
-                node.stopMoving(duration: 5)
-            }
-            for node in parent.smartZombieControllers {
+            for node in parent.allZombies{
                 node.stopMoving(duration: 5)
             }
         }

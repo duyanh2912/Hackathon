@@ -14,6 +14,7 @@
 		5008481A1DEDCB6500C4A940 /* Level4.sks in Resources */ = {isa = PBXBuildFile; fileRef = 500848191DEDCB6500C4A940 /* Level4.sks */; };
 		501F0E221DE74C5800F0A686 /* WallController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501F0E211DE74C5800F0A686 /* WallController.swift */; };
 		501FF6B41DED5E34002505C4 /* Em Cua Ngay Hom Qua - Son Tung M TP.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 501FF6B31DED5E34002505C4 /* Em Cua Ngay Hom Qua - Son Tung M TP.mp3 */; };
+		502262DB1DFBE5280029D770 /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 502262DA1DFBE5270029D770 /* Explosion.sks */; };
 		503E62AA1DE83EE0009BCF47 /* HandgunController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503E62A91DE83EE0009BCF47 /* HandgunController.swift */; };
 		503E62AC1DE84862009BCF47 /* BulletController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503E62AB1DE84862009BCF47 /* BulletController.swift */; };
 		50501C7A1DE4062E007301E4 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50501C791DE4062E007301E4 /* View.swift */; };
@@ -79,6 +80,7 @@
 		500848191DEDCB6500C4A940 /* Level4.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level4.sks; sourceTree = "<group>"; };
 		501F0E211DE74C5800F0A686 /* WallController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallController.swift; sourceTree = "<group>"; };
 		501FF6B31DED5E34002505C4 /* Em Cua Ngay Hom Qua - Son Tung M TP.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Em Cua Ngay Hom Qua - Son Tung M TP.mp3"; sourceTree = "<group>"; };
+		502262DA1DFBE5270029D770 /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
 		503E62A91DE83EE0009BCF47 /* HandgunController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandgunController.swift; sourceTree = "<group>"; };
 		503E62AB1DE84862009BCF47 /* BulletController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletController.swift; sourceTree = "<group>"; };
 		50501C791DE4062E007301E4 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				6388EE301DFB707600575FC7 /* TrapController.swift */,
 				63C327321DFB563A0025AB23 /* StuntPowerUpController.swift */,
 				501F0E211DE74C5800F0A686 /* WallController.swift */,
+				502262DA1DFBE5270029D770 /* Explosion.sks */,
 			);
 			name = Item;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				506F48611DEDD9AE00F2F95B /* Level1.sks in Resources */,
 				50CB9E611DEB025500271641 /* handgun_fire.wav in Resources */,
 				50ABEF101DFBBABF00CCE469 /* EyeRay.sks in Resources */,
+				502262DB1DFBE5280029D770 /* Explosion.sks in Resources */,
 				500052C71DE4A704008B6471 /* GameoverScene.sks in Resources */,
 				50BD53651DE35476005A5B55 /* Main.storyboard in Resources */,
 				50BD535C1DE35476005A5B55 /* Level2.sks in Resources */,
