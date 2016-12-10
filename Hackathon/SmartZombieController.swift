@@ -38,15 +38,12 @@ class SmartZombieController: ZombieController {
         }
     }
     
-    override func configHandleContact() {
-        view.handleContact = { [unowned view = self.view!, weak parent = self.parent as? SmartZombies, unowned self]
-            other in
-            view.removeFromParent()
-            if var controllers = parent?.smartZombieControllers {
-                if let index = controllers.index(where: {$0 === self}) {
-                    controllers.remove(at: index)
-                    parent?.smartZombieControllers = controllers
-                }
+    override func removeFromParent() {
+        view.removeFromParent()
+        if var zombieControllers = (parent as? GameScene)?.smartZombieControllers {
+            if let index = zombieControllers.index(where: {$0 === self}) {
+                zombieControllers.remove(at: index)
+                (parent as! GameScene).smartZombieControllers = zombieControllers
             }
         }
     }

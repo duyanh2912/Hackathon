@@ -26,6 +26,7 @@ struct BitMasks {
     static let STATUE: UInt32 = 1 << 6
     static let GIFT: UInt32 = 1 << 7
     static let TRAP: UInt32 = 1 << 8
+    static let EYE_RAY: UInt32 = 1 << 11
 }
 
 struct LightMask {
@@ -37,6 +38,7 @@ struct Textures {
     static let BULLET = SKTexture(image: #imageLiteral(resourceName: "bullet"))
     static let TRIANGLE = SKTexture(image: #imageLiteral(resourceName: "triangle"))
     static let SON_TUNG = SKTexture(image: #imageLiteral(resourceName: "son_tung"))
+    static let RAY = SKTexture(image: #imageLiteral(resourceName: "ray"))
     
     static let FEET_IDLE = FEET_RUN[6]
     static let FEET_RUN = SKTextureAtlas(named: "feet_run").toTextures()
@@ -73,7 +75,8 @@ struct ZPosition {
     static let FEET: CGFloat = -0.1  // child của player
     static let FOOTPRINT: CGFloat = 9.5
     static let LIGHT_CONE: CGFloat = -1 // child của player
-    static let TIME: CGFloat = 11
+    static let TIME: CGFloat = 100
     static let BACKGROUND: CGFloat = -10
     static let ZOMBIE: CGFloat = 1
+    static let EYE_RAY: CGFloat = 10 // child của zombie
 }

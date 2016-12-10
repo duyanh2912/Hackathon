@@ -23,6 +23,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
     // Các loại zombie
     var zombieControllers = [ZombieController]()
     var statueZombieControllers = [StatueZombieController]()
+    var superZombieControllers = [SuperZombieController]()
     
     // Tường
     var wallControllers = [WallController]()
@@ -52,6 +53,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
         configPathFinder()
         configSmartZombies()
         configStatueZombies()
+        configSuperZombies()
         configCamera()
         configTimer()
         configGifts()
@@ -121,6 +123,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
             let zombie = StatueZombieController(view: node as! View, parent: self)
             zombie.config()
             statueZombieControllers.append(zombie)
+        }
+    }
+    
+    func configSuperZombies() {
+        for node in self["//superZombie"] {
+            let zombie = SuperZombieController(view: node as! View, parent: self)
+            zombie.config()
+            superZombieControllers.append(zombie)
         }
     }
 
@@ -193,6 +203,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
         PlayerController.instance.move()
         for zombie in zombieControllers { zombie.move() }
         for smart in smartZombieControllers { smart.move() }
+        for zombie in superZombieControllers { zombie.move() }
         
         // Cho camera đi theo player
         camera?.position = PlayerController.instance.position

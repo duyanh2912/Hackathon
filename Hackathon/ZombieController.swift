@@ -52,16 +52,20 @@ class ZombieController: Controller {
         view.handleContact = { [unowned view = self.view!, weak parent = self.parent as? GameScene, unowned self]
             other in
             if other.physicsBody?.categoryBitMask == BitMasks.BULLET {
-                view.removeFromParent()
-                if var zombieControllers = parent?.zombieControllers {
-                    if let index = zombieControllers.index(where: {$0 === self}) {
-                        zombieControllers.remove(at: index)
-                        parent?.zombieControllers = zombieControllers
-                    }
-                }
+                self.removeFromParent()
             }
             if other.physicsBody?.categoryBitMask == BitMasks.TRAP  {
                 self.stopMoving(duration: 2)
+            }
+        }
+    }
+    
+    func removeFromParent() {
+        view.removeFromParent()
+        if var zombieControllers = (parent as? GameScene)?.zombieControllers {
+            if let index = zombieControllers.index(where: {$0 === self}) {
+                zombieControllers.remove(at: index)
+                (parent as! GameScene).zombieControllers = zombieControllers
             }
         }
     }
