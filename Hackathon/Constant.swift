@@ -15,6 +15,8 @@ var currentLevelScene: String { return "Level\(currentLevel)" }
 let ACTION_KEY_ANIMATE = "animate"
 let ACTION_KEY_MOVE = "move"
 
+let PLAYER_SPEED: CGFloat = 150
+
 struct BitMasks {
     static let zero: UInt32 = 0
     static let WALL: UInt32 = 1 << 0

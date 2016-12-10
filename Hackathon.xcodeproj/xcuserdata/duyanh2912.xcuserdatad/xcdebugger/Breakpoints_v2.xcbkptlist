@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hackathon/Level1.swift"
-            timestampString = "503009372.548221"
+            timestampString = "503041720.513675"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "Level1"
             landmarkType = "3">
          </BreakpointContent>
@@ -234,11 +234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hackathon/GameScene.swift"
-            timestampString = "503039093.047294"
+            timestampString = "503041720.513675"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "configMusic()"
             landmarkType = "7">
          </BreakpointContent>
@@ -260,6 +260,99 @@
                   moduleName = "UIKit"
                   usesParentBreakpointCondition = "Yes"
                   offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hackathon/GameScene.swift"
+            timestampString = "503041427.708429"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "GameScene"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hackathon.GameScene.zombieControllers.getter : Swift.Array&lt;Hackathon.ZombieController&gt;"
+                  moduleName = "Hackathon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/duyanh2912/Desktop/Techkids/Hackathon/Hackathon/GameScene.swift"
+                  timestampString = "503041431.221669"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hackathon.GameScene.zombieControllers.setter : Swift.Array&lt;Hackathon.ZombieController&gt;"
+                  moduleName = "Hackathon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/duyanh2912/Desktop/Techkids/Hackathon/Hackathon/GameScene.swift"
+                  timestampString = "503041431.224491"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hackathon.GameScene.init (size : __C.CGSize) -&gt; Hackathon.GameScene"
+                  moduleName = "Hackathon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/duyanh2912/Desktop/Techkids/Hackathon/Hackathon/GameScene.swift"
+                  timestampString = "503041431.227222"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hackathon.GameScene.init () -&gt; Hackathon.GameScene"
+                  moduleName = "Hackathon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/duyanh2912/Desktop/Techkids/Hackathon/Hackathon/GameScene.swift"
+                  timestampString = "503041431.230402"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hackathon.GameScene.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Hackathon.GameScene&gt;"
+                  moduleName = "Hackathon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/duyanh2912/Desktop/Techkids/Hackathon/Hackathon/GameScene.swift"
+                  timestampString = "503041431.233241"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "136">
                </Location>
             </Locations>
          </BreakpointContent>

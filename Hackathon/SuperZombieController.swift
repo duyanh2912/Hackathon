@@ -8,10 +8,13 @@
 import SpriteKit
 import Foundation
 
+let PLAYER_SPEED_UP = "player_speed_up"
+
 class SuperZombieController: ZombieController {
     override func config() {
-        super.config()
         configEyeRay()
+        super.config()
+        
     }
     
     func configEyeRay() {
@@ -20,9 +23,12 @@ class SuperZombieController: ZombieController {
         emiter.zPosition = ZPosition.EYE_RAY
         view.addChild(emiter)
         
-        let node = SKNode()
-        node.position = CGPoint(x: 0, y: 72.5)
-        node.physicsBody = SKPhysicsBody(texture: Textures.RAY, size: Textures.RAY.size())
+        let node = View(texture: Textures.RAY)
+        node.name = "eye_ray"
+        node.position = CGPoint(x: 0, y: 50)
+        node.zPosition = -50
+        node.physicsBody = SKPhysicsBody(rectangleOf: node.size)
+        node.configPhysicsMask(category: BitMasks.EYE_RAY, collision: 0, contact: BitMasks.PLAYER)
         view.addChild(node)
     }
     

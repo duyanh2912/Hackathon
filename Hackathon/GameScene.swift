@@ -21,6 +21,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
     var playerController: PlayerController!
     
     // Các loại zombie
+    var allZombies: [ZombieController] {
+        get {
+            var array = [ZombieController]()
+            array += zombieControllers
+            array += statueZombieControllers as [ZombieController]
+            array += superZombieControllers as [ZombieController]
+            array += smartZombieControllers as [ZombieController]
+            return array
+        }
+    }
     var zombieControllers = [ZombieController]()
     var statueZombieControllers = [StatueZombieController]()
     var superZombieControllers = [SuperZombieController]()
@@ -113,7 +123,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
     }
     func configBoomFirst() {
         for node in children {
-            if node.name = "boomfirst" {
+            if node.name == "boomfirst" {
                 let boom = BoomFirstController(view: node as! View, parent: self)
                 boom.config()
             }
@@ -228,7 +238,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
         if currentTime - lastUpdate! > 0.05 {
             lastUpdate = currentTime
             zombiesPathUpdate()
-
+            
+            for node in self["superZombie/eye_ray"] {
+                if node.intersects(playerController.view) {
+                    playerController.SPEED = PLAYER_SPEED * 3 / 4
+                    return
+                }
+            }
+            
+            playerController.SPEED = PLAYER_SPEED
         }
     }
     

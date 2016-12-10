@@ -49,7 +49,7 @@ class ZombieController: Controller {
     }
     
     func configHandleContact() {
-        view.handleContact = { [unowned view = self.view!, weak parent = self.parent as? GameScene, unowned self]
+        view.handleContact = { [unowned self]
             other in
             if other.physicsBody?.categoryBitMask == BitMasks.BULLET {
                 self.removeFromParent()
@@ -57,7 +57,7 @@ class ZombieController: Controller {
             if other.physicsBody?.categoryBitMask == BitMasks.TRAP  {
                 self.stopMoving(duration: 2)
             }
-            if other.physicsBody?.categoryBitMask == BitMasks.TRAP {
+            if other.physicsBody?.categoryBitMask == BitMasks.BOOM {
                 self.view.removeFromParent()
             }
         }

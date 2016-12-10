@@ -21,7 +21,7 @@ class BoomController: Controller{
         configHandleContact()
     }
     func configHandleContact() {
-        view.handleContact = { [unowned view = self.view!, unowned parent = self.parent as! GameScene] other in
+        view.handleContact = { [unowned view = self.view!] other in
             self.view.removeFromParent()
         }
     }

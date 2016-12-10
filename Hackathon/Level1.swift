@@ -14,15 +14,8 @@ class Level1: GameScene, TriangleLight {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         configTriangeLight()
-    }
-    
-    override func configZombies() {
-        enumerateChildNodes(withName: "zombie") { [unowned self]
-            (node, stop) in
-            let controller = ZombieController(view: node as! View, parent: self)
-            controller.SPEED = 75
-            controller.config()
-            self.zombieControllers.append(controller)
+        for zombie in allZombies {
+            zombie.SPEED = 75
         }
     }
     

@@ -33,7 +33,7 @@ class PlayerController: Controller {
         }
     }
     var currentState: PlayerState = .idle
-    var SPEED: CGFloat = 150
+    var SPEED: CGFloat = PLAYER_SPEED
     var touchLocation: CGPoint?
     var timePerFrame: Double = 1/20  //Animation
     
