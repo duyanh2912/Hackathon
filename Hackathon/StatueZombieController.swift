@@ -16,7 +16,7 @@ class StatueZombieController: ZombieController {
     override init(view: View, parent: SKNode) {
         super.init(view: view, parent: parent)
         view.colorBlendFactor = 0.5
-        view.color = UIColor(red: 0, green: 112, blue: 209, alpha: 1)
+        view.color = UIColor(red: 0/255, green: 112/255, blue: 209/255, alpha: 1)
     }
     
     override func configHandleContact() {

@@ -39,6 +39,8 @@
 		50A3AC161DF1222F00490730 /* SmartZombieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3AC151DF1222F00490730 /* SmartZombieController.swift */; };
 		50A3AC181DF123A000490730 /* PathFinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3AC171DF123A000490730 /* PathFinding.swift */; };
 		50ABEF0C1DFB9F0C00CCE469 /* trap.wav in Resources */ = {isa = PBXBuildFile; fileRef = 50ABEF0B1DFB9F0C00CCE469 /* trap.wav */; };
+		50ABEF0E1DFBB9A200CCE469 /* SuperZombieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ABEF0D1DFBB9A100CCE469 /* SuperZombieController.swift */; };
+		50ABEF101DFBBABF00CCE469 /* EyeRay.sks in Resources */ = {isa = PBXBuildFile; fileRef = 50ABEF0F1DFBBABF00CCE469 /* EyeRay.sks */; };
 		50BD535A1DE35475005A5B55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD53591DE35475005A5B55 /* AppDelegate.swift */; };
 		50BD535C1DE35476005A5B55 /* Level2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 50BD535B1DE35476005A5B55 /* Level2.sks */; };
 		50BD53621DE35476005A5B55 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD53611DE35476005A5B55 /* GameViewController.swift */; };
@@ -100,6 +102,8 @@
 		50A3AC151DF1222F00490730 /* SmartZombieController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartZombieController.swift; sourceTree = "<group>"; };
 		50A3AC171DF123A000490730 /* PathFinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathFinding.swift; sourceTree = "<group>"; };
 		50ABEF0B1DFB9F0C00CCE469 /* trap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = trap.wav; sourceTree = "<group>"; };
+		50ABEF0D1DFBB9A100CCE469 /* SuperZombieController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperZombieController.swift; sourceTree = "<group>"; };
+		50ABEF0F1DFBBABF00CCE469 /* EyeRay.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EyeRay.sks; sourceTree = "<group>"; };
 		50BD53561DE35475005A5B55 /* Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BD53591DE35475005A5B55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50BD535B1DE35476005A5B55 /* Level2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level2.sks; sourceTree = "<group>"; };
@@ -240,6 +244,8 @@
 				50501C7F1DE43475007301E4 /* ZombieController.swift */,
 				50A3AC151DF1222F00490730 /* SmartZombieController.swift */,
 				50C159D21DFB399D009656F2 /* StatueZombieController.swift */,
+				50ABEF0D1DFBB9A100CCE469 /* SuperZombieController.swift */,
+				50ABEF0F1DFBBABF00CCE469 /* EyeRay.sks */,
 			);
 			name = Zombie;
 			sourceTree = "<group>";
@@ -404,6 +410,7 @@
 				50EDC22E1DE4B7FF00DA3E55 /* game_over.caf in Resources */,
 				506F48611DEDD9AE00F2F95B /* Level1.sks in Resources */,
 				50CB9E611DEB025500271641 /* handgun_fire.wav in Resources */,
+				50ABEF101DFBBABF00CCE469 /* EyeRay.sks in Resources */,
 				500052C71DE4A704008B6471 /* GameoverScene.sks in Resources */,
 				50BD53651DE35476005A5B55 /* Main.storyboard in Resources */,
 				50BD535C1DE35476005A5B55 /* Level2.sks in Resources */,
@@ -455,6 +462,7 @@
 				50C159D61DFB44BA009656F2 /* TriangleLight.swift in Sources */,
 				500052C91DE4A86E008B6471 /* SoundController.swift in Sources */,
 				50BD535A1DE35475005A5B55 /* AppDelegate.swift in Sources */,
+				50ABEF0E1DFBB9A200CCE469 /* SuperZombieController.swift in Sources */,
 				500052C61DE4A704008B6471 /* GameoverScene.swift in Sources */,
 				50A3AC161DF1222F00490730 /* SmartZombieController.swift in Sources */,
 				503E62AC1DE84862009BCF47 /* BulletController.swift in Sources */,

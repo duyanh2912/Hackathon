@@ -59,7 +59,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
     }
     
     func configBackground() {
-        let node = self.childNode(withName: "background") as! SKSpriteNode
+        guard let node = self.childNode(withName: "background") as? SKSpriteNode else { return }
         node.configLightningMask(mask: LightMask.DEFAULT)
         node.zPosition = ZPosition.BACKGROUND
     }
@@ -130,6 +130,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
         playerController = PlayerController(view: player, parent: self)
         PlayerController.instance = playerController
         playerController.config()
+//        playerController.lightNode.isEnabled = false
         self.listener = player
     }
     
@@ -207,6 +208,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
         if currentTime - lastUpdate! > 0.05 {
             lastUpdate = currentTime
             zombiesPathUpdate()
+
         }
     }
     
