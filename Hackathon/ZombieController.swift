@@ -83,9 +83,10 @@ class ZombieController: Controller {
     
     // Gọi hàm nếu muốn zombie dừng lại trong 1 khoảng thời gian nào đó
     func stopMoving(duration: Double){
-        view.physicsBody?.isResting = true
+        view.physicsBody?.isDynamic = false
         move = {}
         self.view.run(SKAction.wait(forDuration: duration)){[unowned self] in
+            self.view.physicsBody?.isDynamic = true
             self.configMove()
         }
     }

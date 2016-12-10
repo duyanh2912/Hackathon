@@ -38,6 +38,7 @@
 		50A3AC141DF121C100490730 /* Level3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3AC131DF121C100490730 /* Level3.swift */; };
 		50A3AC161DF1222F00490730 /* SmartZombieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3AC151DF1222F00490730 /* SmartZombieController.swift */; };
 		50A3AC181DF123A000490730 /* PathFinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3AC171DF123A000490730 /* PathFinding.swift */; };
+		50ABEF0C1DFB9F0C00CCE469 /* trap.wav in Resources */ = {isa = PBXBuildFile; fileRef = 50ABEF0B1DFB9F0C00CCE469 /* trap.wav */; };
 		50BD535A1DE35475005A5B55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD53591DE35475005A5B55 /* AppDelegate.swift */; };
 		50BD535C1DE35476005A5B55 /* Level2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 50BD535B1DE35476005A5B55 /* Level2.sks */; };
 		50BD53621DE35476005A5B55 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD53611DE35476005A5B55 /* GameViewController.swift */; };
@@ -98,6 +99,7 @@
 		50A3AC131DF121C100490730 /* Level3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level3.swift; sourceTree = "<group>"; };
 		50A3AC151DF1222F00490730 /* SmartZombieController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartZombieController.swift; sourceTree = "<group>"; };
 		50A3AC171DF123A000490730 /* PathFinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathFinding.swift; sourceTree = "<group>"; };
+		50ABEF0B1DFB9F0C00CCE469 /* trap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = trap.wav; sourceTree = "<group>"; };
 		50BD53561DE35475005A5B55 /* Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BD53591DE35475005A5B55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50BD535B1DE35476005A5B55 /* Level2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level2.sks; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 				50CB9E601DEB025500271641 /* handgun_fire.wav */,
 				50CB9E621DEB06CE00271641 /* zombie_moan.wav */,
 				50CB9E5A1DEAFF3B00271641 /* background.mp3 */,
+				50ABEF0B1DFB9F0C00CCE469 /* trap.wav */,
 				500848171DEDC45F00C4A940 /* tha_thu.wav */,
 				501FF6B31DED5E34002505C4 /* Em Cua Ngay Hom Qua - Son Tung M TP.mp3 */,
 			);
@@ -407,6 +410,7 @@
 				50D88FC41DFB1A47007C61A5 /* Footstep.sks in Resources */,
 				50BD53671DE35477005A5B55 /* Assets.xcassets in Resources */,
 				500848181DEDC45F00C4A940 /* tha_thu.wav in Resources */,
+				50ABEF0C1DFB9F0C00CCE469 /* trap.wav in Resources */,
 				501FF6B41DED5E34002505C4 /* Em Cua Ngay Hom Qua - Son Tung M TP.mp3 in Resources */,
 				50CB9E5B1DEAFF3B00271641 /* background.mp3 in Resources */,
 				50F357121DEAD992006F25D9 /* WinScene.sks in Resources */,

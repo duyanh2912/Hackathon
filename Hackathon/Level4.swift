@@ -37,7 +37,7 @@ class Level4: GameScene {
         PlayerController.instance = playerController
         playerController.config()
         self.listener = player
-        playerController.lightNode.falloff = 2.5
+        playerController.lightNode.falloff = 2
     }
     
     override func configMusic() {

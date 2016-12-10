@@ -17,7 +17,7 @@ class GameViewController: UIViewController {
         
         // Random màn chơi
 //        currentLevel = Int(arc4random_uniform(UInt32(maxLevel))) + 1
-        currentLevel = 4
+        currentLevel = 1
         
         if let view = self.view as! SKView? {
             if let scene = SKScene(fileNamed: currentLevelScene) {
@@ -29,7 +29,7 @@ class GameViewController: UIViewController {
             
             view.showsFPS = true
             view.showsNodeCount = true
-            //view.showsPhysics = true
+            view.showsPhysics = true
         }
     }
 

@@ -16,6 +16,7 @@ class StuntPowerUpController: Controller{
         view.physicsBody?.collisionBitMask = 0
         
         view.configLightningMask(mask: LightMask.DEFAULT)
+        view.shadowCastBitMask = 0
         configHandleContact()
     }
     func configHandleContact() {
