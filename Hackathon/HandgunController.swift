@@ -21,5 +21,6 @@ class HandgunController: Controller {
         }
         
         view.configLightningMask(mask: LightMask.DEFAULT)
+        view.shadowCastBitMask = 0
     }
 }
