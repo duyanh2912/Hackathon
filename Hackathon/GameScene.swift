@@ -161,7 +161,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
         playerController = PlayerController(view: player, parent: self)
         PlayerController.instance = playerController
         playerController.config()
-        //        playerController.lightNode.isEnabled = false
+//                playerController.lightNode.isEnabled = false
         self.listener = player
     }
     

@@ -44,6 +44,8 @@
 		50ABEF0C1DFB9F0C00CCE469 /* trap.wav in Resources */ = {isa = PBXBuildFile; fileRef = 50ABEF0B1DFB9F0C00CCE469 /* trap.wav */; };
 		50ABEF0E1DFBB9A200CCE469 /* SuperZombieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ABEF0D1DFBB9A100CCE469 /* SuperZombieController.swift */; };
 		50ABEF101DFBBABF00CCE469 /* EyeRay.sks in Resources */ = {isa = PBXBuildFile; fileRef = 50ABEF0F1DFBBABF00CCE469 /* EyeRay.sks */; };
+		50ADA0831DFD3AFF00C97155 /* SepTungGameOver.sks in Resources */ = {isa = PBXBuildFile; fileRef = 50ADA0811DFD3AFF00C97155 /* SepTungGameOver.sks */; };
+		50ADA0841DFD3AFF00C97155 /* SepTungGameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ADA0821DFD3AFF00C97155 /* SepTungGameOver.swift */; };
 		50BD535A1DE35475005A5B55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD53591DE35475005A5B55 /* AppDelegate.swift */; };
 		50BD535C1DE35476005A5B55 /* Level2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 50BD535B1DE35476005A5B55 /* Level2.sks */; };
 		50BD53621DE35476005A5B55 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD53611DE35476005A5B55 /* GameViewController.swift */; };
@@ -59,8 +61,6 @@
 		50EDC22E1DE4B7FF00DA3E55 /* game_over.caf in Resources */ = {isa = PBXBuildFile; fileRef = 500052CB1DE4B5B7008B6471 /* game_over.caf */; };
 		50F357121DEAD992006F25D9 /* WinScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 50F357111DEAD992006F25D9 /* WinScene.sks */; };
 		50FD42221DFCF797009D8433 /* explosion.wav in Resources */ = {isa = PBXBuildFile; fileRef = 50FD42211DFCF797009D8433 /* explosion.wav */; };
-		50FDED631DE828D300054F59 /* Handgun.sks in Resources */ = {isa = PBXBuildFile; fileRef = 50FDED621DE828D300054F59 /* Handgun.sks */; };
-		50FDED651DE8315C00054F59 /* Glow.sks in Resources */ = {isa = PBXBuildFile; fileRef = 50FDED641DE8315C00054F59 /* Glow.sks */; };
 		50FE5E741DF20AC700772C4C /* Level2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE5E731DF20AC700772C4C /* Level2.swift */; };
 		6388EE311DFB707600575FC7 /* TrapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6388EE301DFB707600575FC7 /* TrapController.swift */; };
 		6388EE331DFBC1B100575FC7 /* MIneTrapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6388EE321DFBC1B100575FC7 /* MIneTrapController.swift */; };
@@ -113,6 +113,8 @@
 		50ABEF0B1DFB9F0C00CCE469 /* trap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = trap.wav; sourceTree = "<group>"; };
 		50ABEF0D1DFBB9A100CCE469 /* SuperZombieController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperZombieController.swift; sourceTree = "<group>"; };
 		50ABEF0F1DFBBABF00CCE469 /* EyeRay.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EyeRay.sks; sourceTree = "<group>"; };
+		50ADA0811DFD3AFF00C97155 /* SepTungGameOver.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SepTungGameOver.sks; sourceTree = "<group>"; };
+		50ADA0821DFD3AFF00C97155 /* SepTungGameOver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SepTungGameOver.swift; sourceTree = "<group>"; };
 		50BD53561DE35475005A5B55 /* Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BD53591DE35475005A5B55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50BD535B1DE35476005A5B55 /* Level2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level2.sks; sourceTree = "<group>"; };
@@ -129,8 +131,6 @@
 		50D88FC31DFB1A47007C61A5 /* Footstep.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Footstep.sks; sourceTree = "<group>"; };
 		50F357111DEAD992006F25D9 /* WinScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WinScene.sks; sourceTree = "<group>"; };
 		50FD42211DFCF797009D8433 /* explosion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = explosion.wav; sourceTree = "<group>"; };
-		50FDED621DE828D300054F59 /* Handgun.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Handgun.sks; sourceTree = "<group>"; };
-		50FDED641DE8315C00054F59 /* Glow.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Glow.sks; sourceTree = "<group>"; };
 		50FE5E731DF20AC700772C4C /* Level2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level2.swift; sourceTree = "<group>"; };
 		6388EE301DFB707600575FC7 /* TrapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrapController.swift; sourceTree = "<group>"; };
 		6388EE321DFBC1B100575FC7 /* MIneTrapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIneTrapController.swift; sourceTree = "<group>"; };
@@ -289,10 +289,10 @@
 			isa = PBXGroup;
 			children = (
 				63FE5EA61DEAED710014347C /* GameScene.swift */,
-				50FDED621DE828D300054F59 /* Handgun.sks */,
 				500052C41DE4A704008B6471 /* GameoverScene.swift */,
 				500052C51DE4A704008B6471 /* GameoverScene.sks */,
-				50FDED641DE8315C00054F59 /* Glow.sks */,
+				50ADA0811DFD3AFF00C97155 /* SepTungGameOver.sks */,
+				50ADA0821DFD3AFF00C97155 /* SepTungGameOver.swift */,
 				63FE5EAA1DEAED930014347C /* WinScene.swift */,
 				50F357111DEAD992006F25D9 /* WinScene.sks */,
 				506F485F1DEDD97200F2F95B /* Levels */,
@@ -424,11 +424,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50FDED651DE8315C00054F59 /* Glow.sks in Resources */,
 				50EDC22E1DE4B7FF00DA3E55 /* game_over.caf in Resources */,
 				506F48611DEDD9AE00F2F95B /* Level1.sks in Resources */,
 				50CB9E611DEB025500271641 /* handgun_fire.wav in Resources */,
 				50ABEF101DFBBABF00CCE469 /* EyeRay.sks in Resources */,
+				50ADA0831DFD3AFF00C97155 /* SepTungGameOver.sks in Resources */,
 				502262DB1DFBE5280029D770 /* Explosion.sks in Resources */,
 				508672531DFD05BC00DA7FD1 /* pick_up.wav in Resources */,
 				500052C71DE4A704008B6471 /* GameoverScene.sks in Resources */,
@@ -445,7 +445,6 @@
 				50BD536A1DE35477005A5B55 /* LaunchScreen.storyboard in Resources */,
 				50CB9E631DEB06CE00271641 /* zombie_moan.wav in Resources */,
 				5008481A1DEDCB6500C4A940 /* Level4.sks in Resources */,
-				50FDED631DE828D300054F59 /* Handgun.sks in Resources */,
 				50A3AC121DF1212900490730 /* Level3.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,6 +477,7 @@
 				50501C7A1DE4062E007301E4 /* View.swift in Sources */,
 				505FCA741DF68FE70092ABCB /* CGVector.swift in Sources */,
 				505FCA761DF68FE70092ABCB /* SKNode.swift in Sources */,
+				50ADA0841DFD3AFF00C97155 /* SepTungGameOver.swift in Sources */,
 				50A3AC0E1DEDDFFB00490730 /* Level1.swift in Sources */,
 				63FE5EAB1DEAED930014347C /* WinScene.swift in Sources */,
 				505FCA751DF68FE70092ABCB /* GKGraphNode2D.swift in Sources */,

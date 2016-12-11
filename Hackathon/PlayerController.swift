@@ -66,6 +66,7 @@ class PlayerController: Controller {
     
     // ACTION
     var move: (() -> ())!
+    var gameOver: (() -> ())!
     
     // FUNCTIONS
     
@@ -95,6 +96,13 @@ class PlayerController: Controller {
         lightNode.falloff = 2
         
         configMove()
+        configGameOver()
+    }
+    
+    func configGameOver() {
+        gameOver = { [unowned parent = self.parent as! GameScene] in
+            GameoverScene.present(view: parent.view!)
+        }
     }
     
     func configFeet() {
@@ -111,7 +119,7 @@ class PlayerController: Controller {
     func configHandleContact() {
         view.handleContact = { [unowned self, unowned parent = self.parent as! GameScene] other in
             if other.physicsBody?.categoryBitMask == BitMasks.ZOMBIE {
-                GameoverScene.present(view: parent.view!)
+                self.gameOver()
             }
             if other.physicsBody?.categoryBitMask == BitMasks.TRAP {
                 self.stopMoving(duration: 2)
@@ -121,7 +129,7 @@ class PlayerController: Controller {
                 self.feetController = nil
                 self.view.removeFromParent()
                 self.parent.run(.wait(forDuration: 1)) {
-                    GameoverScene.present(view: parent.view!)
+                    self.gameOver()
                 }
             }
         }

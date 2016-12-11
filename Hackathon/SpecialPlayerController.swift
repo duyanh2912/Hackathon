@@ -11,4 +11,9 @@ import Foundation
 class SpecialPlayerController: PlayerController {
     override func animate(repeatForever: Bool, completion: @escaping () -> ()) {}
     override func configFeet() {}
+    override func configGameOver() {
+        self.gameOver = { [unowned parent = self.parent as! GameScene] in
+            SepTungGameOverScene.present(view: parent.view!)
+        }
+    }
 }
