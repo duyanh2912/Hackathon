@@ -17,6 +17,33 @@ let ACTION_KEY_MOVE = "move"
 
 let PLAYER_SPEED: CGFloat = 150
 
+struct Names {
+    // Player và những thứ lquan
+    static let PLAYER = "player"
+    static let FEET = "feet"
+    
+    // Các thành phần cần thiết của mỗi bàn
+    static let BACKGROUND = "background"
+    static let WALL = "wall"
+    static let EXIT = "exit"
+    
+    // Các loại power up
+    static let HANDGUN = "handgun"
+    static let STUNT_POWER_UP = "stunt_power_up"
+    static let MINE_POWER_UP = "mine_power_up"
+    
+    // Các loại trap
+    static let TRAP = "trap"
+    static let MINE_TRAP = "mine_trap"
+    
+    // Các loại zombie
+    static let ZOMBIE = "zombie"
+    static let SMART_ZOMBIE = "smart_zombie"
+    static let STATUE_ZOMBIE = "statue_zombie"
+    static let SUPER_ZOMBIE = "super_zombie"
+    static let EYE_RAY = "eye_ray"
+}
+
 struct BitMasks {
     static let zero: UInt32 = 0
     static let WALL: UInt32 = 1 << 0
@@ -44,9 +71,9 @@ struct Textures {
     static let TRIANGLE = SKTexture(image: #imageLiteral(resourceName: "triangle"))
     static let SON_TUNG = SKTexture(image: #imageLiteral(resourceName: "son_tung"))
     static let RAY = SKTexture(image: #imageLiteral(resourceName: "ray"))
-    static let MINE = SKTexture(image: #imageLiteral(resourceName: "mine"))
+    static let MINE = SKTexture(imageNamed: "mine")
     
-    static let FEET_IDLE = FEET_RUN[6]
+    static let FEET_IDLE = FEET_WALK[6]
     static let FEET_RUN = SKTextureAtlas(named: "feet_run").toTextures()
     static let FEET_WALK = SKTextureAtlas(named: "feet_walk").toTextures()
     
@@ -79,10 +106,18 @@ struct Textures {
 struct ZPosition {
     static let PLAYER: CGFloat = 10
     static let FEET: CGFloat = -0.1  // child của player
-    static let FOOTPRINT: CGFloat = 9.5
     static let LIGHT_CONE: CGFloat = -1 // child của player
-    static let TIME: CGFloat = 100
-    static let BACKGROUND: CGFloat = -10
+    
     static let ZOMBIE: CGFloat = 1
     static let EYE_RAY: CGFloat = 10 // child của zombie
+    
+    static let FOOTPRINT: CGFloat = 9.5
+    static let TIME: CGFloat = 100
+    static let BACKGROUND: CGFloat = -10
+    static let WALL: CGFloat = 0
+    static let EXIT: CGFloat = 0
+    static let POWER_UP: CGFloat = 0
+    static let TRAP: CGFloat = 0
+    static let BLAST: CGFloat = 9.5
+
 }

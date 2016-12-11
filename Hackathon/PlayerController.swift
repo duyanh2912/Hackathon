@@ -57,6 +57,13 @@ class PlayerController: Controller {
         }
     }
     
+    // POWER UPS
+    var numberOfMines: Int = 0 {
+        didSet {
+            (parent as? GameScene)?.mineLabel.text = "MINE: \(numberOfMines)"
+        }
+    }
+    
     // ACTION
     var move: (() -> ())!
     
@@ -85,49 +92,38 @@ class PlayerController: Controller {
         
         view.addChild(lightNode)
         lightNode.categoryBitMask = 1
-        lightNode.falloff = 3
+        lightNode.falloff = 2
         
         configMove()
     }
     
     func configFeet() {
-        guard let feet = view.childNode(withName: "feet") as? View else { return }
+        let feet = View(texture: Textures.FEET_IDLE)
         self.feetController = FeetController(
             view: feet,
             parent: parent
         )
         feetController?.timePerFrame = self.timePerFrame
         feetController?.config(moveType: .walk)
+        view.addChild(feet)
     }
     
     func configHandleContact() {
-        view.handleContact = { [unowned self] other in
+        view.handleContact = { [unowned self, unowned parent = self.parent as! GameScene] other in
             if other.physicsBody?.categoryBitMask == BitMasks.ZOMBIE {
-                self.gameOver()
+                GameoverScene.present(view: parent.view!)
             }
             if other.physicsBody?.categoryBitMask == BitMasks.TRAP {
                 self.stopMoving(duration: 2)
             }
             if other.physicsBody?.categoryBitMask == BitMasks.BLAST {
                 self.lightNode.move(toParent: self.parent)
-//                self.view.childNode(withName: "light_cone")?.move(toParent: self.parent)
+                self.feetController = nil
                 self.view.removeFromParent()
                 self.parent.run(.wait(forDuration: 1)) {
-                    self.gameOver()
+                    GameoverScene.present(view: parent.view!)
                 }
             }
-        }
-    }
-    
-    // Chuyển sang scene Game Over
-    func gameOver() {
-        if let gameoverScene = SKScene(fileNamed: "GameoverScene") {
-            guard let scene = self.parent as? SKScene else { return }
-            if UIDevice.current.userInterfaceIdiom == .pad {
-                gameoverScene.size = CGSize(width: gameoverScene.size.width, height: gameoverScene.size.width * 1024 / 768)
-            }
-            gameoverScene.scaleMode = .aspectFill
-            scene.view?.presentScene(gameoverScene)
         }
     }
     
@@ -240,5 +236,20 @@ class PlayerController: Controller {
             }
         }
         parent.run(SoundController.sharedInstance.HANDGUN_FIRE)
+    }
+    
+    func throwMine() {
+        guard numberOfMines > 0 else {
+            return
+        }
+        view.physicsBody?.isResting = true
+        touchLocation = position
+        numberOfMines -= 1
+        let boom = MineTrapController(parent: parent)
+        boom.config()
+        boom.view.position = view.position.add(
+            x: 75 * cos(view.zRotation),
+            y: 75 * sin(view.zRotation))
+        parent.addChild(boom.view)
     }
 }

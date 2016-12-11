@@ -44,8 +44,9 @@ class FeetController: Controller {
     
     func footPrints() {
         let delay = SKAction.wait(forDuration: 1)
-        let footPrint = SKAction.run { [unowned self, unowned player = PlayerController.instance!] in
-            let footprint = SKSpriteNode(texture: self.view.texture, size: self.view.size)
+        let footPrint = SKAction.run { [weak self, unowned player = PlayerController.instance!] in
+            guard self != nil else { return }
+            let footprint = SKSpriteNode(texture: self!.view.texture, size: self!.view.size)
             
             footprint.name = "footprint"
             footprint.color = .yellow
@@ -53,7 +54,7 @@ class FeetController: Controller {
             footprint.blendMode = .add
             footprint.position = player.position
             
-            for node in (self.parent as! GameScene).nodes(at: footprint.position){
+            for node in (self!.parent as! GameScene).nodes(at: footprint.position){
                 if node.name == "footprint" {
                     node.removeFromParent()
                 }
@@ -62,7 +63,7 @@ class FeetController: Controller {
             footprint.zRotation = player.view.zRotation
             footprint.setScale(player.view.xScale)
 
-            self.parent.addChild(footprint)
+            self!.parent.addChild(footprint)
             
             let fade = SKAction.sequence([.wait(forDuration: 5), .fadeAlpha(to: 0, duration: 0.5), .removeFromParent()])
             footprint.run(fade)

@@ -10,11 +10,9 @@ import SpriteKit
 import Foundation
 
 class Level2: GameScene {
-//    override func didMove(to view: SKView) {
-//        enumerateChildNodes(withName: "//zombie", using: { node,_ in
-//            node.name = "smartZombie"
-//        })
-//        super.didMove(to: view)
-//    }
+    override func didMove(to view: SKView) {
+        super.didMove(to: view)
+        playerController.lightNode.falloff = 2.5
+    }
 }
 

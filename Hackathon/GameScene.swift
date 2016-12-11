@@ -10,13 +10,8 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
-    // Số boom drop 
-    var dropbooms: Int = 0 {
-        didSet {
-            labelBoom.text = "BOOM: \(dropbooms)"
-        }
-    }
-    var labelBoom: SKLabelNode!
+    // Số mìn player đang giữ
+    var mineLabel: SKLabelNode!
     
     // Timer phục vụ tính điểm
     var currentTime: Int! = 0
@@ -63,7 +58,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
         configPhysics()
         configBackground()
         configPlayer()
-        configBorder()
+        configWalls()
         configZombies()
         configGuns()
         configExit()
@@ -73,14 +68,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
         configSuperZombies()
         configCamera()
         configTimer()
-        configGifts()
+        configStuntPowerUp()
         configTraps()
-        configBoomFirst()
+        configMinePowerUp()
         configDropLabel()
     }
     
     func configBackground() {
-        guard let node = self.childNode(withName: "background") as? SKSpriteNode else { return }
+        guard let node = self.childNode(withName: Names.BACKGROUND) as? SKSpriteNode else { return }
         node.configLightningMask(mask: LightMask.DEFAULT)
         node.zPosition = ZPosition.BACKGROUND
     }
@@ -105,7 +100,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
     }
     
     func configExit() {
-        if let exit = childNode(withName: "exit") as? View {
+        if let exit = childNode(withName: Names.EXIT) as? View {
             let controller = ExitController(view: exit, parent: self)
             controller.config()
         }
@@ -113,39 +108,39 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
     
     func configZombies() {
         for node in children {
-            if node.name == "zombie" {
+            if node.name == Names.ZOMBIE {
                 let zombie = ZombieController(view: node as! View, parent: self)
                 zombie.config()
                 zombieControllers.append(zombie)
             }
         }
     }
-    func configGifts(){
+    func configStuntPowerUp(){
         for node in children {
-            if node.name == "stuntPowerUp" {
+            if node.name == Names.STUNT_POWER_UP {
                 let gift = StuntPowerUpController(view: node as! View, parent: self)
                 gift.config()
             }
         }
     }
-    func configBoomFirst() {
+    func configMinePowerUp() {
         for node in children {
-            if node.name == "mine" {
-                let boom = BoomFirstController(view: node as! View, parent: self)
+            if node.name == Names.MINE_POWER_UP {
+                let boom = MinePowerUpController(view: node as! View, parent: self)
                 boom.config()
             }
         }
     }
     func configTraps() {
         for node in children {
-            if node.name == "trap" {
+            if node.name == Names.TRAP {
                 let trap = TrapController(view: node as! View, parent: self)
                 trap.config()
             }
         }
     }
     func configStatueZombies() {
-        for node in self["//statueZombie"] {
+        for node in self[Names.STATUE_ZOMBIE] {
             let zombie = StatueZombieController(view: node as! View, parent: self)
             zombie.config()
             statueZombieControllers.append(zombie)
@@ -153,7 +148,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
     }
     
     func configSuperZombies() {
-        for node in self["//superZombie"] {
+        for node in self[Names.SUPER_ZOMBIE] {
             let zombie = SuperZombieController(view: node as! View, parent: self)
             zombie.config()
             superZombieControllers.append(zombie)
@@ -162,7 +157,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
     
     
     func configPlayer() {
-        let player = self.childNode(withName: "player") as! View
+        let player = self.childNode(withName: Names.PLAYER) as! View
         playerController = PlayerController(view: player, parent: self)
         PlayerController.instance = playerController
         playerController.config()
@@ -170,8 +165,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
         self.listener = player
     }
     
-    func configBorder() {
-        self.enumerateChildNodes(withName: "//wall") { [unowned self]
+    func configWalls() {
+        self.enumerateChildNodes(withName: Names.WALL) { [unowned self]
             (node, stop) in
             let controller = WallController(view: node as! View, parent: self)
             controller.config()
@@ -185,17 +180,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
     }
     
     func configDropLabel() {
-        labelBoom = SKLabelNode()
-        labelBoom.name = "DropBoom"
-        labelBoom.text = "BOOM: \(dropbooms)"
-        labelBoom.fontSize = 90
-        labelBoom.fontName = "Papyrus"
-        labelBoom.color = UIColor.darkGray
-        labelBoom.verticalAlignmentMode = .bottom
-        labelBoom.horizontalAlignmentMode = .left
-        labelBoom.position = CGPoint(x: -self.size.width / 2, y: -self.size.height / 2).add(x: 8, y: 8)
-        labelBoom.zPosition = ZPosition.TIME
-        self.camera?.addChild(labelBoom)
+        mineLabel = SKLabelNode()
+        mineLabel.name = "DropBoom"
+        mineLabel.text = "Mine: \(playerController.numberOfMines)"
+        mineLabel.fontSize = 90
+        mineLabel.fontName = "Papyrus"
+        mineLabel.color = UIColor.darkGray
+        mineLabel.verticalAlignmentMode = .bottom
+        mineLabel.horizontalAlignmentMode = .left
+        mineLabel.position = CGPoint(x: -self.size.width / 2, y: -self.size.height / 2).add(x: 20, y: 20)
+        mineLabel.zPosition = ZPosition.TIME
+        self.camera?.addChild(mineLabel)
     }
     
     func configCamera() {
@@ -223,8 +218,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
     
     func configGuns() {
         for node in children {
-            if node.name == "handgun" {
-                let gun = node.children[0].childNode(withName: "gun") as! View
+            if node.name == Names.HANDGUN {
+                let gun = node as! View
                 let controller = HandgunController(view: gun, parent: self)
                 controller.config()
             }
@@ -242,9 +237,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
     override func didSimulatePhysics() {
         // Hàm move được gọi liên tục để player và zombie di chuyển nuột =))
         PlayerController.instance.move()
-        for zombie in zombieControllers { zombie.move() }
-        for smart in smartZombieControllers { smart.move() }
-        for zombie in superZombieControllers { zombie.move() }
+        for zombie in allZombies { zombie.move() }
         
         // Cho camera đi theo player
         camera?.position = PlayerController.instance.position
@@ -261,7 +254,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
             lastUpdate = currentTime
             zombiesPathUpdate()
             
-            for node in self["superZombie/eye_ray"] {
+            for node in self["\(Names.SUPER_ZOMBIE)/\(Names.EYE_RAY)"] {
                 if node.intersects(playerController.view) {
                     playerController.SPEED = PLAYER_SPEED * 3 / 4
                     return
@@ -282,20 +275,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
                 }
             }
             
-            if dropbooms > 0 {
-                if node.name == "DropBoom" {
-                    playerController.view.physicsBody?.isResting = true
-                    playerController.touchLocation = playerController.position
-                    self.dropbooms -= 1
-                    let boom = BoomController(parent: self)
-                    boom.config()
-                    boom.view.position = playerController.view.position.add(
-                        x: 75 * cos(playerController.view.zRotation),
-                        y: 75 * sin(playerController.view.zRotation))
-                    self.addChild(boom.view)
-                    print("zRotation: \(playerController.view.zRotation)")
-                    return
-                }
+            if node === mineLabel {
+                playerController.throwMine()
+                return
             }
         }
         // update touchLocation của PlayerController để hàm move di chuyển tới điểm chạm mới

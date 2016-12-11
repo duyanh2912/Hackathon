@@ -17,5 +17,6 @@ class WallController: Controller {
         view.physicsBody?.collisionBitMask = (view.physicsBody?.collisionBitMask)! ^ BitMasks.WALL
         
         view.configLightningMask(mask: LightMask.DEFAULT)
+        view.zPosition = ZPosition.WALL
     }
 }

@@ -28,5 +28,6 @@ class ExitController: Controller {
         
         view.configLightningMask(mask: LightMask.DEFAULT)
         view.shadowCastBitMask = 0
+        view.zPosition = ZPosition.EXIT
     }
 }

@@ -9,6 +9,6 @@ import SpriteKit
 import Foundation
 
 class SpecialPlayerController: PlayerController {
-    override func animate(repeatForever: Bool, completion: @escaping () -> ()) {
-    }
+    override func animate(repeatForever: Bool, completion: @escaping () -> ()) {}
+    override func configFeet() {}
 }

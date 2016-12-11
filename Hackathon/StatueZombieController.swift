@@ -19,6 +19,8 @@ class StatueZombieController: ZombieController {
         view.color = UIColor(red: 0/255, green: 112/255, blue: 209/255, alpha: 1)
     }
     
+    override func configSound() {}
+    
     override func configHandleContact() {
         view.handleContact = { _ in}
     }
@@ -28,5 +30,15 @@ class StatueZombieController: ZombieController {
         view.physicsBody?.mass = (view.physicsBody?.mass)! * 50
         view.configPhysicsMask(category: BitMasks.STATUE, collision: BitMasks.PLAYER | BitMasks.ZOMBIE | BitMasks.WALL, contact: 0)
 //        view.physicsBody?.isDynamic = false
+    }
+    
+    override func removeFromParent() {
+        view.removeFromParent()
+        if var zombieControllers = (parent as? GameScene)?.statueZombieControllers {
+            if let index = zombieControllers.index(where: {$0 === self}) {
+                zombieControllers.remove(at: index)
+                (parent as! GameScene).statueZombieControllers = zombieControllers
+            }
+        }
     }
 }

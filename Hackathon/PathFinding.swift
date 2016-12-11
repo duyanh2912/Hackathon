@@ -82,7 +82,7 @@ protocol SmartZombies: class, PathFindable {
 }
 extension SmartZombies where Self: GameScene {
     func configPathFinder() {
-        let obstacles = self["//wall"] as! [SKSpriteNode]
+        let obstacles = self[Names.WALL] as! [SKSpriteNode]
         //        obstacles += self["//zombie"] as! [SKSpriteNode]
         self.pathFinder = PathFinder(obstacles: obstacles, bufferRadius: Float(#imageLiteral(resourceName: "zombie").size.height / 2.6))
         PathFinder.instance = self.pathFinder
@@ -91,7 +91,7 @@ extension SmartZombies where Self: GameScene {
     func configSmartZombies() {
         smartZombieControllers = [SmartZombieController]()
         for node in children {
-            if node.name == "smartZombie" {
+            if node.name == Names.SMART_ZOMBIE {
                 let zombie = SmartZombieController(view: node as! View, parent: self)
                 zombie.config()
                 smartZombieControllers.append(zombie)

@@ -8,7 +8,7 @@
 
 import Foundation
 import SpriteKit
-class BoomFirstController: Controller {
+class MinePowerUpController: Controller {
     func config() {
         view.physicsBody = SKPhysicsBody(circleOfRadius: view.size.height / 2 * 0.8)
         view.physicsBody?.categoryBitMask = BitMasks.BOOMFIRST
@@ -18,11 +18,14 @@ class BoomFirstController: Controller {
         view.configLightningMask(mask: LightMask.DEFAULT)
         view.shadowCastBitMask = 0
         configHandleContact()
+        
+        view.zPosition = ZPosition.POWER_UP
     }
     func configHandleContact() {
-        view.handleContact = { [unowned view = self.view!, unowned parent = self.parent as! GameScene] other in
+        view.handleContact = { [unowned view = self.view!, unowned parent = self.parent!] other in
             view.removeFromParent()
-            parent.dropbooms += 1
+            parent.run(SoundController.sharedInstance.PICK_UP)
+            PlayerController.instance.numberOfMines += 1
         }
     }
 }

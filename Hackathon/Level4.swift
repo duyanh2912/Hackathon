@@ -10,20 +10,17 @@ import SpriteKit
 import Foundation
 
 class Level4: GameScene {
-    override func configZombies() {
-        for node in children {
-            if node.name == "zombie" {
-                let zombie = ZombieController(view: node as! View, parent: self)
-                zombie.audio = SKAudioNode(fileNamed: "tha_thu")
-                zombie.SPEED = 125
-                zombie.config()
-                zombieControllers.append(zombie)
-            }
+    override func didMove(to view: SKView) {
+        super.didMove(to: view)
+        for zombie in allZombies {
+            zombie.audio = SKAudioNode(url: Bundle.main.url(forResource: "tha_thu", withExtension: "wav")!)
+            zombie.configSound()
+            zombie.view.shadowCastBitMask = 0
         }
     }
     
     override func configStatueZombies() {
-        for node in self["//statueZombie"] {
+        for node in self[Names.STATUE_ZOMBIE] {
             let zombie = StatueZombieController(view: node as! View, parent: self)
             zombie.view.colorBlendFactor = 0
             zombie.config()
@@ -32,7 +29,7 @@ class Level4: GameScene {
     }
     
     override func configPlayer() {
-        let player = self.childNode(withName: "player") as! View
+        let player = self.childNode(withName: Names.PLAYER) as! View
         playerController = SpecialPlayerController(view: player, parent: self)
         PlayerController.instance = playerController
         playerController.config()
