@@ -28,7 +28,7 @@ class StatueZombieController: ZombieController {
     override func configPhysics() {
         super.configPhysics()
         view.physicsBody?.mass = (view.physicsBody?.mass)! * 50
-        view.configPhysicsMask(category: BitMasks.STATUE, collision: BitMasks.PLAYER | BitMasks.ZOMBIE | BitMasks.WALL, contact: 0)
+        view.configPhysicsMask(category: BitMasks.STATUE, collision: BitMasks.PLAYER | BitMasks.ZOMBIE | BitMasks.WALL | BitMasks.STATUE, contact: 0)
 //        view.physicsBody?.isDynamic = false
     }
     

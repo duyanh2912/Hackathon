@@ -35,6 +35,7 @@ struct Names {
     // Các loại trap
     static let TRAP = "trap"
     static let MINE_TRAP = "mine_trap"
+    static let MINE_RANDOM = "mine_random"
     
     // Các loại zombie
     static let ZOMBIE = "zombie"
@@ -116,8 +117,12 @@ struct ZPosition {
     static let BACKGROUND: CGFloat = -10
     static let WALL: CGFloat = 0
     static let EXIT: CGFloat = 0
-    static let POWER_UP: CGFloat = 0
-    static let TRAP: CGFloat = 0
+    
+    static let STUNT_POWER_UP: CGFloat = 1
+    static let MINE_POWER_UP: CGFloat = 0
+    
+    static let MINE_TRAP: CGFloat = 0
+    static let TRAP: CGFloat = 1
     static let BLAST: CGFloat = 9.5
 
 }

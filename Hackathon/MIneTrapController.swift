@@ -14,6 +14,10 @@ class MineTrapController: Controller{
         view.setScale(0.25)
     }
     
+    override init(view: View, parent: SKNode) {
+        super.init(view: view, parent: parent)
+    }
+    
     func config() {
         view.physicsBody = SKPhysicsBody(circleOfRadius: view.size.height / 2)
         view.physicsBody?.categoryBitMask = BitMasks.BOOM
@@ -22,7 +26,7 @@ class MineTrapController: Controller{
         
         view.configLightningMask(mask: LightMask.DEFAULT)
         view.shadowCastBitMask = 0
-        view.zPosition = ZPosition.TRAP
+        view.zPosition = ZPosition.MINE_TRAP
         configHandleContact()
     }
     func configHandleContact() {
@@ -36,7 +40,7 @@ class MineTrapController: Controller{
             let node = View(color: .clear, size: CGSize(width: 200, height: 200))
             node.position = view.position
             node.physicsBody = SKPhysicsBody(circleOfRadius: node.size.height / 2)
-            node.configPhysicsMask(category: BitMasks.BLAST, collision: 0, contact: BitMasks.ZOMBIE | BitMasks.PLAYER)
+            node.configPhysicsMask(category: BitMasks.BLAST, collision: 0, contact: BitMasks.ZOMBIE | BitMasks.PLAYER | BitMasks.BOOM)
          
             node.setScale(0.05)
             parent.addChild(node)

@@ -8,12 +8,9 @@
 import SpriteKit
 import Foundation
 
-class Level1: GameScene, TriangleLight {
-    var isUsingTriangeLight: Bool = true
-    
+class Level1: GameScene {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
-        configTriangeLight()
         for zombie in allZombies {
             zombie.SPEED = 75
         }

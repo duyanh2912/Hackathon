@@ -40,13 +40,15 @@ class WinScene: SKScene {
     
     }
     static func present(view: SKView) {
-        if let winScene = SKScene(fileNamed: "WinScene") {
+        if let scene = SKScene(fileNamed: "WinScene") {
             if UIDevice.current.userInterfaceIdiom == .pad {
-                winScene.size = CGSize(width: winScene.size.width, height: winScene.size.width * 1024 / 768)
+                scene.size = CGSize(width: scene.size.width, height: scene.size.width * 1024 / 768)
+            } else {
+                scene.size = CGSize(width: scene.size.width, height: scene.size.width * 16 / 9)
             }
-            winScene.scaleMode = .aspectFill
-            (winScene as! WinScene).score = (view.scene as! Timer).currentTime!
-            view.presentScene(winScene)
+            scene.scaleMode = .aspectFill
+            (scene as! WinScene).score = (view.scene as! Timer).currentTime!
+            view.presentScene(scene)
         }
     }
 }

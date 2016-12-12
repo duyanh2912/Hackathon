@@ -19,7 +19,7 @@ class MinePowerUpController: Controller {
         view.shadowCastBitMask = 0
         configHandleContact()
         
-        view.zPosition = ZPosition.POWER_UP
+        view.zPosition = ZPosition.MINE_POWER_UP
     }
     func configHandleContact() {
         view.handleContact = { [unowned view = self.view!, unowned parent = self.parent!] other in

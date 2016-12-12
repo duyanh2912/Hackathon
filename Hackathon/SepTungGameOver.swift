@@ -61,6 +61,8 @@ class SepTungGameOverScene: SKScene {
         if let scene = SKScene(fileNamed: "SepTungGameOver") {
             if UIDevice.current.userInterfaceIdiom == .pad {
                 scene.size = CGSize(width: scene.size.width, height: scene.size.width * 1024 / 768)
+            } else {
+                scene.size = CGSize(width: scene.size.width, height: scene.size.width * 16 / 9)
             }
             scene.scaleMode = .aspectFill
             view.presentScene(scene)

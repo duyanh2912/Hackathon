@@ -11,7 +11,7 @@ import Foundation
 extension SKSpriteNode {
     func configLightningMask(mask: UInt32) {
         self.lightingBitMask = mask
-        self.shadowedBitMask = 0
+        self.shadowedBitMask = mask
         self.shadowCastBitMask = mask
     }
     

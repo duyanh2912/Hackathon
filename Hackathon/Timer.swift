@@ -12,6 +12,8 @@ protocol Timer {
     var currentTime: Int!{
         get set
     }
+    var timeLabel: SKLabelNode! { get set }
+    
     func configTimer()
 }
 extension Timer where Self: GameScene{
@@ -20,7 +22,7 @@ extension Timer where Self: GameScene{
         currentTime = 100
         
         // labelTime
-        let timeLabel = SKLabelNode()
+        timeLabel = SKLabelNode()
         timeLabel.fontSize = 65
         timeLabel.fontName = "Papyrus"
         timeLabel.color = UIColor.darkGray
@@ -39,7 +41,7 @@ extension Timer where Self: GameScene{
             }
             
             self.currentTime = self.currentTime - 1;
-            timeLabel.text = "Time: \(self.currentTime!)"
+            self.timeLabel.text = "Time: \(self.currentTime!)"
         }
         let runTime = SKAction.sequence([SKAction.wait(forDuration: 1), count])
         self.run(SKAction.repeatForever(runTime))

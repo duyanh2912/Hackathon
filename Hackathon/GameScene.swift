@@ -15,6 +15,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
     
     // Timer phục vụ tính điểm
     var currentTime: Int! = 0
+    var timeLabel: SKLabelNode!
     
     // Sound Controller cho tiếng bắn súng v.v...
     let soundController = SoundController.sharedInstance
@@ -57,26 +58,46 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
         configMusic()
         configPhysics()
         configBackground()
-        configPlayer()
         configWalls()
+        configPathFinder()
+        configPlayer()
         configZombies()
         configGuns()
         configExit()
-        configPathFinder()
         configSmartZombies()
         configStatueZombies()
         configSuperZombies()
         configCamera()
         configTimer()
         configStuntPowerUp()
+        configMineRandom()
         configTraps()
         configMinePowerUp()
         configDropLabel()
+        configMineTrap()
+    }
+    
+    func configMineRandom() {
+        for node in self[Names.MINE_RANDOM] {
+            if arc4random_uniform(2) == 0 {
+                node.name = Names.MINE_TRAP
+            } else {
+                node.name = Names.MINE_POWER_UP
+            }
+        }
+    }
+    
+    func configMineTrap() {
+        for node in self[Names.MINE_TRAP] {
+            let controller = MineTrapController(view: node as! View, parent: self)
+            controller.config()
+        }
     }
     
     func configBackground() {
         guard let node = self.childNode(withName: Names.BACKGROUND) as? SKSpriteNode else { return }
         node.configLightningMask(mask: LightMask.DEFAULT)
+        node.shadowCastBitMask = 0
         node.zPosition = ZPosition.BACKGROUND
     }
     func configMusic() {

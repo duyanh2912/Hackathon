@@ -13,15 +13,21 @@ import GameplayKit
 class GameViewController: UIViewController {
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         // Random màn chơi
 //        currentLevel = Int(arc4random_uniform(UInt32(maxLevel))) + 1
         currentLevel = 1
         
-        if let view = self.view as! SKView? {
+        if let view = self.view as? SKView {
             if let scene = SKScene(fileNamed: currentLevelScene) {
                 scene.scaleMode = .aspectFit
+                if UIDevice.current.userInterfaceIdiom == .pad {
+                    scene.size = CGSize(width: scene.size.width, height: scene.size.width * 1024 / 768)
+                } else {
+                    scene.size = CGSize(width: scene.size.width, height: scene.size.width * 16 / 9)
+                }
                 view.presentScene(scene)
             }
             

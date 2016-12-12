@@ -67,6 +67,7 @@ class PlayerController: Controller {
     // ACTION
     var move: (() -> ())!
     var gameOver: (() -> ())!
+    var win: (() -> ())!
     
     // FUNCTIONS
     
@@ -96,7 +97,15 @@ class PlayerController: Controller {
         lightNode.falloff = 2
         
         configMove()
+        configWin()
         configGameOver()
+      
+    }
+    
+    func configWin() {
+        win = { [unowned parent = self.parent as! GameScene] in
+            WinScene.present(view: parent.view!)
+        }
     }
     
     func configGameOver() {
@@ -117,7 +126,7 @@ class PlayerController: Controller {
     }
     
     func configHandleContact() {
-        view.handleContact = { [unowned self, unowned parent = self.parent as! GameScene] other in
+        view.handleContact = { [unowned self] other in
             if other.physicsBody?.categoryBitMask == BitMasks.ZOMBIE {
                 self.gameOver()
             }

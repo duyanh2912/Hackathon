@@ -17,7 +17,7 @@ class StuntPowerUpController: Controller{
         
         view.configLightningMask(mask: LightMask.DEFAULT)
         view.shadowCastBitMask = 0
-        view.zPosition = ZPosition.POWER_UP
+        view.zPosition = ZPosition.STUNT_POWER_UP
         configHandleContact()
     }
     func configHandleContact() {

@@ -21,7 +21,7 @@ class SmartZombieController: ZombieController {
     }
     
     override func configMove() {
-        move = {
+        move = { [unowned self] in
         guard self.view != nil else { return }
         guard self.currentTargetNodeIndex < self.pathNodes.count else {
             self.view.physicsBody?.isResting = true
