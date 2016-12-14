@@ -12,6 +12,7 @@
 		500052C91DE4A86E008B6471 /* SoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500052C81DE4A86E008B6471 /* SoundController.swift */; };
 		500848181DEDC45F00C4A940 /* tha_thu.wav in Resources */ = {isa = PBXBuildFile; fileRef = 500848171DEDC45F00C4A940 /* tha_thu.wav */; };
 		5008481A1DEDCB6500C4A940 /* Level4.sks in Resources */ = {isa = PBXBuildFile; fileRef = 500848191DEDCB6500C4A940 /* Level4.sks */; };
+		5011A4CA1E015D2D002EDCB2 /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5011A4C91E015D2D002EDCB2 /* InstructionViewController.swift */; };
 		501246B81DFF127500D90CFC /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501246B71DFF127500D90CFC /* Demo.swift */; };
 		501246BA1DFF12A900D90CFC /* Demo.sks in Resources */ = {isa = PBXBuildFile; fileRef = 501246B91DFF12A900D90CFC /* Demo.sks */; };
 		501246BC1DFF2FAC00D90CFC /* DemoPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501246BB1DFF2FAC00D90CFC /* DemoPlayerController.swift */; };
@@ -84,6 +85,7 @@
 		500052CB1DE4B5B7008B6471 /* game_over.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = game_over.caf; sourceTree = "<group>"; };
 		500848171DEDC45F00C4A940 /* tha_thu.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tha_thu.wav; sourceTree = "<group>"; };
 		500848191DEDCB6500C4A940 /* Level4.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level4.sks; sourceTree = "<group>"; };
+		5011A4C91E015D2D002EDCB2 /* InstructionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
 		501246B71DFF127500D90CFC /* Demo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Demo.swift; sourceTree = "<group>"; };
 		501246B91DFF12A900D90CFC /* Demo.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Demo.sks; sourceTree = "<group>"; };
 		501246BB1DFF2FAC00D90CFC /* DemoPlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoPlayerController.swift; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 				50BD53591DE35475005A5B55 /* AppDelegate.swift */,
 				63FE5EA21DEAED420014347C /* Constant.swift */,
 				50BD53611DE35476005A5B55 /* GameViewController.swift */,
+				5011A4C91E015D2D002EDCB2 /* InstructionViewController.swift */,
 				508672561DFD154300DA7FD1 /* InitialScreenController.swift */,
 				50BD53631DE35476005A5B55 /* Main.storyboard */,
 				50BD53661DE35477005A5B55 /* Assets.xcassets */,
@@ -473,6 +476,7 @@
 				508BEDD91DFB74C400EA471B /* SpecialPlayerController.swift in Sources */,
 				505FCA731DF68FE70092ABCB /* CGSize.swift in Sources */,
 				501246BC1DFF2FAC00D90CFC /* DemoPlayerController.swift in Sources */,
+				5011A4CA1E015D2D002EDCB2 /* InstructionViewController.swift in Sources */,
 				50C159D31DFB399D009656F2 /* StatueZombieController.swift in Sources */,
 				505FCA781DF68FE70092ABCB /* SKTextureAtlas.swift in Sources */,
 				6388EE351DFBC51D00575FC7 /* MinePowerUpController.swift in Sources */,

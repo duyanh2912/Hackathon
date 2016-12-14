@@ -204,7 +204,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
         mineLabel = SKLabelNode()
         mineLabel.name = "DropBoom"
         mineLabel.text = "Mine: \(playerController.numberOfMines)"
-        mineLabel.fontSize = 90
+        mineLabel.fontSize = 90 * self.size.width / 1080
         mineLabel.fontName = "Papyrus"
         mineLabel.color = UIColor.darkGray
         mineLabel.verticalAlignmentMode = .bottom

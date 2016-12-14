@@ -17,11 +17,11 @@
                         <viewControllerLayoutGuide type="bottom" id="OGc-89-Qlc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IC6-Kg-NL3" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="64" width="1024" height="1302"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="occ-gc-JEN" customClass="CustomUIButton" customModule="Hackathon" customModuleProvider="target">
-                                <rect key="frame" x="290" y="1032" width="444" height="70"/>
+                                <rect key="frame" x="290" y="968" width="444" height="70"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="58"/>
                                 <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                 <state key="normal" title="INSTRUCTIONS">
@@ -41,9 +41,12 @@
                                 <variation key="widthClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 </variation>
+                                <connections>
+                                    <segue destination="RU2-s2-dvh" kind="show" id="geM-DT-zfA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oy2-Yz-6Uu" customClass="CustomUIButton" customModule="Hackathon" customModuleProvider="target">
-                                <rect key="frame" x="425.5" y="923" width="173" height="70"/>
+                                <rect key="frame" x="425.5" y="859" width="173" height="70"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="58"/>
                                 <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                 <state key="normal" title="PLAY">
@@ -103,6 +106,24 @@
             </objects>
             <point key="canvasLocation" x="65.625" y="100.58565153733528"/>
         </scene>
+        <!--Instruction View Controller-->
+        <scene sceneID="ybO-Bu-fJE">
+            <objects>
+                <viewController id="RU2-s2-dvh" userLabel="Instruction View Controller" customClass="InstructionViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QD6-9o-nrR"/>
+                        <viewControllerLayoutGuide type="bottom" id="voJ-TR-YOG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WxQ-07-f2A">
+                        <rect key="frame" x="0.0" y="64" width="1024" height="1302"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="omG-Uu-VlW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="150" y="929"/>
+        </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
@@ -124,13 +145,17 @@
         <!--Navigation Controller-->
         <scene sceneID="e4d-lL-XaP">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="i8r-5z-5Bd" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="i8r-5z-5Bd" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vJc-oh-NUw">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="vJc-oh-NUw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="K4N-SJ-2Kc">
+                        <rect key="frame" x="0.0" y="1322" width="1024" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="tL0-ud-0lf" kind="relationship" relationship="rootViewController" id="cO2-6R-6OM"/>
                     </connections>

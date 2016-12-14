@@ -26,6 +26,7 @@ class InitialScreenController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
         
         guard let view = self.view as? SKView else { return }
         if let scene = SKScene(fileNamed: "Demo") {

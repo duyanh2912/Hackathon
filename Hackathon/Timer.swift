@@ -23,7 +23,7 @@ extension Timer where Self: GameScene{
         
         // labelTime
         timeLabel = SKLabelNode()
-        timeLabel.fontSize = 65
+        timeLabel.fontSize = 65 * self.size.width / 1080
         timeLabel.fontName = "Papyrus"
         timeLabel.color = UIColor.darkGray
         timeLabel.verticalAlignmentMode = .top
