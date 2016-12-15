@@ -31,24 +31,8 @@ class MineTrapController: Controller{
     }
     func configHandleContact() {
         view.handleContact = { [unowned view = self.view!, unowned parent = self.parent!] other in
-            parent.run(SoundController.sharedInstance.EXPLOSION)
-            
-            let emitter = SKEmitterNode(fileNamed: "Explosion")
-            emitter?.position = view.position
-            emitter?.zPosition = ZPosition.BLAST
-            
-            let node = View(color: .clear, size: CGSize(width: 200, height: 200))
-            node.position = view.position
-            node.physicsBody = SKPhysicsBody(circleOfRadius: node.size.height / 2)
-            node.configPhysicsMask(category: BitMasks.BLAST, collision: 0, contact: BitMasks.ZOMBIE | BitMasks.PLAYER | BitMasks.BOOM)
-         
-            node.setScale(0.05)
-            parent.addChild(node)
-            parent.addChild(emitter!)
-            
-            node.run(.scale(to: 1, duration: 0.5)) {
-                node.removeFromParent()
-            }
+            let bc = BlastController(parent: parent)
+            bc.config(position: view.position)
             
             view.removeFromParent()
         }

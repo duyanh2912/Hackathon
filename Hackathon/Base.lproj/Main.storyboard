@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="i8r-5z-5Bd">
-    <device id="ipad12_9" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,11 +19,11 @@
                         <viewControllerLayoutGuide type="bottom" id="OGc-89-Qlc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IC6-Kg-NL3" customClass="SKView">
-                        <rect key="frame" x="0.0" y="64" width="1024" height="1302"/>
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="occ-gc-JEN" customClass="CustomUIButton" customModule="Hackathon" customModuleProvider="target">
-                                <rect key="frame" x="290" y="968" width="444" height="70"/>
+                                <rect key="frame" x="162" y="810" width="444" height="70"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="58"/>
                                 <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                 <state key="normal" title="INSTRUCTIONS">
@@ -42,11 +44,11 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="RU2-s2-dvh" kind="show" id="geM-DT-zfA"/>
+                                    <segue destination="vHb-HD-ZjM" kind="show" id="s5V-8t-wQr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oy2-Yz-6Uu" customClass="CustomUIButton" customModule="Hackathon" customModuleProvider="target">
-                                <rect key="frame" x="425.5" y="859" width="173" height="70"/>
+                                <rect key="frame" x="297.5" y="722" width="173" height="70"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="58"/>
                                 <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                 <state key="normal" title="PLAY">
@@ -70,16 +72,29 @@
                                     <action selector="playButtonTapped:" destination="tL0-ud-0lf" eventType="touchUpInside" id="EgX-xp-iua"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zombie Maze" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S26-QQ-56i">
+                                <rect key="frame" x="94" y="50" width="580" height="151.5"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="98"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="49"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="OGc-89-Qlc" firstAttribute="top" secondItem="occ-gc-JEN" secondAttribute="bottom" constant="264" id="3vz-0q-qnx"/>
+                            <constraint firstItem="OGc-89-Qlc" firstAttribute="top" secondItem="occ-gc-JEN" secondAttribute="bottom" constant="80" id="3vz-0q-qnx"/>
                             <constraint firstItem="occ-gc-JEN" firstAttribute="top" secondItem="oy2-Yz-6Uu" secondAttribute="bottom" constant="178" id="B3R-ad-ZLs">
-                                <variation key="widthClass=compact" constant="25"/>
+                                <variation key="widthClass=compact" constant="15"/>
                             </constraint>
-                            <constraint firstItem="occ-gc-JEN" firstAttribute="top" secondItem="oy2-Yz-6Uu" secondAttribute="bottom" constant="39" id="Hln-hn-w3g"/>
+                            <constraint firstItem="occ-gc-JEN" firstAttribute="top" secondItem="oy2-Yz-6Uu" secondAttribute="bottom" constant="18" id="Hln-hn-w3g"/>
+                            <constraint firstItem="S26-QQ-56i" firstAttribute="top" secondItem="OsN-w9-PVN" secondAttribute="bottom" constant="50" id="PGH-yA-c6z">
+                                <variation key="widthClass=compact" constant="35"/>
+                            </constraint>
+                            <constraint firstItem="S26-QQ-56i" firstAttribute="centerX" secondItem="oy2-Yz-6Uu" secondAttribute="centerX" id="PL8-Dg-CaZ"/>
                             <constraint firstItem="OGc-89-Qlc" firstAttribute="top" secondItem="occ-gc-JEN" secondAttribute="bottom" constant="264" id="TEo-W2-xpi">
-                                <variation key="widthClass=compact" constant="125"/>
+                                <variation key="widthClass=compact" constant="50"/>
                             </constraint>
                             <constraint firstItem="occ-gc-JEN" firstAttribute="centerX" secondItem="IC6-Kg-NL3" secondAttribute="centerX" id="VHg-46-VQ2"/>
                             <constraint firstItem="oy2-Yz-6Uu" firstAttribute="centerX" secondItem="IC6-Kg-NL3" secondAttribute="centerX" id="hpa-vd-7Y3"/>
@@ -104,25 +119,119 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cnA-Va-OcW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="65.625" y="100.58565153733528"/>
+            <point key="canvasLocation" x="65.625" y="100.1953125"/>
         </scene>
         <!--Instruction View Controller-->
         <scene sceneID="ybO-Bu-fJE">
             <objects>
-                <viewController id="RU2-s2-dvh" userLabel="Instruction View Controller" customClass="InstructionViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Instruction1" title="Zombies" id="RU2-s2-dvh" userLabel="Instruction View Controller" customClass="InstructionViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QD6-9o-nrR"/>
                         <viewControllerLayoutGuide type="bottom" id="voJ-TR-YOG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WxQ-07-f2A">
-                        <rect key="frame" x="0.0" y="64" width="1024" height="1302"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xqm-L5-JwV" userLabel="normal_zombe_text">
+                                <rect key="frame" x="32" y="371.5" width="317" height="81.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" priority="800" constant="317" id="fqx-HP-3T9"/>
+                                </constraints>
+                                <string key="text">Zombie thường, luôn hướng về phía người chơi. Nếu có một bức tường giữa zombie và người chơi thì zombie sẽ lao vào tường.                      </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zombie" translatesAutoresizingMaskIntoConstraints="NO" id="7ge-fw-wl0" userLabel="smart_zombie">
+                                <rect key="frame" x="452" y="70" width="252" height="252.5"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7ge-fw-wl0" secondAttribute="height" multiplier="1:1" id="COe-Bc-Kek"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4E-8U-TTe" userLabel="smart_zombie_text">
+                                <rect key="frame" x="419" y="371.5" width="317" height="101.5"/>
+                                <string key="text">Zombie thông minh, biết tự tìm đường. Nếu có một bức tường giữa người chơi và zombie thì sẽ tìm cách vòng qua bức tường. Bề ngoài không khác gì zombie thường.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zombie" translatesAutoresizingMaskIntoConstraints="NO" id="EzL-Wu-FEc" userLabel="normal_zombie">
+                                <rect key="frame" x="65" y="70" width="252" height="252.5"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EzL-Wu-FEc" secondAttribute="height" multiplier="1:1" id="IUP-L6-wcM"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Siêu zombie, bắn ra chùm sáng màu xanh. Khi người chơi đi vào vùng sáng xanh này thì sẽ bị chậm lại." textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fG6-ZL-bVn" userLabel="super_zombie_text">
+                                <rect key="frame" x="32" y="874" width="317" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="super_zombie_demo" translatesAutoresizingMaskIntoConstraints="NO" id="Oql-mL-kEU" userLabel="super_zombie">
+                                <rect key="frame" x="108" y="573" width="165" height="252"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zombie" translatesAutoresizingMaskIntoConstraints="NO" id="Y2H-5s-UoV" userLabel="statue_zombie" customClass="CustomUIImageView" customModule="Hackathon" customModuleProvider="target">
+                                <rect key="frame" x="452" y="573" width="252" height="252"/>
+                                <color key="tintColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Y2H-5s-UoV" secondAttribute="height" multiplier="1:1" id="4iD-cJ-P2g"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="blendColor">
+                                        <color key="value" red="0.0" green="0.44044679399999997" blue="0.82055753470000004" alpha="1" colorSpace="deviceRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="blendAlpha">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tượng zombie, người chơi có thể chạm vào mà không sao cả." textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXi-oK-pgv" userLabel="statue_zombie_text">
+                                <rect key="frame" x="419" y="874" width="317" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fG6-ZL-bVn" firstAttribute="top" secondItem="Oql-mL-kEU" secondAttribute="bottom" constant="49" id="1JA-2z-jrb"/>
+                            <constraint firstItem="7ge-fw-wl0" firstAttribute="width" secondItem="7ge-fw-wl0" secondAttribute="height" multiplier="1:1" id="1di-WS-HQQ"/>
+                            <constraint firstItem="V4E-8U-TTe" firstAttribute="leading" secondItem="Xqm-L5-JwV" secondAttribute="trailing" constant="70" id="4Hb-sm-c8T"/>
+                            <constraint firstItem="Oql-mL-kEU" firstAttribute="top" secondItem="Xqm-L5-JwV" secondAttribute="bottom" constant="119.5" id="HCP-H3-FVq"/>
+                            <constraint firstItem="EzL-Wu-FEc" firstAttribute="centerX" secondItem="Xqm-L5-JwV" secondAttribute="centerX" id="HwN-gO-Gxd"/>
+                            <constraint firstItem="Y2H-5s-UoV" firstAttribute="centerY" secondItem="Oql-mL-kEU" secondAttribute="centerY" id="JON-6t-ssR"/>
+                            <constraint firstItem="EzL-Wu-FEc" firstAttribute="width" secondItem="EzL-Wu-FEc" secondAttribute="height" multiplier="1:1" id="Kan-NS-uXA"/>
+                            <constraint firstItem="OXi-oK-pgv" firstAttribute="centerX" secondItem="Y2H-5s-UoV" secondAttribute="centerX" id="MSK-lt-ULM"/>
+                            <constraint firstItem="Y2H-5s-UoV" firstAttribute="width" secondItem="Y2H-5s-UoV" secondAttribute="height" multiplier="1:1" id="Ogi-Ol-Z0Z"/>
+                            <constraint firstItem="Xqm-L5-JwV" firstAttribute="top" secondItem="EzL-Wu-FEc" secondAttribute="bottom" constant="49" id="QUN-55-SuW"/>
+                            <constraint firstItem="V4E-8U-TTe" firstAttribute="width" secondItem="Xqm-L5-JwV" secondAttribute="width" id="QsB-kX-Kad"/>
+                            <constraint firstItem="OXi-oK-pgv" firstAttribute="top" secondItem="fG6-ZL-bVn" secondAttribute="top" id="TTz-ea-iK0"/>
+                            <constraint firstItem="fG6-ZL-bVn" firstAttribute="width" secondItem="Xqm-L5-JwV" secondAttribute="width" id="WSd-wZ-ieS"/>
+                            <constraint firstItem="7ge-fw-wl0" firstAttribute="centerX" secondItem="V4E-8U-TTe" secondAttribute="centerX" id="Y0O-ke-ZZh"/>
+                            <constraint firstItem="fG6-ZL-bVn" firstAttribute="centerX" secondItem="Oql-mL-kEU" secondAttribute="centerX" id="axr-dH-TfY"/>
+                            <constraint firstItem="Oql-mL-kEU" firstAttribute="height" secondItem="EzL-Wu-FEc" secondAttribute="height" id="cDc-YT-3BD"/>
+                            <constraint firstItem="Y2H-5s-UoV" firstAttribute="width" secondItem="Y2H-5s-UoV" secondAttribute="height" multiplier="1:1" id="cfj-gm-Y6o"/>
+                            <constraint firstItem="voJ-TR-YOG" firstAttribute="top" secondItem="fG6-ZL-bVn" secondAttribute="top" constant="150" id="ctX-8X-yiH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="V4E-8U-TTe" secondAttribute="trailing" constant="12" id="dPZ-ZG-ZS5"/>
+                            <constraint firstItem="Xqm-L5-JwV" firstAttribute="leading" secondItem="WxQ-07-f2A" secondAttribute="leadingMargin" constant="12" id="gEa-qc-6gH"/>
+                            <constraint firstItem="Y2H-5s-UoV" firstAttribute="height" secondItem="Oql-mL-kEU" secondAttribute="height" id="jdN-kS-dE3"/>
+                            <constraint firstItem="V4E-8U-TTe" firstAttribute="top" secondItem="7ge-fw-wl0" secondAttribute="bottom" constant="49" id="kis-P7-lEd"/>
+                            <constraint firstItem="V4E-8U-TTe" firstAttribute="height" relation="greaterThanOrEqual" secondItem="Xqm-L5-JwV" secondAttribute="height" id="ldr-zB-0sF"/>
+                            <constraint firstItem="Y2H-5s-UoV" firstAttribute="centerX" secondItem="7ge-fw-wl0" secondAttribute="centerX" id="mF0-9D-sm6"/>
+                            <constraint firstItem="Oql-mL-kEU" firstAttribute="centerX" secondItem="Xqm-L5-JwV" secondAttribute="centerX" id="mup-dg-aeC"/>
+                            <constraint firstItem="QD6-9o-nrR" firstAttribute="bottom" secondItem="EzL-Wu-FEc" secondAttribute="top" constant="-50" id="oaF-6H-O0T"/>
+                            <constraint firstItem="7ge-fw-wl0" firstAttribute="centerY" secondItem="EzL-Wu-FEc" secondAttribute="centerY" id="pqF-wH-6IY"/>
+                            <constraint firstItem="OXi-oK-pgv" firstAttribute="width" secondItem="fG6-ZL-bVn" secondAttribute="width" id="utv-bA-uAP"/>
+                            <constraint firstItem="V4E-8U-TTe" firstAttribute="top" secondItem="Xqm-L5-JwV" secondAttribute="top" id="vPz-7e-2Tn"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="omG-Uu-VlW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="150" y="929"/>
+            <point key="canvasLocation" x="65.625" y="1628.90625"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -133,7 +242,7 @@
                         <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
                     </layoutGuides>
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -164,5 +273,35 @@
             </objects>
             <point key="canvasLocation" x="-658.59375" y="100.58565153733528"/>
         </scene>
+        <!--Page View Controller-->
+        <scene sceneID="ZM3-aV-Wwu">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="vHb-HD-ZjM" customClass="PageViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uCk-YJ-5wX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="916" y="929"/>
+        </scene>
+        <!--Các loại zombie-->
+        <scene sceneID="cSw-QX-ZZV">
+            <objects>
+                <viewController storyboardIdentifier="Instruction0" title="Các loại zombie" id="Qtd-JE-3WG" customClass="InstructionViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CXh-H5-mAg"/>
+                        <viewControllerLayoutGuide type="bottom" id="coN-JF-wQV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zOf-qJ-ZVW">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B2G-Kt-vHZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1386.71875" y="1730.2734375"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="super_zombie_demo" width="165" height="745"/>
+        <image name="zombie" width="61" height="62"/>
+    </resources>
 </document>
