@@ -84,7 +84,7 @@ extension SmartZombies where Self: GameScene {
     func configPathFinder() {
         let obstacles = self[Names.WALL] as! [SKSpriteNode]
         //        obstacles += self["//zombie"] as! [SKSpriteNode]
-        self.pathFinder = PathFinder(obstacles: obstacles, bufferRadius: Float(#imageLiteral(resourceName: "zombie").size.height / 2.6))
+        self.pathFinder = PathFinder(obstacles: obstacles, bufferRadius: Float(#imageLiteral(resourceName: "zombie").size.height / 2.6 * 2))
         PathFinder.instance = self.pathFinder
     }
     

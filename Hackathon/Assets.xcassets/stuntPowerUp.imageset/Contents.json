@@ -6,11 +6,11 @@
     },
     {
       "idiom" : "universal",
+      "filename" : "stuntPowerUp.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "stuntPowerUp.png",
       "scale" : "3x"
     }
   ],

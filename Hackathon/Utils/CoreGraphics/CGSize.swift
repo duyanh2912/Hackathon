@@ -15,4 +15,10 @@ extension CGSize {
         let height = self.height * factor
         return CGSize(width: width, height: height)
     }
+    
+    func add(dx: CGFloat, dy: CGFloat) -> CGSize {
+        let x = self.width + dx
+        let y = self.height + dy
+        return CGSize(width: x, height: y)
+    }
 }

@@ -22,11 +22,18 @@
 		501F0E221DE74C5800F0A686 /* WallController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501F0E211DE74C5800F0A686 /* WallController.swift */; };
 		501FF6B41DED5E34002505C4 /* Em Cua Ngay Hom Qua - Son Tung M TP.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 501FF6B31DED5E34002505C4 /* Em Cua Ngay Hom Qua - Son Tung M TP.mp3 */; };
 		502262DB1DFBE5280029D770 /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 502262DA1DFBE5270029D770 /* Explosion.sks */; };
+		5024476B1E052C4E0042BC0B /* GifUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5024476A1E052C4E0042BC0B /* GifUIImageView.swift */; };
+		5024476D1E052C910042BC0B /* Instruction0.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5024476C1E052C910042BC0B /* Instruction0.swift */; };
+		502447731E0553280042BC0B /* mine.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5024476F1E0553280042BC0B /* mine.gif */; };
+		502447741E0553280042BC0B /* mine_exploded.gif in Resources */ = {isa = PBXBuildFile; fileRef = 502447701E0553280042BC0B /* mine_exploded.gif */; };
+		502447751E0553280042BC0B /* touch.gif in Resources */ = {isa = PBXBuildFile; fileRef = 502447711E0553280042BC0B /* touch.gif */; };
+		502447761E0553280042BC0B /* win.gif in Resources */ = {isa = PBXBuildFile; fileRef = 502447721E0553280042BC0B /* win.gif */; };
 		503E62AA1DE83EE0009BCF47 /* HandgunController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503E62A91DE83EE0009BCF47 /* HandgunController.swift */; };
 		503E62AC1DE84862009BCF47 /* BulletController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503E62AB1DE84862009BCF47 /* BulletController.swift */; };
 		50501C7A1DE4062E007301E4 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50501C791DE4062E007301E4 /* View.swift */; };
 		50501C7C1DE42059007301E4 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50501C7B1DE42059007301E4 /* Controller.swift */; };
 		50501C801DE43475007301E4 /* ZombieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50501C7F1DE43475007301E4 /* ZombieController.swift */; };
+		505AA4041E05573F008D4590 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 505AA4031E05573F008D4590 /* Assets.xcassets */; };
 		505FCA701DF68FE70092ABCB /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FCA651DF68FE70092ABCB /* CGFloat.swift */; };
 		505FCA711DF68FE70092ABCB /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FCA661DF68FE70092ABCB /* CGPoint.swift */; };
 		505FCA721DF68FE70092ABCB /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FCA671DF68FE70092ABCB /* CGRect.swift */; };
@@ -37,6 +44,7 @@
 		505FCA771DF68FE70092ABCB /* SKSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FCA6E1DF68FE70092ABCB /* SKSpriteNode.swift */; };
 		505FCA781DF68FE70092ABCB /* SKTextureAtlas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FCA6F1DF68FE70092ABCB /* SKTextureAtlas.swift */; };
 		506F48611DEDD9AE00F2F95B /* Level1.sks in Resources */ = {isa = PBXBuildFile; fileRef = 506F48601DEDD9AE00F2F95B /* Level1.sks */; };
+		507AE5591E0435490000554C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507AE5581E0435490000554C /* UIView.swift */; };
 		508672531DFD05BC00DA7FD1 /* pick_up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 508672521DFD05BC00DA7FD1 /* pick_up.wav */; };
 		508672571DFD154400DA7FD1 /* InitialScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508672561DFD154300DA7FD1 /* InitialScreenController.swift */; };
 		5089FBFE1DE7CBFC004A41FE /* FeetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5089FBFD1DE7CBFB004A41FE /* FeetController.swift */; };
@@ -57,7 +65,6 @@
 		50BD535C1DE35476005A5B55 /* Level2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 50BD535B1DE35476005A5B55 /* Level2.sks */; };
 		50BD53621DE35476005A5B55 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD53611DE35476005A5B55 /* GameViewController.swift */; };
 		50BD53651DE35476005A5B55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50BD53631DE35476005A5B55 /* Main.storyboard */; };
-		50BD53671DE35477005A5B55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BD53661DE35477005A5B55 /* Assets.xcassets */; };
 		50BD536A1DE35477005A5B55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50BD53681DE35477005A5B55 /* LaunchScreen.storyboard */; };
 		50C159D31DFB399D009656F2 /* StatueZombieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C159D21DFB399D009656F2 /* StatueZombieController.swift */; };
 		50C159D61DFB44BA009656F2 /* TriangleLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C159D51DFB44BA009656F2 /* TriangleLight.swift */; };
@@ -98,11 +105,18 @@
 		501F0E211DE74C5800F0A686 /* WallController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallController.swift; sourceTree = "<group>"; };
 		501FF6B31DED5E34002505C4 /* Em Cua Ngay Hom Qua - Son Tung M TP.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Em Cua Ngay Hom Qua - Son Tung M TP.mp3"; sourceTree = "<group>"; };
 		502262DA1DFBE5270029D770 /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
+		5024476A1E052C4E0042BC0B /* GifUIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifUIImageView.swift; sourceTree = "<group>"; };
+		5024476C1E052C910042BC0B /* Instruction0.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instruction0.swift; sourceTree = "<group>"; };
+		5024476F1E0553280042BC0B /* mine.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = mine.gif; sourceTree = "<group>"; };
+		502447701E0553280042BC0B /* mine_exploded.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = mine_exploded.gif; sourceTree = "<group>"; };
+		502447711E0553280042BC0B /* touch.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = touch.gif; sourceTree = "<group>"; };
+		502447721E0553280042BC0B /* win.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = win.gif; sourceTree = "<group>"; };
 		503E62A91DE83EE0009BCF47 /* HandgunController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandgunController.swift; sourceTree = "<group>"; };
 		503E62AB1DE84862009BCF47 /* BulletController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletController.swift; sourceTree = "<group>"; };
 		50501C791DE4062E007301E4 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		50501C7B1DE42059007301E4 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		50501C7F1DE43475007301E4 /* ZombieController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZombieController.swift; sourceTree = "<group>"; };
+		505AA4031E05573F008D4590 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		505FCA651DF68FE70092ABCB /* CGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
 		505FCA661DF68FE70092ABCB /* CGPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
 		505FCA671DF68FE70092ABCB /* CGRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRect.swift; sourceTree = "<group>"; };
@@ -113,6 +127,7 @@
 		505FCA6E1DF68FE70092ABCB /* SKSpriteNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSpriteNode.swift; sourceTree = "<group>"; };
 		505FCA6F1DF68FE70092ABCB /* SKTextureAtlas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTextureAtlas.swift; sourceTree = "<group>"; };
 		506F48601DEDD9AE00F2F95B /* Level1.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level1.sks; sourceTree = "<group>"; };
+		507AE5581E0435490000554C /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		508672521DFD05BC00DA7FD1 /* pick_up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pick_up.wav; sourceTree = "<group>"; };
 		508672561DFD154300DA7FD1 /* InitialScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialScreenController.swift; sourceTree = "<group>"; };
 		5089FBFD1DE7CBFB004A41FE /* FeetController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeetController.swift; sourceTree = "<group>"; };
@@ -134,7 +149,6 @@
 		50BD535B1DE35476005A5B55 /* Level2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level2.sks; sourceTree = "<group>"; };
 		50BD53611DE35476005A5B55 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		50BD53641DE35476005A5B55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		50BD53661DE35477005A5B55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50BD53691DE35477005A5B55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50BD536B1DE35477005A5B55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50C159D21DFB399D009656F2 /* StatueZombieController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatueZombieController.swift; sourceTree = "<group>"; };
@@ -169,6 +183,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5024476E1E0553280042BC0B /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				5024476F1E0553280042BC0B /* mine.gif */,
+				502447701E0553280042BC0B /* mine_exploded.gif */,
+				502447711E0553280042BC0B /* touch.gif */,
+				502447721E0553280042BC0B /* win.gif */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
 		50501C751DE405DB007301E4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +278,8 @@
 			children = (
 				508FA4991DF9A5B7004098BD /* UIButton.swift */,
 				500946081E02EA6C00CF4A0B /* UIImageView.swift */,
+				507AE5581E0435490000554C /* UIView.swift */,
+				5024476A1E052C4E0042BC0B /* GifUIImageView.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -348,12 +375,14 @@
 				63FE5EA21DEAED420014347C /* Constant.swift */,
 				50BD53611DE35476005A5B55 /* GameViewController.swift */,
 				5011A4C91E015D2D002EDCB2 /* InstructionViewController.swift */,
+				5024476C1E052C910042BC0B /* Instruction0.swift */,
 				5011A4CB1E0167AE002EDCB2 /* PageViewController.swift */,
 				508672561DFD154300DA7FD1 /* InitialScreenController.swift */,
+				505AA4031E05573F008D4590 /* Assets.xcassets */,
 				50BD53631DE35476005A5B55 /* Main.storyboard */,
-				50BD53661DE35477005A5B55 /* Assets.xcassets */,
 				50BD53681DE35477005A5B55 /* LaunchScreen.storyboard */,
 				50BD536B1DE35477005A5B55 /* Info.plist */,
+				5024476E1E0553280042BC0B /* Animation */,
 			);
 			path = Hackathon;
 			sourceTree = "<group>";
@@ -451,22 +480,26 @@
 				50ABEF101DFBBABF00CCE469 /* EyeRay.sks in Resources */,
 				50ADA0831DFD3AFF00C97155 /* SepTungGameOver.sks in Resources */,
 				502262DB1DFBE5280029D770 /* Explosion.sks in Resources */,
+				502447731E0553280042BC0B /* mine.gif in Resources */,
+				502447761E0553280042BC0B /* win.gif in Resources */,
 				508672531DFD05BC00DA7FD1 /* pick_up.wav in Resources */,
 				500052C71DE4A704008B6471 /* GameoverScene.sks in Resources */,
 				50BD53651DE35476005A5B55 /* Main.storyboard in Resources */,
 				50BD535C1DE35476005A5B55 /* Level2.sks in Resources */,
 				50D88FC41DFB1A47007C61A5 /* Footstep.sks in Resources */,
 				501246BA1DFF12A900D90CFC /* Demo.sks in Resources */,
-				50BD53671DE35477005A5B55 /* Assets.xcassets in Resources */,
 				500848181DEDC45F00C4A940 /* tha_thu.wav in Resources */,
 				50ABEF0C1DFB9F0C00CCE469 /* trap.wav in Resources */,
 				501FF6B41DED5E34002505C4 /* Em Cua Ngay Hom Qua - Son Tung M TP.mp3 in Resources */,
 				50FD42221DFCF797009D8433 /* explosion.wav in Resources */,
 				50CB9E5B1DEAFF3B00271641 /* background.mp3 in Resources */,
+				502447741E0553280042BC0B /* mine_exploded.gif in Resources */,
 				50F357121DEAD992006F25D9 /* WinScene.sks in Resources */,
 				50BD536A1DE35477005A5B55 /* LaunchScreen.storyboard in Resources */,
 				50CB9E631DEB06CE00271641 /* zombie_moan.wav in Resources */,
+				502447751E0553280042BC0B /* touch.gif in Resources */,
 				5008481A1DEDCB6500C4A940 /* Level4.sks in Resources */,
+				505AA4041E05573F008D4590 /* Assets.xcassets in Resources */,
 				50A3AC121DF1212900490730 /* Level3.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +531,7 @@
 				50BD53621DE35476005A5B55 /* GameViewController.swift in Sources */,
 				505FCA721DF68FE70092ABCB /* CGRect.swift in Sources */,
 				6388EE311DFB707600575FC7 /* TrapController.swift in Sources */,
+				507AE5591E0435490000554C /* UIView.swift in Sources */,
 				50501C7A1DE4062E007301E4 /* View.swift in Sources */,
 				505FCA741DF68FE70092ABCB /* CGVector.swift in Sources */,
 				505FCA761DF68FE70092ABCB /* SKNode.swift in Sources */,
@@ -511,6 +545,8 @@
 				500052C91DE4A86E008B6471 /* SoundController.swift in Sources */,
 				50BD535A1DE35475005A5B55 /* AppDelegate.swift in Sources */,
 				50ABEF0E1DFBB9A200CCE469 /* SuperZombieController.swift in Sources */,
+				5024476B1E052C4E0042BC0B /* GifUIImageView.swift in Sources */,
+				5024476D1E052C910042BC0B /* Instruction0.swift in Sources */,
 				500052C61DE4A704008B6471 /* GameoverScene.swift in Sources */,
 				50A3AC161DF1222F00490730 /* SmartZombieController.swift in Sources */,
 				503E62AC1DE84862009BCF47 /* BulletController.swift in Sources */,

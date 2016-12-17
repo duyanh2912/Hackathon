@@ -11,7 +11,7 @@ import UIKit
 class PageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     lazy var orderedViewControllers: [InstructionViewController] = {
         var controllers = [InstructionViewController]()
-        for i in 0...1 {
+        for i in 0...3 {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "Instruction\(i)") as! InstructionViewController
             controllers.append(vc)
         }

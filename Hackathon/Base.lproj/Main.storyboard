@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="i8r-5z-5Bd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="i8r-5z-5Bd">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,11 +19,11 @@
                         <viewControllerLayoutGuide type="bottom" id="OGc-89-Qlc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IC6-Kg-NL3" customClass="SKView">
-                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="occ-gc-JEN" customClass="CustomUIButton" customModule="Hackathon" customModuleProvider="target">
-                                <rect key="frame" x="162" y="810" width="444" height="70"/>
+                                <rect key="frame" x="162" y="874" width="444" height="70"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="58"/>
                                 <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                 <state key="normal" title="INSTRUCTIONS">
@@ -44,11 +44,11 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="vHb-HD-ZjM" kind="show" id="s5V-8t-wQr"/>
+                                    <segue destination="vHb-HD-ZjM" kind="show" identifier="segue0" id="s5V-8t-wQr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oy2-Yz-6Uu" customClass="CustomUIButton" customModule="Hackathon" customModuleProvider="target">
-                                <rect key="frame" x="297.5" y="722" width="173" height="70"/>
+                                <rect key="frame" x="297.5" y="786" width="173" height="70"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="58"/>
                                 <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                 <state key="normal" title="PLAY">
@@ -73,7 +73,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zombie Maze" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S26-QQ-56i">
-                                <rect key="frame" x="94" y="50" width="580" height="151.5"/>
+                                <rect key="frame" x="94" y="114" width="580" height="151.5"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="98"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -124,7 +124,7 @@
         <!--Instruction View Controller-->
         <scene sceneID="ybO-Bu-fJE">
             <objects>
-                <viewController storyboardIdentifier="Instruction1" title="Zombies" id="RU2-s2-dvh" userLabel="Instruction View Controller" customClass="InstructionViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Instruction1" title="Các loại zombie" id="RU2-s2-dvh" userLabel="Instruction View Controller" customClass="InstructionViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QD6-9o-nrR"/>
                         <viewControllerLayoutGuide type="bottom" id="voJ-TR-YOG"/>
@@ -133,8 +133,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xqm-L5-JwV" userLabel="normal_zombe_text">
-                                <rect key="frame" x="32" y="371.5" width="317" height="81.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xqm-L5-JwV" userLabel="normal_zombe_text">
+                                <rect key="frame" x="32" y="397" width="317" height="81.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" priority="800" constant="317" id="fqx-HP-3T9"/>
                                 </constraints>
@@ -144,54 +144,54 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zombie" translatesAutoresizingMaskIntoConstraints="NO" id="7ge-fw-wl0" userLabel="smart_zombie">
-                                <rect key="frame" x="452" y="70" width="252" height="252.5"/>
+                                <rect key="frame" x="438.5" y="70" width="278" height="278"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7ge-fw-wl0" secondAttribute="height" multiplier="1:1" id="COe-Bc-Kek"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4E-8U-TTe" userLabel="smart_zombie_text">
-                                <rect key="frame" x="419" y="371.5" width="317" height="101.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4E-8U-TTe" userLabel="smart_zombie_text">
+                                <rect key="frame" x="419" y="397" width="317" height="101.5"/>
                                 <string key="text">Zombie thông minh, biết tự tìm đường. Nếu có một bức tường giữa người chơi và zombie thì sẽ tìm cách vòng qua bức tường. Bề ngoài không khác gì zombie thường.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zombie" translatesAutoresizingMaskIntoConstraints="NO" id="EzL-Wu-FEc" userLabel="normal_zombie">
-                                <rect key="frame" x="65" y="70" width="252" height="252.5"/>
+                                <rect key="frame" x="51.5" y="70" width="278" height="278"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EzL-Wu-FEc" secondAttribute="height" multiplier="1:1" id="IUP-L6-wcM"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Siêu zombie, bắn ra chùm sáng màu xanh. Khi người chơi đi vào vùng sáng xanh này thì sẽ bị chậm lại." textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fG6-ZL-bVn" userLabel="super_zombie_text">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Siêu zombie, bắn ra chùm sáng màu xanh. Khi người chơi đi vào vùng sáng xanh này thì sẽ bị chậm lại." textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fG6-ZL-bVn" userLabel="super_zombie_text">
                                 <rect key="frame" x="32" y="874" width="317" height="61"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="super_zombie_demo" translatesAutoresizingMaskIntoConstraints="NO" id="Oql-mL-kEU" userLabel="super_zombie">
-                                <rect key="frame" x="108.5" y="573" width="165" height="252"/>
+                                <rect key="frame" x="108.5" y="547" width="165" height="278"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zombie" translatesAutoresizingMaskIntoConstraints="NO" id="Y2H-5s-UoV" userLabel="statue_zombie" customClass="CustomUIImageView" customModule="Hackathon" customModuleProvider="target">
-                                <rect key="frame" x="452" y="573" width="252" height="252"/>
-                                <color key="tintColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                <rect key="frame" x="438.5" y="547" width="278" height="278"/>
+                                <color key="tintColor" red="0.99942404029999998" green="0.56930421987191449" blue="0.50010474217520684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Y2H-5s-UoV" secondAttribute="height" multiplier="1:1" id="4iD-cJ-P2g"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="blendColor">
-                                        <color key="value" red="0.0" green="0.44044679399999997" blue="0.82055753470000004" alpha="1" colorSpace="deviceRGB"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="blendMode">
+                                        <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="blendAlpha">
                                         <real key="value" value="0.5"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="blendMode">
-                                        <integer key="value" value="1"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="blendColor">
+                                        <color key="value" red="0.0" green="0.53536347470000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tượng zombie, người chơi có thể chạm vào mà không sao cả." textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXi-oK-pgv" userLabel="statue_zombie_text">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Tượng zombie, người chơi có thể chạm vào mà không sao cả." textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXi-oK-pgv" userLabel="statue_zombie_text">
                                 <rect key="frame" x="419" y="874" width="317" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -203,7 +203,7 @@
                             <constraint firstItem="fG6-ZL-bVn" firstAttribute="top" secondItem="Oql-mL-kEU" secondAttribute="bottom" constant="49" id="1JA-2z-jrb"/>
                             <constraint firstItem="7ge-fw-wl0" firstAttribute="width" secondItem="7ge-fw-wl0" secondAttribute="height" multiplier="1:1" id="1di-WS-HQQ"/>
                             <constraint firstItem="V4E-8U-TTe" firstAttribute="leading" secondItem="Xqm-L5-JwV" secondAttribute="trailing" constant="70" id="4Hb-sm-c8T"/>
-                            <constraint firstItem="Oql-mL-kEU" firstAttribute="top" secondItem="Xqm-L5-JwV" secondAttribute="bottom" constant="119.5" id="HCP-H3-FVq"/>
+                            <constraint firstItem="Oql-mL-kEU" firstAttribute="top" secondItem="Xqm-L5-JwV" secondAttribute="top" constant="150" id="HCP-H3-FVq"/>
                             <constraint firstItem="EzL-Wu-FEc" firstAttribute="centerX" secondItem="Xqm-L5-JwV" secondAttribute="centerX" id="HwN-gO-Gxd"/>
                             <constraint firstItem="Y2H-5s-UoV" firstAttribute="centerY" secondItem="Oql-mL-kEU" secondAttribute="centerY" id="JON-6t-ssR"/>
                             <constraint firstItem="EzL-Wu-FEc" firstAttribute="width" secondItem="EzL-Wu-FEc" secondAttribute="height" multiplier="1:1" id="Kan-NS-uXA"/>
@@ -234,7 +234,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="omG-Uu-VlW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="65.625" y="1628.90625"/>
+            <point key="canvasLocation" x="-308" y="1622"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -259,7 +259,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="i8r-5z-5Bd" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="vJc-oh-NUw">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="vJc-oh-NUw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -284,27 +285,437 @@
             </objects>
             <point key="canvasLocation" x="916" y="929"/>
         </scene>
-        <!--Các loại zombie-->
-        <scene sceneID="cSw-QX-ZZV">
+        <!--Instruction View Controller-->
+        <scene sceneID="Hbx-b4-uK5">
             <objects>
-                <viewController storyboardIdentifier="Instruction0" title="Các loại zombie" id="Qtd-JE-3WG" customClass="InstructionViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Instruction0" title="Cách chơi" id="8Qh-My-uUG" userLabel="Instruction View Controller" customClass="Instruction0" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="CXh-H5-mAg"/>
-                        <viewControllerLayoutGuide type="bottom" id="coN-JF-wQV"/>
+                        <viewControllerLayoutGuide type="top" id="bEa-tH-FvH"/>
+                        <viewControllerLayoutGuide type="bottom" id="lcB-Tl-j8M"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zOf-qJ-ZVW">
+                    <view key="view" contentMode="scaleToFill" id="n29-Ys-rfh">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hjz-GU-qyS" userLabel="smart_zombie">
+                                <rect key="frame" x="423.5" y="114" width="309" height="309"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Hjz-GU-qyS" secondAttribute="height" multiplier="1:1" id="1x0-0l-9Z8"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Nếu người chơi đi được đến cửa ra mà không bị zombie chạm vào thì sẽ qua bàn." textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fp8-Il-QI5" userLabel="smart_zombie_text">
+                                <rect key="frame" x="419" y="472" width="317" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="80y-Yy-fxw" userLabel="normal_zombie">
+                                <rect key="frame" x="36" y="114" width="309" height="309"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="80y-Yy-fxw" secondAttribute="height" multiplier="1:1" id="xqz-zA-d0F"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Hai loại cửa ra trong game." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOE-Cv-8dG" userLabel="super_zombie_text">
+                                <rect key="frame" x="32" y="949" width="704" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stair" translatesAutoresizingMaskIntoConstraints="NO" id="kSL-PZ-OBd" userLabel="super_zombie" customClass="CustomUIImageView" customModule="Hackathon" customModuleProvider="target">
+                                <rect key="frame" x="36.5" y="591.5" width="308.5" height="308.5"/>
+                                <color key="backgroundColor" red="0.90641931114551078" green="0.85032770878035779" blue="0.77330019113061133" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kSL-PZ-OBd" secondAttribute="height" multiplier="1:1" id="sIc-iw-nNA"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="insetAmount">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="goal" translatesAutoresizingMaskIntoConstraints="NO" id="ckb-aq-UnW" userLabel="statue_zombie" customClass="CustomUIImageView" customModule="Hackathon" customModuleProvider="target">
+                                <rect key="frame" x="423.5" y="591" width="309" height="309"/>
+                                <color key="backgroundColor" red="0.90641931109999996" green="0.85032770879999997" blue="0.77330019110000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.99942404029999998" green="0.56930421990000002" blue="0.50010474220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ckb-aq-UnW" secondAttribute="height" multiplier="1:1" id="neU-KB-4XK"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="insetAmount">
+                                        <real key="value" value="-11"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Chạm vào bất cứ chỗ nào trên màn hình để di chuyển." textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWX-2Q-PpS" userLabel="normal_zombe_text">
+                                <rect key="frame" x="32" y="472" width="317" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" priority="800" constant="317" id="VQU-ad-spw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="80y-Yy-fxw" firstAttribute="width" secondItem="80y-Yy-fxw" secondAttribute="height" multiplier="1:1" id="1g6-CS-2rn"/>
+                            <constraint firstItem="Fp8-Il-QI5" firstAttribute="leading" secondItem="PWX-2Q-PpS" secondAttribute="trailing" constant="70" id="5UX-fu-tbF"/>
+                            <constraint firstItem="ckb-aq-UnW" firstAttribute="centerX" secondItem="Hjz-GU-qyS" secondAttribute="centerX" id="87C-ou-EWz"/>
+                            <constraint firstItem="Fp8-Il-QI5" firstAttribute="width" secondItem="PWX-2Q-PpS" secondAttribute="width" id="8GD-8g-XkO"/>
+                            <constraint firstItem="BOE-Cv-8dG" firstAttribute="leading" secondItem="n29-Ys-rfh" secondAttribute="leadingMargin" constant="12" id="9ZK-wA-LfE"/>
+                            <constraint firstItem="bEa-tH-FvH" firstAttribute="bottom" secondItem="80y-Yy-fxw" secondAttribute="top" constant="-50" id="Eet-gs-IbY"/>
+                            <constraint firstItem="Fp8-Il-QI5" firstAttribute="top" secondItem="Hjz-GU-qyS" secondAttribute="bottom" constant="49" id="J3I-8f-JnJ"/>
+                            <constraint firstItem="PWX-2Q-PpS" firstAttribute="leading" secondItem="n29-Ys-rfh" secondAttribute="leadingMargin" constant="12" id="K9t-0D-0kb"/>
+                            <constraint firstItem="kSL-PZ-OBd" firstAttribute="centerX" secondItem="PWX-2Q-PpS" secondAttribute="centerX" id="PNi-Wx-OFr"/>
+                            <constraint firstItem="80y-Yy-fxw" firstAttribute="centerX" secondItem="PWX-2Q-PpS" secondAttribute="centerX" id="Rh1-9J-SNg"/>
+                            <constraint firstItem="Fp8-Il-QI5" firstAttribute="top" secondItem="PWX-2Q-PpS" secondAttribute="top" id="UGH-AZ-6EK"/>
+                            <constraint firstItem="Hjz-GU-qyS" firstAttribute="width" secondItem="Hjz-GU-qyS" secondAttribute="height" multiplier="1:1" id="bOu-He-QqY"/>
+                            <constraint firstItem="Hjz-GU-qyS" firstAttribute="centerY" secondItem="80y-Yy-fxw" secondAttribute="centerY" id="dBE-oC-5qE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fp8-Il-QI5" secondAttribute="trailing" constant="12" id="dST-c5-Dc8"/>
+                            <constraint firstItem="kSL-PZ-OBd" firstAttribute="height" secondItem="80y-Yy-fxw" secondAttribute="height" id="iWj-ca-SIQ"/>
+                            <constraint firstItem="ckb-aq-UnW" firstAttribute="centerY" secondItem="kSL-PZ-OBd" secondAttribute="centerY" id="jOC-kx-31X"/>
+                            <constraint firstItem="BOE-Cv-8dG" firstAttribute="top" secondItem="kSL-PZ-OBd" secondAttribute="bottom" constant="49" id="qYO-qe-InM"/>
+                            <constraint firstItem="Hjz-GU-qyS" firstAttribute="centerX" secondItem="Fp8-Il-QI5" secondAttribute="centerX" id="s8y-Yk-dZ9"/>
+                            <constraint firstItem="kSL-PZ-OBd" firstAttribute="top" secondItem="PWX-2Q-PpS" secondAttribute="top" constant="119.5" id="uDj-d7-J21"/>
+                            <constraint firstItem="lcB-Tl-j8M" firstAttribute="top" secondItem="BOE-Cv-8dG" secondAttribute="top" constant="75" id="uUT-E4-z5Y"/>
+                            <constraint firstItem="PWX-2Q-PpS" firstAttribute="top" secondItem="80y-Yy-fxw" secondAttribute="bottom" constant="49" id="vcx-mM-sUe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BOE-Cv-8dG" secondAttribute="trailing" constant="12" id="w7w-n3-LV5"/>
+                            <constraint firstItem="BOE-Cv-8dG" firstAttribute="top" secondItem="ckb-aq-UnW" secondAttribute="bottom" constant="49" id="yVh-MJ-ydN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="instructionImage1" destination="80y-Yy-fxw" id="Dm3-XL-USE"/>
+                        <outlet property="instructionImage2" destination="Hjz-GU-qyS" id="goU-b5-sgM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ia-qx-35W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1091.40625" y="1621.875"/>
+        </scene>
+        <!--Instruction View Controller-->
+        <scene sceneID="dXc-zD-PUD">
+            <objects>
+                <viewController storyboardIdentifier="Instruction2" title="Các loại item" id="HJk-w5-01h" userLabel="Instruction View Controller" customClass="InstructionViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bBz-8V-Rrf"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xey-3f-9dl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="je4-KF-Ohm">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Súng, có thể bắn chết zombie. Khi nhặt được súng rồi thì nhấn vào chỗ zombie để bắn." textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3S-Kn-BKt" userLabel="handgun_text">
+                                <rect key="frame" x="32" y="397" width="317" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" priority="800" constant="317" id="QeJ-vo-nP3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stuntPowerUp" translatesAutoresizingMaskIntoConstraints="NO" id="K5o-Yd-bvI" userLabel="stunt_power_up">
+                                <rect key="frame" x="439" y="70" width="278" height="278"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Power up, khi người chơi nhặt được thì tất cả zombie trong map đơ 5s." textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6q-Lf-8O9" userLabel="stunt_power_up_text">
+                                <rect key="frame" x="419" y="397" width="317" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="handgun" translatesAutoresizingMaskIntoConstraints="NO" id="r0U-9e-jg0" customClass="CustomUIImageView" customModule="Hackathon" customModuleProvider="target">
+                                <rect key="frame" x="52" y="70" width="278" height="278"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="r0U-9e-jg0" secondAttribute="height" multiplier="1:1" id="ep2-U0-dT5"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="blendColor">
+                                        <color key="value" red="0.61524574875338722" green="0.82055753470000004" blue="0.59721316341658759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="blendAlpha">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="blendMode">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="insetAmount">
+                                        <real key="value" value="-30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="cornerCircle" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.59700267669999996" green="0.82055753470000004" blue="0.6280501866" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Bẫy, nếu người chơi hoặc zombie đi vào thì sẽ bị đơ 2s." textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPc-YH-yMm" userLabel="trap_text">
+                                <rect key="frame" x="33" y="874" width="317" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trap" translatesAutoresizingMaskIntoConstraints="NO" id="Tbr-Np-nCg" customClass="CustomUIImageView" customModule="Hackathon" customModuleProvider="target">
+                                <rect key="frame" x="52" y="547" width="278.5" height="278"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Tbr-Np-nCg" secondAttribute="height" multiplier="1:1" id="Enp-kH-WNV"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="cornerCircle" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="insetAmount">
+                                        <real key="value" value="-10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.59700267669999996" green="0.82055753470000004" blue="0.6280501866" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mine" translatesAutoresizingMaskIntoConstraints="NO" id="5Gs-PB-jhr" customClass="CustomUIImageView" customModule="Hackathon" customModuleProvider="target">
+                                <rect key="frame" x="439" y="547" width="278" height="278"/>
+                                <color key="tintColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="blendAlpha">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="blendMode">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDV-Sd-OFy" userLabel="mine_text">
+                                <rect key="frame" x="420" y="874" width="317" height="81.5"/>
+                                <string key="text">Mìn, có 2 loại khác nhau. Một loại người chơi có thể nhặt lên và ném xuống đất trở lại. Khi đó mìn trở thành loại 2, cả người và zombie chạm vào đều phát nổ.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pPc-YH-yMm" firstAttribute="top" secondItem="Tbr-Np-nCg" secondAttribute="bottom" constant="49" id="4rb-wc-zdf"/>
+                            <constraint firstItem="vDV-Sd-OFy" firstAttribute="top" secondItem="pPc-YH-yMm" secondAttribute="top" id="6Kg-4D-ljC"/>
+                            <constraint firstItem="vDV-Sd-OFy" firstAttribute="centerX" secondItem="5Gs-PB-jhr" secondAttribute="centerX" id="6Q5-FH-sZG"/>
+                            <constraint firstItem="Tbr-Np-nCg" firstAttribute="height" secondItem="r0U-9e-jg0" secondAttribute="height" id="Elm-hS-m88"/>
+                            <constraint firstItem="5Gs-PB-jhr" firstAttribute="centerX" secondItem="K5o-Yd-bvI" secondAttribute="centerX" id="FX4-w7-nmY"/>
+                            <constraint firstItem="vDV-Sd-OFy" firstAttribute="width" secondItem="pPc-YH-yMm" secondAttribute="width" id="IEk-u3-SjW"/>
+                            <constraint firstItem="bBz-8V-Rrf" firstAttribute="bottom" secondItem="r0U-9e-jg0" secondAttribute="top" constant="-50" id="Mn2-rA-AVl"/>
+                            <constraint firstItem="X6q-Lf-8O9" firstAttribute="leading" secondItem="S3S-Kn-BKt" secondAttribute="trailing" constant="70" id="NRV-Ho-MJX"/>
+                            <constraint firstItem="Xey-3f-9dl" firstAttribute="top" secondItem="pPc-YH-yMm" secondAttribute="top" constant="150" id="Sj0-ab-FG8"/>
+                            <constraint firstItem="5Gs-PB-jhr" firstAttribute="height" secondItem="Tbr-Np-nCg" secondAttribute="height" id="V3H-6z-n7N"/>
+                            <constraint firstItem="X6q-Lf-8O9" firstAttribute="top" secondItem="K5o-Yd-bvI" secondAttribute="bottom" constant="49" id="WAw-k4-dgi"/>
+                            <constraint firstItem="S3S-Kn-BKt" firstAttribute="top" secondItem="r0U-9e-jg0" secondAttribute="bottom" constant="49" id="YHH-iF-7I2"/>
+                            <constraint firstItem="Tbr-Np-nCg" firstAttribute="top" secondItem="S3S-Kn-BKt" secondAttribute="top" constant="150" id="YOF-yA-i4d"/>
+                            <constraint firstItem="K5o-Yd-bvI" firstAttribute="centerX" secondItem="X6q-Lf-8O9" secondAttribute="centerX" id="Zfj-bH-saX"/>
+                            <constraint firstItem="Tbr-Np-nCg" firstAttribute="centerX" secondItem="S3S-Kn-BKt" secondAttribute="centerX" id="a7f-aq-KI8"/>
+                            <constraint firstItem="S3S-Kn-BKt" firstAttribute="leading" secondItem="je4-KF-Ohm" secondAttribute="leadingMargin" constant="12" id="bJ2-Hn-hUW"/>
+                            <constraint firstItem="K5o-Yd-bvI" firstAttribute="centerY" secondItem="r0U-9e-jg0" secondAttribute="centerY" id="cBP-Lr-Hlf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="X6q-Lf-8O9" secondAttribute="trailing" constant="12" id="gOl-xn-Fcl"/>
+                            <constraint firstItem="r0U-9e-jg0" firstAttribute="centerX" secondItem="S3S-Kn-BKt" secondAttribute="centerX" id="heY-DM-NgY"/>
+                            <constraint firstItem="pPc-YH-yMm" firstAttribute="width" secondItem="S3S-Kn-BKt" secondAttribute="width" id="iLE-Xz-qY3"/>
+                            <constraint firstItem="pPc-YH-yMm" firstAttribute="centerX" secondItem="Tbr-Np-nCg" secondAttribute="centerX" id="lIs-gJ-FG3"/>
+                            <constraint firstItem="X6q-Lf-8O9" firstAttribute="width" secondItem="S3S-Kn-BKt" secondAttribute="width" id="nF4-dc-ECa"/>
+                            <constraint firstItem="5Gs-PB-jhr" firstAttribute="width" secondItem="5Gs-PB-jhr" secondAttribute="height" multiplier="1:1" id="odz-C9-PuK"/>
+                            <constraint firstItem="K5o-Yd-bvI" firstAttribute="width" secondItem="K5o-Yd-bvI" secondAttribute="height" multiplier="1:1" id="pe0-za-ogW"/>
+                            <constraint firstItem="X6q-Lf-8O9" firstAttribute="top" secondItem="S3S-Kn-BKt" secondAttribute="top" id="riK-bO-R4h"/>
+                            <constraint firstItem="5Gs-PB-jhr" firstAttribute="centerY" secondItem="Tbr-Np-nCg" secondAttribute="centerY" id="zFZ-Ay-Uor"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="B2G-Kt-vHZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zyW-Y2-b9p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1386.71875" y="1730.2734375"/>
+            <point key="canvasLocation" x="418.75" y="1621.875"/>
+        </scene>
+        <!--Instruction View Controller-->
+        <scene sceneID="srf-0i-o8b">
+            <objects>
+                <viewController storyboardIdentifier="Instruction3" title="Mìn" id="DCX-ya-roh" userLabel="Instruction View Controller" customClass="InstructionViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wmL-5Q-kTZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="fGS-D8-sdL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ait-zK-PvM">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Súng, có thể bắn chết zombie. Khi nhặt được súng rồi thì nhấn vào chỗ zombie để bắn." textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBZ-qv-4hS" userLabel="handgun_text">
+                                <rect key="frame" x="32" y="412" width="317" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" priority="800" constant="317" id="T2c-cE-BUO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stuntPowerUp" translatesAutoresizingMaskIntoConstraints="NO" id="HoY-Iw-sKC" userLabel="stunt_power_up">
+                                <rect key="frame" x="431.5" y="70" width="293" height="293"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Power up, khi người chơi nhặt được thì tất cả zombie trong map đơ 5s." textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jak-vo-tCs" userLabel="stunt_power_up_text">
+                                <rect key="frame" x="419" y="412" width="317" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="handgun" translatesAutoresizingMaskIntoConstraints="NO" id="efp-uY-VVJ" customClass="CustomUIImageView" customModule="Hackathon" customModuleProvider="target">
+                                <rect key="frame" x="44.5" y="70" width="293" height="293"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="efp-uY-VVJ" secondAttribute="height" multiplier="1:1" id="STv-4B-bVh"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="blendColor">
+                                        <color key="value" red="0.61524574880000005" green="0.82055753470000004" blue="0.59721316339999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="blendAlpha">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="blendMode">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="insetAmount">
+                                        <real key="value" value="-30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="cornerCircle" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.59700267669999996" green="0.82055753470000004" blue="0.6280501866" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Bẫy, nếu người chơi hoặc zombie đi vào thì sẽ bị đơ 2s." textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dc-Or-UnO" userLabel="trap_text">
+                                <rect key="frame" x="32" y="874" width="317" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trap" translatesAutoresizingMaskIntoConstraints="NO" id="LBi-Xb-xWJ" customClass="CustomUIImageView" customModule="Hackathon" customModuleProvider="target">
+                                <rect key="frame" x="44.5" y="532" width="293.5" height="293"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LBi-Xb-xWJ" secondAttribute="height" multiplier="1:1" id="ybx-DK-2iG"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="cornerCircle" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="insetAmount">
+                                        <real key="value" value="-10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.59700267669999996" green="0.82055753470000004" blue="0.6280501866" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mine" translatesAutoresizingMaskIntoConstraints="NO" id="tw5-WO-ROc" customClass="CustomUIImageView" customModule="Hackathon" customModuleProvider="target">
+                                <rect key="frame" x="431.5" y="532" width="293" height="293"/>
+                                <color key="tintColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="blendAlpha">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="blendMode">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kwx-J7-y02" userLabel="mine_text">
+                                <rect key="frame" x="419" y="874" width="317" height="81.5"/>
+                                <string key="text">Mìn, có 2 loại khác nhau. Một loại người chơi có thể nhặt lên và ném xuống đất trở lại. Khi đó mìn trở thành loại 2, cả người và zombie chạm vào đều phát nổ.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LBi-Xb-xWJ" firstAttribute="centerX" secondItem="rBZ-qv-4hS" secondAttribute="centerX" id="16h-GJ-dXT"/>
+                            <constraint firstItem="HoY-Iw-sKC" firstAttribute="centerX" secondItem="jak-vo-tCs" secondAttribute="centerX" id="3td-DP-ih3"/>
+                            <constraint firstItem="tw5-WO-ROc" firstAttribute="width" secondItem="tw5-WO-ROc" secondAttribute="height" multiplier="1:1" id="60o-OP-Git"/>
+                            <constraint firstItem="HoY-Iw-sKC" firstAttribute="width" secondItem="HoY-Iw-sKC" secondAttribute="height" multiplier="1:1" id="92z-H9-sRl"/>
+                            <constraint firstItem="Kwx-J7-y02" firstAttribute="centerX" secondItem="tw5-WO-ROc" secondAttribute="centerX" id="9uW-FS-xPP"/>
+                            <constraint firstItem="rBZ-qv-4hS" firstAttribute="leading" secondItem="ait-zK-PvM" secondAttribute="leadingMargin" constant="12" id="D5W-Eh-95T"/>
+                            <constraint firstItem="jak-vo-tCs" firstAttribute="top" secondItem="rBZ-qv-4hS" secondAttribute="top" id="Ds6-h5-sTY"/>
+                            <constraint firstItem="fGS-D8-sdL" firstAttribute="top" secondItem="8dc-Or-UnO" secondAttribute="top" constant="150" id="GXv-IW-UQ6"/>
+                            <constraint firstItem="tw5-WO-ROc" firstAttribute="centerY" secondItem="LBi-Xb-xWJ" secondAttribute="centerY" id="HKj-Cy-XWv"/>
+                            <constraint firstItem="jak-vo-tCs" firstAttribute="top" secondItem="HoY-Iw-sKC" secondAttribute="bottom" constant="49" id="IEN-Mo-TFM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jak-vo-tCs" secondAttribute="trailing" constant="12" id="IYG-yr-fuZ"/>
+                            <constraint firstItem="efp-uY-VVJ" firstAttribute="centerX" secondItem="rBZ-qv-4hS" secondAttribute="centerX" id="Ogf-1j-fP7"/>
+                            <constraint firstItem="Kwx-J7-y02" firstAttribute="width" secondItem="8dc-Or-UnO" secondAttribute="width" id="RwT-ot-UIA"/>
+                            <constraint firstItem="wmL-5Q-kTZ" firstAttribute="bottom" secondItem="efp-uY-VVJ" secondAttribute="top" constant="-50" id="Sh6-68-feq"/>
+                            <constraint firstItem="HoY-Iw-sKC" firstAttribute="centerY" secondItem="efp-uY-VVJ" secondAttribute="centerY" id="Ymh-yj-dtP"/>
+                            <constraint firstItem="LBi-Xb-xWJ" firstAttribute="height" secondItem="efp-uY-VVJ" secondAttribute="height" id="ZDe-2R-jdZ"/>
+                            <constraint firstItem="rBZ-qv-4hS" firstAttribute="top" secondItem="efp-uY-VVJ" secondAttribute="bottom" constant="49" id="b6l-aQ-IjD"/>
+                            <constraint firstItem="Kwx-J7-y02" firstAttribute="top" secondItem="8dc-Or-UnO" secondAttribute="top" id="bSj-kA-upg"/>
+                            <constraint firstItem="jak-vo-tCs" firstAttribute="width" secondItem="rBZ-qv-4hS" secondAttribute="width" id="cDB-Q1-a3y"/>
+                            <constraint firstItem="tw5-WO-ROc" firstAttribute="centerX" secondItem="HoY-Iw-sKC" secondAttribute="centerX" id="ekG-9J-fug"/>
+                            <constraint firstItem="tw5-WO-ROc" firstAttribute="height" secondItem="LBi-Xb-xWJ" secondAttribute="height" id="hYK-WB-BuT"/>
+                            <constraint firstItem="jak-vo-tCs" firstAttribute="leading" secondItem="rBZ-qv-4hS" secondAttribute="trailing" constant="70" id="mWv-zk-FW9"/>
+                            <constraint firstItem="8dc-Or-UnO" firstAttribute="centerX" secondItem="LBi-Xb-xWJ" secondAttribute="centerX" id="nVY-Qh-1fe"/>
+                            <constraint firstItem="8dc-Or-UnO" firstAttribute="top" secondItem="LBi-Xb-xWJ" secondAttribute="bottom" constant="49" id="oRh-lV-pBQ"/>
+                            <constraint firstItem="8dc-Or-UnO" firstAttribute="width" secondItem="rBZ-qv-4hS" secondAttribute="width" id="vGM-l9-Jvz"/>
+                            <constraint firstItem="LBi-Xb-xWJ" firstAttribute="top" secondItem="rBZ-qv-4hS" secondAttribute="bottom" constant="119.5" id="zc3-km-3Dc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0E8-4b-Wlj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1093" y="1622"/>
         </scene>
     </scenes>
     <resources>
+        <image name="goal" width="50" height="170"/>
+        <image name="handgun" width="203" height="121"/>
+        <image name="mine" width="450" height="434"/>
+        <image name="stair" width="52" height="53"/>
+        <image name="stuntPowerUp" width="100" height="100"/>
         <image name="super_zombie_demo" width="165" height="745"/>
-        <image name="zombie" width="61" height="62"/>
+        <image name="trap" width="128" height="128"/>
+        <image name="zombie" width="30" height="31"/>
     </resources>
 </document>

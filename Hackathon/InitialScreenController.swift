@@ -37,6 +37,8 @@ class InitialScreenController: UIViewController {
             }
             scene.scaleMode = .aspectFill
             view.presentScene(scene)
+            
+//            view.showsPhysics = true
         }
     }
 }

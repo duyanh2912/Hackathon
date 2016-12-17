@@ -27,6 +27,10 @@ class DemoPlayerController: PlayerController {
             let dy = self.pathNodes[self.currentTargetNodeIndex].y - self.position.y
             if !(abs(dx) > self.width / 8 || abs(dy) > self.height / 8) {
                 self.currentTargetNodeIndex += 1
+                if self.currentTargetNodeIndex >= self.pathNodes.count {
+                    self.view.physicsBody?.isResting = true
+                    return
+                }
             }
             
             self.view.headToward(self.pathNodes[self.currentTargetNodeIndex], spriteAngle: 0, speed: self.SPEED)

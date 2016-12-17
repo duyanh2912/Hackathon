@@ -11,7 +11,7 @@ import SpriteKit
 class MineTrapController: Controller{
     init(parent: SKNode) {
         super.init(view: View(texture: Textures.MINE), parent: parent)
-        view.setScale(0.25)
+        view.setScale(0.25 * 2 / 3)
     }
     
     override init(view: View, parent: SKNode) {
@@ -30,6 +30,7 @@ class MineTrapController: Controller{
         configHandleContact()
     }
     func configHandleContact() {
+        
         view.handleContact = { [unowned view = self.view!, unowned parent = self.parent!] other in
             let bc = BlastController(parent: parent)
             bc.config(position: view.position)

@@ -27,5 +27,10 @@ class Level3: Level1, TriangleLight {
         }
         super.configZombies()
     }
+    
+//    override func configCamera() {
+//        super.configCamera()
+//        self.camera = nil
+//    }
 }
 
