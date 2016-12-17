@@ -15,8 +15,6 @@ var currentLevelScene: String { return "Level\(currentLevel)" }
 let ACTION_KEY_ANIMATE = "animate"
 let ACTION_KEY_MOVE = "move"
 
-let PLAYER_SPEED: CGFloat = 150
-
 struct Names {
     // Player và những thứ lquan
     static let PLAYER = "player"

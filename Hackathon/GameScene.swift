@@ -277,11 +277,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
             
             for node in self["\(Names.SUPER_ZOMBIE)/\(Names.EYE_RAY)"] {
                 if node.intersects(playerController.view) {
-                    playerController.SPEED = PLAYER_SPEED * 3 / 4
+                    playerController.SPEED = playerController.INITIAL_SPEED * 3 / 4
                     return
                 }
             }
-            playerController.SPEED = PLAYER_SPEED
+            playerController.SPEED = playerController.INITIAL_SPEED
         }
     }
     

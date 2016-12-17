@@ -14,6 +14,7 @@ class Level3: Level1, TriangleLight {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         configTriangeLight()
+        for zombie in allZombies { zombie.SPEED *= 1.1 }
     }
     
     override func configZombies() {
@@ -28,9 +29,10 @@ class Level3: Level1, TriangleLight {
         super.configZombies()
     }
     
-//    override func configCamera() {
-//        super.configCamera()
-//        self.camera = nil
-//    }
+    override func configPlayer() {
+        super.configPlayer()
+        playerController.INITIAL_SPEED *= 1.5
+        playerController.timePerFrame /= 1.5
+    }
 }
 
