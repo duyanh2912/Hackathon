@@ -108,7 +108,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SmartZombies, Timer {
             GameScene.audioPlayer?.play()
         }
         
-        if let path = Bundle.main.url(forResource: "background", withExtension: "mp3") {
+        if let path = Bundle.main.url(forResource: "Tchaikovsky -Dance Of The Sugarplum Fairy", withExtension: "m4a") {
             print("music")
             if let audio = GameScene.audioPlayer {
                 if audio.url != path {

@@ -17,12 +17,12 @@ class SepTungGameOverScene: SKScene {
     
     override func didMove(to view: SKView) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { [unowned self] in
-            self.run(SoundController.sharedInstance.GAME_OVER)
+//            self.run(SoundController.sharedInstance.GAME_OVER)
         }
        
         let gameoverLabel = childNode(withName: "gameoverLabel") as! SKLabelNode
         gameoverLabel.position = frame.center()
-        gameoverLabel.alpha = 0
+        gameoverLabel.alpha = 1
         
         replayLabel = SKLabelNode(text: "Replay")
         replayLabel.position = gameoverLabel.position.add(x: 0, y: -50)

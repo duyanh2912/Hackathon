@@ -73,6 +73,7 @@
 		50CB9E611DEB025500271641 /* handgun_fire.wav in Resources */ = {isa = PBXBuildFile; fileRef = 50CB9E601DEB025500271641 /* handgun_fire.wav */; };
 		50CB9E631DEB06CE00271641 /* zombie_moan.wav in Resources */ = {isa = PBXBuildFile; fileRef = 50CB9E621DEB06CE00271641 /* zombie_moan.wav */; };
 		50D88FC41DFB1A47007C61A5 /* Footstep.sks in Resources */ = {isa = PBXBuildFile; fileRef = 50D88FC31DFB1A47007C61A5 /* Footstep.sks */; };
+		50E04E181E06FD830086DDA2 /* Tchaikovsky -Dance Of The Sugarplum Fairy.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 50E04E171E06FBF20086DDA2 /* Tchaikovsky -Dance Of The Sugarplum Fairy.m4a */; };
 		50EDC22E1DE4B7FF00DA3E55 /* game_over.caf in Resources */ = {isa = PBXBuildFile; fileRef = 500052CB1DE4B5B7008B6471 /* game_over.caf */; };
 		50F357121DEAD992006F25D9 /* WinScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 50F357111DEAD992006F25D9 /* WinScene.sks */; };
 		50FD42221DFCF797009D8433 /* explosion.wav in Resources */ = {isa = PBXBuildFile; fileRef = 50FD42211DFCF797009D8433 /* explosion.wav */; };
@@ -159,6 +160,7 @@
 		50CB9E601DEB025500271641 /* handgun_fire.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = handgun_fire.wav; sourceTree = "<group>"; };
 		50CB9E621DEB06CE00271641 /* zombie_moan.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = zombie_moan.wav; sourceTree = "<group>"; };
 		50D88FC31DFB1A47007C61A5 /* Footstep.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Footstep.sks; sourceTree = "<group>"; };
+		50E04E171E06FBF20086DDA2 /* Tchaikovsky -Dance Of The Sugarplum Fairy.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tchaikovsky -Dance Of The Sugarplum Fairy.m4a"; sourceTree = "<group>"; };
 		50F357111DEAD992006F25D9 /* WinScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WinScene.sks; sourceTree = "<group>"; };
 		50FD42211DFCF797009D8433 /* explosion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = explosion.wav; sourceTree = "<group>"; };
 		50FE5E731DF20AC700772C4C /* Level2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level2.swift; sourceTree = "<group>"; };
@@ -412,6 +414,7 @@
 				508672521DFD05BC00DA7FD1 /* pick_up.wav */,
 				50ABEF0B1DFB9F0C00CCE469 /* trap.wav */,
 				500848171DEDC45F00C4A940 /* tha_thu.wav */,
+				50E04E171E06FBF20086DDA2 /* Tchaikovsky -Dance Of The Sugarplum Fairy.m4a */,
 				501FF6B31DED5E34002505C4 /* Em Cua Ngay Hom Qua - Son Tung M TP.mp3 */,
 			);
 			name = Sounds;
@@ -477,6 +480,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50E04E181E06FD830086DDA2 /* Tchaikovsky -Dance Of The Sugarplum Fairy.m4a in Resources */,
 				50EDC22E1DE4B7FF00DA3E55 /* game_over.caf in Resources */,
 				506F48611DEDD9AE00F2F95B /* Level1.sks in Resources */,
 				50CB9E611DEB025500271641 /* handgun_fire.wav in Resources */,
